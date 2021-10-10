@@ -1,0 +1,22 @@
+{
+  "name": "projet_3",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/main.scss:./public/scss/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SyMelin/MelinSylvie_3_07102021.git"
+  },
+  "keywords": [
+    "\"\""
+  ],
+  "author": "sylvie melin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SyMelin/MelinSylvie_3_07102021/issues"
+  },
+  "homepage": "https://github.com/SyMelin/MelinSylvie_3_07102021#readme"
+}
