@@ -1,0 +1,19 @@
+header {
+    background-color: #fff;
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 5px 3px darken($color:$color-background, $amount: 10);
+    /*a, img {
+        border: 1px solid black;
+    }*/
+    a {
+        position: absolute;
+        left: 10px;
+    }
+}
+

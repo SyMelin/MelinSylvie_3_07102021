@@ -1,0 +1,12 @@
+footer{
+    
+    color: #fff;
+    background-color: darken($color-background, 75);
+    ul{
+        list-style-type: none;
+    }
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+}

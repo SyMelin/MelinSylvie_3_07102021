@@ -8,12 +8,13 @@
         <meta name="description" content="Découvrez des restaurants d'exception, sélectionnés par nos soins." /> <!-- Description du site qui apparait sous le titre de la page lors d'une recherche sur moteur de recherche -->
        
         <!-- Lien vers le fichier style-->
-        <link rel="stylesheet" type="text/css" href="public/scss/style.css" />
+        <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+        
        
         <!-- Lien pour la font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!--<link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">-->
         
         <!-- Lien donné par W3C pour les icônes -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -21,20 +22,20 @@
     </head>
     <body>
         <header>
-            <i></i>
+            <a href="../accueil.html"><i class="fas fa-arrow-left"></i></a>
             <img src="images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood" />
         </header>
         <main>
-            <section id="localisation">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>Paris, Belleville</p>
-            </section>
-            <section>
+            <section class="selection">
+                <div class="selection__localisation">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Paris, Belleville</p> <!-- champs ??-->
+                </div>
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <div>Explorer nos restaurants</div> <!-- bouton??? -->
+                <a href="#" class="btn">Explorer nos restaurants</a>
             </section>
-            <section id="fonctionnement">
+            <section class="fonctionnement">
                 <h2>Fonctionnement</h2>
                 <ol>
                     <li><i class="fas fa-mobile-alt"></i>Choisissez votre menu</li>
@@ -42,10 +43,10 @@
                     <li><i class="fas fa-store"></i>Dégustez au restaurant</li>
                 </ol>
             </section>
-            <section id="restaurants">
+            <section class="restaurants">
                 <h2>Restaurants</h2>
-                <div id="container_restos">
-                    <a href="restaurants_menus/index_resto1.html" class="carte">
+                <div class="container_restos">
+                    <a href="restaurants_menus/menu1.html" class="carte">
                         <img />
                         <div>
                             <div>
