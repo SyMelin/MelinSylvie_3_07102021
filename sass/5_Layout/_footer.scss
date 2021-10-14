@@ -1,12 +1,12 @@
 footer{
     
-    color: #fff;
+    color: $white;
     background-color: darken($color-background, 75);
     ul{
         list-style-type: none;
     }
     a{
-        color: #fff;
+        color: $white;
         text-decoration: none;
     }
 }

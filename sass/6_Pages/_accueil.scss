@@ -19,13 +19,11 @@ header{
             margin-right: 1em;
         }
     }
-    .btn{
-        display: block;
-        text-align: center;
-        color: #fff;
-        background-color: $color-primary;
-        text-decoration: none;
-        padding: 1rem 2rem 1rem 2rem;
-        border-radius: 5rem;
-    }
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 1rem 2rem 1rem;
 }
