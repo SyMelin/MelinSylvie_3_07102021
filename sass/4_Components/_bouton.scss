@@ -1,5 +1,14 @@
 .btn{
+    /*border: none;*/
     @include bouton;
+    @include shadow(0, 0.3rem, 0.3rem, darken($color-background, 15%));
+    filter: brightness(1);
+    transition: filter 300ms;
+    transition: shadow 300ms;
+    &:hover{
+        filter: brightness(1.3);
+        @include shadow(0, 0.3rem, 0.3rem, darken($color-background, 45%));
+        }
     &--form{
         border: none;
     }

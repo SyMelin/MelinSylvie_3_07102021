@@ -28,6 +28,7 @@
         li{
         background-color: $color-background;
         @include rounded-corner;
+        @include shadow(0, 0.3rem, 0.3rem, darken($color-background, 15%));
         border: 1px solid black;
         }
     }

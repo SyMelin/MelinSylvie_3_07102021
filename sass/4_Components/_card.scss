@@ -2,6 +2,7 @@
     display: block;
     text-decoration: none;
     position: relative;
+    @include shadow(0, 0.3rem, 0.3rem, darken($color-background, 15%));
     @include rounded-corner;
     background-color: $color-white;
     &__img{

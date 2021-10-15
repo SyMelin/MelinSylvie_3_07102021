@@ -1,5 +1,6 @@
 .dish{
     @include rounded-corner($size:1rem);
+    @include shadow(0, 0.3rem, 0.3rem, darken($color-background, 15%));
     background-color: $color-white;
     display: flex;
     /*justify-content: space-between;*/
