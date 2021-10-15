@@ -17,8 +17,8 @@ body {
   display: block;
   text-align: center;
   color: #fff;
-  font-weight: bold;
-  background-color: #9356DC;
+  font-weight: 500;
+  background: linear-gradient(#FF79DA, #9356DC);
   text-decoration: none;
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 5rem;
@@ -50,15 +50,6 @@ body {
   background-color: #99E2D0;
   border-radius: 0.1rem;
   color: #217460;
-}
-
-.info {
-  color: black;
-  border: 1px solid black;
-}
-.info h3, .info p {
-  border: 1px solid black;
-  margin: 0;
 }
 
 .info {
@@ -131,6 +122,10 @@ header {
   flex-direction: column;
   gap: 1rem;
   padding: 2rem 1rem 2rem 1rem;
+}
+
+#resto3 .new, #resto4 .new {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

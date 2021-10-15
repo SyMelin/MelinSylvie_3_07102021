@@ -1,12 +1,11 @@
 footer{
-    
-    color: $white;
-    background-color: darken($color-background, 75);
+    color: colortext($color: $color-background);
+    background-color: darken($color-background, 75%);
     ul{
         list-style-type: none;
     }
     a{
-        color: $white;
+        color: colortext($color: $color-background);
         text-decoration: none;
     }
 }

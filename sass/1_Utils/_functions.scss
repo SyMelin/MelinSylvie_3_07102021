@@ -1,0 +1,5 @@
+@function colortext($color){
+    @if (lightness($color) > 25% ) {
+        @return $color-white;
+    }
+}

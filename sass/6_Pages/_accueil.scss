@@ -14,7 +14,7 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: darken($color-background, 5);
+        background-color: darken($color-background, 5%);
         .fas {
             margin-right: 1em;
         }
@@ -26,4 +26,10 @@ header{
     flex-direction: column;
     gap: 1rem;
     padding: 2rem 1rem 2rem 1rem;
+}
+
+#resto3, #resto4{
+    .new{
+        display: none;
+    }
 }
