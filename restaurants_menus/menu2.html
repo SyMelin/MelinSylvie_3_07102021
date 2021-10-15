@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Informations générales -->
+        <title>Ohmyfood</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <meta name="description" content="Découvrez des restaurants d'exception, sélectionnés par nos soins." /> <!-- Description du site qui apparait sous le titre de la page lors d'une recherche sur moteur de recherche -->
+       
+        <!-- Lien vers le fichier style-->
+        <link rel="stylesheet" type="text/css" href="../public/css/style.css" />
+       
+    </head>
+    <body>
+        <header>
+            <a href="../accueil.html"><i class="fas fa-arrow-left"></i></a>
+            <img src="../images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood" />
+        </header>
+        <main>
+            <div class="restaurant">
+                <img src="images_resto/restaurants/la_note_enchantee.jpg" alt="Bienvenue à La note enchantée"/>
+                <div class="restaurant__name">
+                    <h1>La note enchantée</h1>
+                    <i>OO</i>
+                </div>
+            </div>
+            <form method="post" action="#.php">
+
+                    <h2>Entrées</h2>
+                    <div class="dish-container">
+                        <div class="dish">
+                            <div class="info">
+                                <label for="ravioles_de_foie_gras">Ravioles de foie gras</label>
+                                <p>Accompagnés de leur crème à la truffe</p>
+                            </div>
+                            <p class="dish__price">25€</p>
+                            <input type="checkbox" name="ravioles_de_foie_gras" id="ravioles_de_foie_gras" />
+                        </div>
+                        <div class="dish">
+                            <div class="info">
+                                <label for="caviar_oscietre">Caviar osciètre</label>
+                                <p>Sur blini à la farine de blé noir</p>
+                            </div>
+                            <p class="dish__price">35€</p>
+                            <input type="checkbox" name="caviar_oscietre" id="caviar_oscietre" />
+                        </div>
+                        <div class="dish">
+                            <div class="info">
+                                <label for="homard_et_espuma_de_potiron">Homard et espuma de potiron</label>
+                                <p>Mariné aux zestes d'orange</p>
+                            </div>
+                            <p class="dish__price">20€</p>
+                            <input type="checkbox" name="homard_et_espuma_de_potiron" id="homard_et_espuma_de_potiron" />
+                        </div><div class="dish">
+                            <div class="info">
+                                <label for="foie_gras_de_canard_cuit_entier">Foie gras de canard cuit entier</label>
+                                <p>Sur blini à la farine de blé noir</p>
+                            </div>
+                            <p class="dish__price">35€</p>
+                            <input type="checkbox" name="foie_gras_de_canard_cuit_entier" id="foie_gras_de_canard_cuit_entier" />
+                        </div>
+                        
+                    </div>
+                    <h2>Plats</h2>
+                    <h2>Desserts</h2>
+
+
+                    <p>
+                        <button type="submit" value="Commander" class="btn btn--form">Commander</button>
+                    </p>
+
+            </form>
+
+        </main>
+        <footer>
+            <h4>ohmyfood</h4>
+            <ul>
+                <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+                <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

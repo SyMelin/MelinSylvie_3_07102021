@@ -1,15 +1,26 @@
 @mixin bouton {
     display: block;
     text-align: center;
-    color: colortext($color: $color-background);
+    color: $color-white;
+    /*color: colortext($color: $color-background);*/
     font-weight: 500;
     background: linear-gradient($color-secondary, $color-primary);
     text-decoration: none;
     padding: 1rem 2rem 1rem 2rem;
-    border-radius: 5rem;
+    @include rounded-corner($size: 5rem);
 }
 
 @mixin font-title{
     font-family: $font-logo, 'cursive';
     font-weight: 100;
+}
+
+@mixin flex-col-gap($size: $gap-size){
+        display: flex;
+        flex-direction: column;
+        gap: $size;
+}
+
+@mixin rounded-corner($size: $radius){
+    border-radius: $size;
 }

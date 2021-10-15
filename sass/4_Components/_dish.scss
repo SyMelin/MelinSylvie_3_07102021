@@ -1,0 +1,11 @@
+.dish{
+    @include rounded-corner($size:1rem);
+    background-color: $color-white;
+    display: flex;
+    /*justify-content: space-between;*/
+    &__price{
+        font-weight: bold;
+        border: 1px solid black;
+        margin-bottom: 0;
+    }
+}

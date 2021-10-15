@@ -1,5 +1,6 @@
-@function colortext($color){
-    @if (lightness($color) > 25% ) {
+/*@function colortext($color){
+    @if (lightness($color) > 25%){
+
         @return $color-white;
     }
-}
+}/* A REVOIR!!! ET PLACER DANS COLOR.SCSS * */

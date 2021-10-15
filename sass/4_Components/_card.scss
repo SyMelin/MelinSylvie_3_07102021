@@ -2,7 +2,7 @@
     display: block;
     text-decoration: none;
     position: relative;
-    border-radius: 1rem;
+    @include rounded-corner;
     background-color: $color-white;
     &__img{
         width: 100%;
@@ -21,7 +21,7 @@
         right: 1.5rem;
         padding: 0.4rem 0.8rem 0.4rem 0.8rem;
         background-color: $color-tertiary;
-        border-radius: 0.1rem;
+        @include rounded-corner($size:0.1rem);
         color: darken($color-tertiary, 45%);
     }
 }

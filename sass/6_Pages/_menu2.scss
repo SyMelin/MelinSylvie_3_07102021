@@ -1,0 +1,25 @@
+
+
+.restaurant{
+    position: relative;
+    img{
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+    }
+    &__name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: $color-background;
+        border-radius: 1.5rem 1.5rem 0 0;
+        /*border: 1px solid black;*/
+        h1{
+            @include font-title;
+            border: 1px solid black;
+        }
+    }
+}
