@@ -23,11 +23,11 @@ body{
         bottom: 0;
         left: 0;
         opacity: 0;
-        animation: lspinner 3s;
+        animation: lspinner 300ms; /* de 1 à 3s */
     }
     & header, main, footer{
         opacity: 1;
-        animation: hidding 3s;
+        animation: hidding 300ms; /* de 1 à 3s */
     }
 }
 

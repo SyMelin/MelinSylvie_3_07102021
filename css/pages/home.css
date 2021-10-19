@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*@function colortext($color){
     @if (lightness($color) > 25%){
 
@@ -23,11 +24,13 @@ body::after {
   bottom: 0;
   left: 0;
   opacity: 0;
-  animation: lspinner 3s;
+  animation: lspinner 300ms;
+  /* de 1 à 3s */
 }
 body header, body main, body footer {
   opacity: 1;
-  animation: hidding 3s;
+  animation: hidding 300ms;
+  /* de 1 à 3s */
 }
 
 @keyframes hidding {
