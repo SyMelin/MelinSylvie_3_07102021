@@ -4,7 +4,10 @@
   "description": "\"\"",
   "main": "index.js",
   "scripts": {
-    "sass":"sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass-style":"sass --watch ./sass/main.scss:./public/css/style.css",
+    "sass-accueil":"sass --watch ./sass/6_Pages/_accueil.scss:./public/css/pages/accueil.css",
+    "sass-menu2":"sass --watch ./sass/6_Pages/_menu2.scss:./public/css/pages/menu2.css"
+
   },
   "repository": {
     "type": "git",

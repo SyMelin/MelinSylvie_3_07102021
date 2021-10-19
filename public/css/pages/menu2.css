@@ -1,0 +1,32 @@
+/*@function colortext($color){
+    @if (lightness($color) > 25%){
+
+        @return $color-white;
+    }
+}/* A REVOIR!!! ET PLACER DANS COLOR.SCSS * */
+.restaurant {
+  position: relative;
+}
+.restaurant img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+.restaurant__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 1.5rem 1.5rem 0 0;
+  /*border: 1px solid black;*/
+}
+.restaurant__name h1 {
+  font-family: "Shrikhand", "cursive";
+  font-weight: 100;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=menu2.css.map */
