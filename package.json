@@ -4,9 +4,9 @@
   "description": "\"\"",
   "main": "index.js",
   "scripts": {
-    "sass-style":"sass --watch ./sass/main.scss:./public/css/style.css",
-    "sass-accueil":"sass --watch ./sass/6_Pages/_accueil.scss:./public/css/pages/accueil.css",
-    "sass-menu2":"sass --watch ./sass/6_Pages/_menu2.scss:./public/css/pages/menu2.css"
+    "sass-style":"sass --watch ./sass/main.scss:./css/style.css",
+    "sass-home":"sass --watch ./sass/6_Pages/_home.scss:./css/pages/home.css",
+    "sass-rest2":"sass --watch ./sass/6_Pages/_rest2.scss:./css/pages/rest2.css"
 
   },
   "repository": {
