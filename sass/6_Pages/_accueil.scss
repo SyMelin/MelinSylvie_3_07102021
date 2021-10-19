@@ -3,6 +3,44 @@
         display: none;
     }
 }*/
+body{
+    z-index: -1;
+    position: relative;
+    &::after{
+        content: "";
+        width: 100%;
+        background-color: red;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        animation: lspinner 3s;
+    }
+}
+
+header, .main, footer{
+    animation: hidding 3s;
+  }
+  
+  
+@keyframes hidding{
+    0%, 100% {
+        opacity: 0;
+    }
+}
+  
+
+@keyframes lspinner{
+    0%, 100%{
+        opacity: 1;
+    }
+}
+
+
+
 
 .selection{
     display: flex;
