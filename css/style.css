@@ -7,6 +7,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }

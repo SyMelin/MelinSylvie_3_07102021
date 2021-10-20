@@ -13,6 +13,10 @@ h2{
     font-weight: normal;
 }
 
+h3{
+    @extend %title3;
+}
+
 h4{
     @include font-title;
 }

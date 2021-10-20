@@ -4,6 +4,28 @@
         @return $color-white;
     }
 }/* A REVOIR!!! ET PLACER DANS COLOR.SCSS * */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+.dish .info .info__title, h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h4 {
+  font-family: "Shrikhand", "cursive";
+  font-weight: 100;
+}
+
 .restaurant {
   position: relative;
 }
@@ -29,15 +51,30 @@
   border: 1px solid black;
 }
 
-.dish, .dish * {
+.dish {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   cursor: pointer;
+}
+.dish .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+.dish__price {
+  width: 10%;
+  text-align: center;
 }
 
 .checkbox {
   width: 10%;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-left: 0.8rem;
+  /*padding-left: 0.8rem;*/
   background-color: #99E2D0;
   border-radius: 0 1rem 1rem 0;
   position: relative;
@@ -48,7 +85,7 @@
 .checkbox .checkmark {
   position: absolute;
   top: 0.5rem;
-  left: 2rem;
+  /* left: 2rem;*/
   height: 2rem;
   width: 2rem;
   background-color: white;
@@ -70,10 +107,6 @@ input:checked ~ .checkmark::after {
   border: solid #99E2D0;
   border-width: 0 4px 4px 0;
   transform: rotate(45deg);
-}
-
-.dish:active input {
-  type: checked;
 }
 
 /*# sourceMappingURL=rest2.css.map */
