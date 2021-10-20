@@ -25,3 +25,51 @@
         }
     }
 }
+
+.dish, .dish *{
+    cursor: pointer;
+}
+.checkbox{
+    width: 10%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.8rem;
+    background-color: $color-tertiary;
+    border-radius: 0 $radius $radius 0;
+    position: relative;
+    /*& input[type=checkbox] {
+    visibility: hidden;
+        }*/
+    & .checkmark{
+        position: absolute;
+        top: 0.5rem;
+        left: 2rem;
+        height: 2rem;
+        width: 2rem;
+        background-color: white;
+        border-radius: 20rem;
+    }
+}
+
+.checkmark::after{
+    content:"";
+    position: absolute;
+    display: none;
+}
+
+input:checked ~.checkmark::after{
+    display: block;
+    left: 0.6rem;
+    bottom: 0.5rem;
+    width: 0.45rem;
+    height: 0.8rem;
+    border: solid $color-tertiary;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+}
+
+.dish:active{
+    input{
+        type: checked;
+    }
+}
