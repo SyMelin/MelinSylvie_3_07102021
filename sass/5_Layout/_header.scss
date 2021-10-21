@@ -6,13 +6,12 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
-    box-shadow: 0 5px 3px darken($color:$color-background, $amount: 10);
+    box-shadow: 0 3px 2px darken($color-background, 15);
     a{
         position: absolute;
         left: 10px;
     }
     img{
-        height: 1.875rem;
+        width: 10rem;
     }
 }
-

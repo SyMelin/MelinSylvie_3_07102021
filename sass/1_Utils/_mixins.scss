@@ -28,3 +28,7 @@
 @mixin shadow ($size1, $size2, $size3, $color){
     box-shadow: $size1 $size2 $size3 $color;
 }
+
+@mixin border{
+    border: 1px solid red;
+}

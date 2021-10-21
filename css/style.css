@@ -4,8 +4,8 @@
         @return $color-white;
     }
 }/* A REVOIR!!! ET PLACER DANS COLOR.SCSS * */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Shrikhand&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 h3 {
   font-size: 1rem;
@@ -16,7 +16,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h2 {
+.form h2 {
   text-transform: uppercase;
   font-weight: normal;
 }
@@ -58,7 +58,7 @@ header, .fonctionnement {
   color: #fff;
   /*color: colortext($color: $color-background);*/
   font-weight: 500;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(175deg, #FF79DA, #9356DC);
   text-decoration: none;
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 5rem;
@@ -79,7 +79,7 @@ header, .fonctionnement {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
   filter: brightness(1.3);
   border: none;
   box-shadow: 0 0.2rem 0.2rem #373737;
@@ -93,13 +93,13 @@ header, .fonctionnement {
   display: block;
   text-decoration: none;
   position: relative;
-  box-shadow: 0 0.3rem 0.3rem #d0d0d0;
+  box-shadow: 0 0.3rem 0.3rem #e9e9e9;
   border-radius: 1rem;
   background-color: #fff;
 }
 .card__img {
   width: 100%;
-  height: 16rem;
+  height: 10rem;
   object-fit: cover;
   object-position: bottom;
   border-radius: 1rem 1rem 0 0;
@@ -107,15 +107,29 @@ header, .fonctionnement {
 .card__bottom {
   display: flex;
   justify-content: space-between;
+  padding: 0.825rem 0.5rem;
+}
+.card__bottom .info {
+  color: black;
+}
+.card__bottom .info h3, .card__bottom .info p {
+  margin: 0;
+}
+.card__bottom .info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
 }
 .card .new {
+  margin: 0;
   position: absolute;
-  top: 0.5rem;
-  right: 1.5rem;
-  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  top: 0.875rem;
+  right: 0.875rem;
+  padding: 0.4rem 0.725rem 0.3rem 0.725rem;
   background-color: #99E2D0;
   border-radius: 0.1rem;
-  color: #217460;
+  color: #0a9f7b;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .dish {
@@ -131,17 +145,6 @@ header, .fonctionnement {
   margin-bottom: 0;
 }
 
-.info {
-  color: black;
-  border: 1px solid black;
-}
-.info h3, .info p {
-  margin: 0;
-}
-.info h3, .info label {
-  font-weight: bold;
-}
-
 header {
   width: 100%;
   padding-top: 1.25rem;
@@ -150,26 +153,40 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 0 5px 3px #dddddd;
+  box-shadow: 0 3px 2px #d0d0d0;
 }
 header a {
   position: absolute;
   left: 10px;
 }
 header img {
-  height: 1.875rem;
+  width: 10rem;
 }
 
 footer {
   color: #fff;
   background-color: #535353;
+  padding: 1.5rem;
+}
+footer h4 {
+  margin: 0;
 }
 footer ul {
   list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 }
-footer a {
+footer ul li {
+  font-size: 0.925rem;
+  margin-bottom: 0.3rem;
+}
+footer ul li a {
   color: #fff;
   text-decoration: none;
+}
+footer ul li a i {
+  font-size: 0.825rem;
+  margin-right: 0.825rem;
 }
 
 .dish-container {

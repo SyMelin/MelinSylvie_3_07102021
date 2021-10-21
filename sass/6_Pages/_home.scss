@@ -11,6 +11,7 @@ header{
 }
 
 body{
+    margin: 0;
     z-index: 1;
     position: relative;
     &::after{
@@ -51,38 +52,73 @@ body{
 .selection{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-bottom: 3.5rem;
     &__localisation{
-        font-size: 0.875rem;
-        width: 100%;
         display: flex;
         justify-content: center;
-        align-items: baseline;
+        font-size: 0.925rem;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem;
         background-color: $color-background-dken;
         .fas {
-            font-size: 1rem;
-            margin-right: 1rem;
+            font-size: $font-size;
+            margin-right: $size-d;
         }
+        span{
+            text-align: left;
+        }
+    }
+    h1{
+        width: 70%;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-top: 2rem;
+        margin-bottom: $size-d;
+    }
+    > p {
+        width: 90%; 
+        text-align: center;
+        font-size: 1.1rem;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+    .btn{
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        font-size: 0.875rem;
     }
 }
 
 .fonctionnement{
+    margin-top: 0;
+    padding: 1.75rem 5%;
+    h2{
+        font-size: 1.5rem;
+    }
     ol{
         list-style-position: inside;
         @include flex-col-gap;
         li{
+        @include border;
         background-color: $color-background;
         @include rounded-corner;
         @include shadow(0, 0.3rem, 0.3rem, darken($color-background-dken, 10%));
-        border: 1px solid black;
         }
     }
 }
 
+.restaurants{
+    margin-top: 0;
+    padding: 1.75rem 5%;
+}
+
 .card-container{
     @include flex-col-gap;
-    padding: 2rem 1rem 2rem 1rem;
 }
 
 #resto3, #resto4{
