@@ -2,6 +2,7 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-background: #f6f6f6;
+$color-background-dken: darken($color-background, 5%);
 $color-white: #fff;
 $color-footer:#535353;
 $gradient: linear-gradient($color-secondary, $color-primary);

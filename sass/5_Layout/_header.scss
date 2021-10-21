@@ -1,18 +1,18 @@
-header {
+header{
     width: 100%;
-    padding-top: 1.5rem;
-    padding-bottom: 0.8rem;
+    padding-top: 1.25rem;
+    padding-bottom: 0.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     box-shadow: 0 5px 3px darken($color:$color-background, $amount: 10);
-    /*a, img {
-        border: 1px solid black;
-    }*/
-    a {
+    a{
         position: absolute;
         left: 10px;
+    }
+    img{
+        height: 1.875rem;
     }
 }
 
