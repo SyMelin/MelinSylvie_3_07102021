@@ -50,6 +50,7 @@ input {
 }
 
 .anim-ck{
+    box-sizing: border-box;
     z-index: 1;
     margin: 0;
     margin-left: -0.5rem;
@@ -57,25 +58,32 @@ input {
     height: 3.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+ /*   justify-content: space-between;*/
+   /* column-gap: 0.5rem;*/
     align-items: center;
     cursor: pointer;
     & .info{
+        @include border;
+
         @include flex-col-gap($size: 0.5rem);
         width: 80%;
-        padding: 0.5rem;
+        padding: 0.5rem 0 0.5rem 0;
         white-space: nowrap;
         overflow: hidden;
         &__title{
+            @include border;
+            width: 95%; /*Pas 100% sinon overflow ne peut pas fonctionner */
             font-size: 0.95em;
             font-weight: bold;
             overflow: hidden;
             text-overflow: ellipsis;
         }
         &__details{
+            @include border;
+            width: 95%;
+            font-size: 0.8rem;
             overflow: hidden;
             text-overflow: ellipsis;
-            font-size: 0.8rem;
         }
     }
     & .trslt{
@@ -84,7 +92,7 @@ input {
         height: 100%;
         background-color: pink;
         & .price{
-            width: 50%;
+            width: 90%;
             text-align: center;
             font-weight: bold;
             padding-top: 2rem;
@@ -133,22 +141,25 @@ input[type="checkbox"]:checked ~.anim-ck >.trslt>.ckbox >.checkmark::after{
 input[type="checkbox"]:checked{
     ~.anim-ck{
         >.info{
-            animation-name: largeur-p;
+            animation-name: widthP;
             animation-duration: 500ms;
+            animation-delay: 0ms;
             animation-timing-function: ease-in-out;
-            transform-origin: 0;
+            transform-origin: left;
             animation-fill-mode: forwards;
-            >.info__title, >.info__details {
-                animation: largeur-c 500ms cubic-bezier(.62,.1,.55,1);
-                transform-origin: 0;
-                width: 70%;
-              /*  animation: moveRight 500ms cubic-bezier(.53,.11,.34,1);
-            transform-origin: right;*/
+        >.info__title{
+                animation: widthC 500ms 0ms ease-in-out;/*cubic-bezier(.62,.1,.55,1);*/
+                transform-origin: left;
+                animation-fill-mode: forwards;
+            }
+        >.info__details {
+                animation: widthC 500ms 0ms ease-in-out; /*cubic-bezier(.62,.1,.55,1);*/
+                transform-origin: left;
                 animation-fill-mode: forwards;
             }
         }
         >.trslt{
-            animation: moveRight 500ms cubic-bezier(.53,.11,.34,1);
+            animation: moveRight 500ms 0ms cubic-bezier(.53,.11,.34,1);
             transform-origin: right;
           /*  animation-direction: alternate;*/
             animation-fill-mode: forwards;
@@ -156,26 +167,27 @@ input[type="checkbox"]:checked{
     }
 }
 
-@keyframes largeur-p{
+
+@keyframes widthP{
     0%{
         transform: scaleX(1);
     }
     100%{
-        transform: scaleX(0.7);
+        transform: scaleX(0.75);
     }
 }
-@keyframes largeur-c{
+@keyframes widthC{
     0%{
         transform: scaleX(1);
     }
     100%{
-        transform: scaleX(1.45);
+        transform: scaleX(1);
     }
 }
 
 @keyframes moveRight{
     0%{
-    transform: translateX(0%);
+    transform: translateX(0);
     }
     100%{
     transform: translateX(-50%);
