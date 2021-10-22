@@ -31,7 +31,7 @@
 }
 
 .item{
-    @include rounded-corner($size:1rem);
+    @include rounded-corner($size:0.825rem);
     @include shadow(0, 0.3rem, 0.3rem, darken($color-background, 15%));
     background-color: $color-white;
     padding: 0;
@@ -55,45 +55,47 @@ input {
     margin: 0;
     margin-left: -0.5rem;
     width: 120%;
-    height: 3.5rem;
+    height: 4rem;
     display: flex;
     flex-direction: row;
- /*   justify-content: space-between;*/
-   /* column-gap: 0.5rem;*/
+    /*justify-content: space-between;*/
+    column-gap: 0.5rem;
     align-items: center;
     cursor: pointer;
     & .info{
         @include border;
 
-        @include flex-col-gap($size: 0.5rem);
-        width: 80%;
+        @include flex-col-gap($size: 0.25rem);
+       /* flex:1;*/
+        width: 75%;
         padding: 0.5rem 0 0.5rem 0;
         white-space: nowrap;
         overflow: hidden;
         &__title{
             @include border;
-            width: 95%; /*Pas 100% sinon overflow ne peut pas fonctionner */
-            font-size: 0.95em;
-            font-weight: bold;
+            width: 70%; /*Pas 100% sinon overflow ne peut pas fonctionner */
+            font-size: 1.0625rem;
+            font-weight: 600;
             overflow: hidden;
             text-overflow: ellipsis;
         }
         &__details{
             @include border;
             width: 95%;
-            font-size: 0.8rem;
+            font-size: 0.875rem;
             overflow: hidden;
             text-overflow: ellipsis;
         }
     }
     & .trslt{
         display: flex;
-        width: 40%;
+        width: 35%;
         height: 100%;
         background-color: pink;
         & .price{
-            width: 90%;
+            width: 50%;
             text-align: center;
+            font-size: 0.875rem;
             font-weight: bold;
             padding-top: 2rem;
         }
@@ -112,10 +114,10 @@ input {
     position: relative;
     & .checkmark{
         position: absolute;
-        top: 0.825rem;
-        left: 0.625rem;
-        height: 2rem;
-        width: 2rem;
+        top: 1.5rem;
+        left: 1rem;
+        height: 1.25rem;
+        width: 1.25rem;
         background-color: white;
         border-radius: 20rem;
         &::after{
@@ -128,13 +130,13 @@ input {
 
 input[type="checkbox"]:checked ~.anim-ck >.trslt>.ckbox >.checkmark::after{
     display: block;
-    left: 0.6rem;
-    bottom: 0.5rem;
-    width: 0.45rem;
-    height: 0.8rem;
+    top: 0.2rem;
+    left: 0.4rem;
+    width: 0.25rem;
+    height: 0.5rem;
     border: solid $color-tertiary;
-    border-width: 0 4px 4px 0;
-    transform: rotate(45deg);
+    border-width: 0 0.1875rem 0.1875rem 0;
+    transform: rotate(46deg);
 }
 
 
@@ -173,7 +175,7 @@ input[type="checkbox"]:checked{
         transform: scaleX(1);
     }
     100%{
-        transform: scaleX(0.75);
+        transform: scaleX(0.7);
     }
 }
 @keyframes widthC{
@@ -181,7 +183,7 @@ input[type="checkbox"]:checked{
         transform: scaleX(1);
     }
     100%{
-        transform: scaleX(1);
+        transform: scaleX(1.4);
     }
 }
 
