@@ -4,10 +4,10 @@
         @return $color-white;
     }
 }/* A REVOIR!!! ET PLACER DANS COLOR.SCSS * */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Shrikhand&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
-.dish .info .info__title, h3 {
+h3 {
   font-size: 1rem;
   font-weight: bold;
 }
@@ -16,7 +16,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h2 {
+.form h2 {
   text-transform: uppercase;
   font-weight: normal;
 }
@@ -51,54 +51,97 @@ h4 {
   border: 1px solid black;
 }
 
-.dish {
+.item {
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 0.3rem #d0d0d0;
+  background-color: #fff;
+  padding: 0;
+  overflow: hidden;
   width: 100%;
-  height: 5rem;
+}
+
+.dish {
+  display: flex;
+  width: 120%;
+}
+
+input {
+  visibility: hidden;
+  z-index: -1;
+}
+
+.anim-ck {
+  z-index: 1;
+  margin: 0;
+  margin-left: -0.5rem;
+  width: 120%;
+  height: 3.5rem;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
 }
-.dish .info {
+.anim-ck .info {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  flex: 1;
+  width: 80%;
+  padding: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.dish__price {
-  width: 10%;
+.anim-ck .info__title {
+  font-size: 0.95em;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.anim-ck .info__details {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8rem;
+}
+.anim-ck .trslt {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  background-color: pink;
+}
+.anim-ck .trslt .price {
+  width: 50%;
   text-align: center;
+  font-weight: bold;
+  padding-top: 2rem;
 }
 
-.checkbox {
-  width: 10%;
+.ckbox {
+  width: 50%;
+  height: 100%;
+  /* min-width: 3rem;*/
   padding-top: 1rem;
   padding-bottom: 1rem;
   /*padding-left: 0.8rem;*/
   background-color: #99E2D0;
   border-radius: 0 1rem 1rem 0;
   position: relative;
-  /*& input[type=checkbox] {
-  visibility: hidden;
-      }*/
 }
-.checkbox .checkmark {
+.ckbox .checkmark {
   position: absolute;
-  top: 0.5rem;
-  /* left: 2rem;*/
+  top: 0.825rem;
+  left: 0.625rem;
   height: 2rem;
   width: 2rem;
   background-color: white;
   border-radius: 20rem;
 }
-
-.checkmark::after {
+.ckbox .checkmark::after {
   content: "";
   position: absolute;
   display: none;
 }
 
-input:checked ~ .checkmark::after {
+input[type=checkbox]:checked ~ .anim-ck > .trslt > .ckbox > .checkmark::after {
   display: block;
   left: 0.6rem;
   bottom: 0.5rem;
@@ -108,5 +151,79 @@ input:checked ~ .checkmark::after {
   border-width: 0 4px 4px 0;
   transform: rotate(45deg);
 }
+
+input[type=checkbox]:checked ~ .anim-ck > .info {
+  animation-name: largeur-p;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  transform-origin: 0;
+  animation-fill-mode: forwards;
+}
+input[type=checkbox]:checked ~ .anim-ck > .info > .info__title, input[type=checkbox]:checked ~ .anim-ck > .info > .info__details {
+  animation: largeur-c 500ms cubic-bezier(0.62, 0.1, 0.55, 1);
+  transform-origin: 0;
+  width: 70%;
+  /*  animation: moveRight 500ms cubic-bezier(.53,.11,.34,1);
+  transform-origin: right;*/
+  animation-fill-mode: forwards;
+}
+input[type=checkbox]:checked ~ .anim-ck > .trslt {
+  animation: moveRight 500ms cubic-bezier(0.53, 0.11, 0.34, 1);
+  transform-origin: right;
+  /*  animation-direction: alternate;*/
+  animation-fill-mode: forwards;
+}
+
+@keyframes largeur-p {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0.7);
+  }
+}
+@keyframes largeur-c {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1.45);
+  }
+}
+@keyframes moveRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/*
+@keyframes scale{
+    0%{
+        transform: scaleX(100%);
+    }
+    50%{
+        transform: scaleX(80%);
+        animation-timing-function: cubic-bezier(.8,.04,.52,.86);
+    }
+    100%{
+        transform: scaleX(100%);
+    }
+}
+
+@keyframes translation{
+    0%{
+    transform: translateX(0%);
+    }
+    50%{
+    transform: translateX(-50%);
+    animation-timing-function: cubic-bezier(.8,.04,.52,.86);
+    }
+    100%{
+    transform: translateX(0%);
+        }
+}
+*/
 
 /*# sourceMappingURL=rest2.css.map */
