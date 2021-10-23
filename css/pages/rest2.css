@@ -51,6 +51,12 @@ h4 {
   border: 1px solid black;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .item {
   border-radius: 0.825rem;
   box-shadow: 0 0.3rem 0.3rem #d0d0d0;
@@ -171,6 +177,38 @@ input[type=checkbox]:checked ~ .anim-ck > .trslt {
   animation-fill-mode: forwards;
 }
 
+.item {
+  animation: hidding 20ms 0ms ease-in-out both, fadeIn 1000ms 200ms forwards;
+}
+.item--1 {
+  animation-delay: 350ms;
+}
+.item--2 {
+  animation-delay: 700ms;
+}
+.item--3 {
+  animation-delay: 1050ms;
+}
+.item--4 {
+  animation-delay: 1400ms;
+}
+
+@keyframes hidding {
+  0%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.05;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes widthI {
   from {
     width: 100%;

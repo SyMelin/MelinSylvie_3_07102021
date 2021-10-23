@@ -30,6 +30,10 @@
     }
 }
 
+.container{
+    @include flex-col-gap($size: 1rem);
+}
+
 .item{
     @include rounded-corner($size:0.825rem);
     @include shadow(0, 0.3rem, 0.3rem, darken($color-background, 15%));
@@ -154,6 +158,35 @@ input[type="checkbox"]:checked{
         }
     }
 }
+
+.item{
+    animation: hidding 20ms 0ms ease-in-out both, fadeIn 1000ms 200ms forwards;
+    @for $i from 1 through 4 {
+        &--#{$i} {
+            animation-delay: 350ms * $i;
+        }
+    }
+}
+
+   
+@keyframes hidding{
+    0%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0.05;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 
 @keyframes widthI{
     from{
