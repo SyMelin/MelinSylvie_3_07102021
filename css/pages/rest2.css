@@ -80,7 +80,7 @@ input {
   display: flex;
   flex-direction: row;
   /*justify-content: space-between;*/
-  column-gap: 0.5rem;
+  /*column-gap: 0.5rem;*/
   align-items: center;
   cursor: pointer;
 }
@@ -89,25 +89,25 @@ input {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  /* flex:1;*/
-  width: 75%;
+  width: 90%;
   padding: 0.5rem 0 0.5rem 0;
   white-space: nowrap;
   overflow: hidden;
 }
 .anim-ck .info__title {
   border: 1px solid red;
-  width: 70%;
-  /*Pas 100% sinon overflow ne peut pas fonctionner */
+  width: 100%;
   font-size: 1.0625rem;
   font-weight: 600;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .anim-ck .info__details {
   border: 1px solid red;
-  width: 95%;
+  width: 100%;
   font-size: 0.875rem;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -118,15 +118,15 @@ input {
   background-color: pink;
 }
 .anim-ck .trslt .price {
-  width: 50%;
-  text-align: center;
+  width: 40%;
+  text-align: left;
   font-size: 0.875rem;
   font-weight: bold;
   padding-top: 2rem;
 }
 
 .ckbox {
-  width: 50%;
+  width: 60%;
   height: 100%;
   /* min-width: 3rem;*/
   padding-top: 1rem;
@@ -162,47 +162,21 @@ input[type=checkbox]:checked ~ .anim-ck > .trslt > .ckbox > .checkmark::after {
   transform: rotate(46deg);
 }
 
-input[type=checkbox]:checked ~ .anim-ck > .info {
-  animation-name: widthP;
-  animation-duration: 500ms;
-  animation-delay: 0ms;
-  animation-timing-function: ease-in-out;
-  transform-origin: left;
-  animation-fill-mode: forwards;
-}
-input[type=checkbox]:checked ~ .anim-ck > .info > .info__title {
-  animation: widthC 500ms 0ms ease-in-out;
-  /*cubic-bezier(.62,.1,.55,1);*/
-  transform-origin: left;
-  animation-fill-mode: forwards;
-}
-input[type=checkbox]:checked ~ .anim-ck > .info > .info__details {
-  animation: widthC 500ms 0ms ease-in-out;
-  /*cubic-bezier(.62,.1,.55,1);*/
-  transform-origin: left;
-  animation-fill-mode: forwards;
+input[type=checkbox]:checked ~ .anim-ck .info__title, input[type=checkbox]:checked ~ .anim-ck .info__details {
+  animation: widthI 2s ease-in-out forwards;
 }
 input[type=checkbox]:checked ~ .anim-ck > .trslt {
-  animation: moveRight 500ms 0ms cubic-bezier(0.53, 0.11, 0.34, 1);
+  animation: moveRight 2s 0ms ease-in-out;
   transform-origin: right;
-  /*  animation-direction: alternate;*/
   animation-fill-mode: forwards;
 }
 
-@keyframes widthP {
-  0% {
-    transform: scaleX(1);
+@keyframes widthI {
+  from {
+    width: 100%;
   }
-  100% {
-    transform: scaleX(0.7);
-  }
-}
-@keyframes widthC {
-  0% {
-    transform: scaleX(1);
-  }
-  100% {
-    transform: scaleX(1.4);
+  to {
+    width: 70%;
   }
 }
 @keyframes moveRight {
@@ -213,32 +187,5 @@ input[type=checkbox]:checked ~ .anim-ck > .trslt {
     transform: translateX(-50%);
   }
 }
-/*
-@keyframes scale{
-    0%{
-        transform: scaleX(100%);
-    }
-    50%{
-        transform: scaleX(80%);
-        animation-timing-function: cubic-bezier(.8,.04,.52,.86);
-    }
-    100%{
-        transform: scaleX(100%);
-    }
-}
-
-@keyframes translation{
-    0%{
-    transform: translateX(0%);
-    }
-    50%{
-    transform: translateX(-50%);
-    animation-timing-function: cubic-bezier(.8,.04,.52,.86);
-    }
-    100%{
-    transform: translateX(0%);
-        }
-}
-*/
 
 /*# sourceMappingURL=rest2.css.map */
