@@ -1,18 +1,88 @@
 @charset "UTF-8";
+/*-- Variables colours --*/
+/*-- Variables fonts --*/
+/*-- Variables sizes --*/
 /*@function colortext($color){
     @if (lightness($color) > 25%){
 
         @return $color-white;
     }
 }/* A REVOIR!!! ET PLACER DANS COLOR.SCSS * */
-header a {
-  display: none;
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/*-- typography components --*/
+.btn {
+  font-weight: 500;
+}
+
+.card__bottom .info h3 {
+  font-size: 1.1rem;
+}
+.card .new {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/*-- typography layout --*/
+body {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: "Shrikhand", "cursive";
+  font-weight: 100;
+}
+
+/*-- typography page home --*/
+.selection__localisation {
+  font-size: 0.925rem;
+  font-weight: 600;
+}
+.selection__localisation .fas {
+  font-size: 1rem;
+}
+.selection h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.selection > p {
+  font-size: 1.1rem;
+}
+.selection .btn {
+  font-size: 0.875rem;
+}
+
+.fonctionnement h2 {
+  font-size: 1.5rem;
+}
+
+/*-- typography page menu --*/
+form h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.anim-ck .info__title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+.anim-ck .info__details {
+  font-size: 0.875rem;
+}
+.anim-ck .trslt .price {
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 body {
   margin: 0;
   z-index: 1;
   position: relative;
+  /*le pseudo-élément ::after imite le Loading spinner pour le moment*/
 }
 body::after {
   content: "";
@@ -34,16 +104,23 @@ body header, body main, body footer {
   /* de 1 à 3s */
 }
 
+/* animation "masquer" */
 @keyframes hidding {
   0%, 100% {
     opacity: 0;
   }
 }
+/* animation "loading spinner"*/
 @keyframes lspinner {
   0%, 100% {
     opacity: 1;
   }
 }
+header a {
+  display: none;
+}
+
+/* Section "Selection" */
 .selection {
   display: flex;
   flex-direction: column;
@@ -53,8 +130,6 @@ body header, body main, body footer {
 .selection__localisation {
   display: flex;
   justify-content: center;
-  font-size: 0.925rem;
-  font-weight: 600;
   width: 100%;
   text-align: center;
   padding-top: 0.875rem;
@@ -62,7 +137,6 @@ body header, body main, body footer {
   background-color: #e9e9e9;
 }
 .selection__localisation .fas {
-  font-size: 1rem;
   margin-right: 1rem;
 }
 .selection__localisation span {
@@ -71,30 +145,24 @@ body header, body main, body footer {
 .selection h1 {
   width: 70%;
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: 900;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 .selection > p {
   width: 90%;
   text-align: center;
-  font-size: 1.1rem;
   margin-top: 0;
   margin-bottom: 2rem;
 }
 .selection .btn {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-  font-size: 0.875rem;
 }
 
+/* Section "Fonctionnement" */
 .fonctionnement {
   margin-top: 0;
   padding: 1.75rem 5%;
-}
-.fonctionnement h2 {
-  font-size: 1.5rem;
 }
 .fonctionnement ol {
   list-style-position: inside;
@@ -109,6 +177,7 @@ body header, body main, body footer {
   box-shadow: 0 0.3rem 0.3rem #d0d0d0;
 }
 
+/* Section "Rsetaurants" */
 .restaurants {
   margin-top: 0;
   padding: 1.75rem 5%;

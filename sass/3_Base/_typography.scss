@@ -1,0 +1,95 @@
+
+
+
+
+/*-- typography components --*/
+
+.btn{
+    font-weight: $fw500;
+}
+
+.card{
+    &__bottom{
+        & .info{
+            h3{
+                font-size: 1.1rem;
+            }
+        }
+    }
+    .new{
+        font-size: 0.8rem;
+        font-weight: $fw500; 
+    }
+}
+
+
+/*-- typography layout --*/
+body{
+    font-size: $fs-d;
+    font-weight: $fw400;
+}
+
+h3{
+    @extend %title3;
+}
+
+h4{
+    @include font-title;
+}
+
+
+/*-- typography page home --*/
+
+.selection{
+    &__localisation{
+        font-size: 0.925rem;
+        font-weight: $fw600;
+        .fas{
+            font-size: $fs-d; 
+        }
+    }
+    h1{
+        font-size: 1.5rem;
+        font-weight: $fw900; 
+    }
+    > p{
+        font-size: 1.1rem; 
+    }
+    .btn{
+        font-size: 0.875rem;
+    }
+}
+
+.fonctionnement{
+    h2{
+        font-size: 1.5rem;
+    }
+}
+
+
+/*-- typography page menu --*/
+
+form{
+    & h2{
+        font-weight: $fw400;
+        text-transform: uppercase;
+    }
+}
+
+.anim-ck{
+    & .info{
+        &__title{
+            font-size: 1.0625rem;
+            font-weight: $fw600;
+        }
+        &__details{
+            font-size: 0.875rem;
+        }
+    }
+    & .trslt{
+        & .price{
+            font-size: 0.875rem;
+            font-weight: $fw500;
+        }
+    }
+}

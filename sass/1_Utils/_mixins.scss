@@ -1,4 +1,4 @@
-@mixin rounded-corner($size: $radius){
+@mixin rounded-corner($size: $radius-d){
     border-radius: $size;
 }
 
@@ -7,7 +7,6 @@
     text-align: center;
     color: $color-white;
     /*color: colortext($color: $color-background);*/
-    font-weight: 500;
     background-image: $gradient;
     text-decoration: none;
     padding: 1rem 2rem 1rem 2rem;
@@ -16,10 +15,10 @@
 
 @mixin font-title{
     font-family: $font-logo, 'cursive';
-    font-weight: 100;
+    font-weight: $fw100;
 }
 
-@mixin flex-col-gap($size: $gap-size){
+@mixin flex-col-gap($size: $gs-d){
         display: flex;
         flex-direction: column;
         gap: $size;

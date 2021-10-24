@@ -1,3 +1,6 @@
+/*-- Variables colours --*/
+/*-- Variables fonts --*/
+/*-- Variables sizes --*/
 /*@function colortext($color){
     @if (lightness($color) > 25%){
 
@@ -9,16 +12,30 @@
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 h3 {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 body {
   font-family: "Roboto", sans-serif;
 }
 
-.form h2 {
-  text-transform: uppercase;
-  font-weight: normal;
+/*-- typography components --*/
+.btn {
+  font-weight: 500;
+}
+
+.card__bottom .info h3 {
+  font-size: 1.1rem;
+}
+.card .new {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/*-- typography layout --*/
+body {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 h4 {
@@ -26,35 +43,45 @@ h4 {
   font-weight: 100;
 }
 
-.restaurant {
-  position: relative;
+/*-- typography page home --*/
+.selection__localisation {
+  font-size: 0.925rem;
+  font-weight: 600;
 }
-.restaurant img {
-  width: 100%;
-  height: 20rem;
-  object-fit: cover;
+.selection__localisation .fas {
+  font-size: 1rem;
 }
-.restaurant__name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: #f6f6f6;
-  border-radius: 1.5rem 1.5rem 0 0;
-  /*border: 1px solid black;*/
+.selection h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
 }
-.restaurant__name h1 {
-  font-family: "Shrikhand", "cursive";
-  font-weight: 100;
-  border: 1px solid black;
+.selection > p {
+  font-size: 1.1rem;
+}
+.selection .btn {
+  font-size: 0.875rem;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.fonctionnement h2 {
+  font-size: 1.5rem;
+}
+
+/*-- typography page menu --*/
+form h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.anim-ck .info__title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+.anim-ck .info__details {
+  font-size: 0.875rem;
+}
+.anim-ck .trslt .price {
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .item {
@@ -100,19 +127,9 @@ input {
   white-space: nowrap;
   overflow: hidden;
 }
-.anim-ck .info__title {
+.anim-ck .info__title, .anim-ck .info__details {
   border: 1px solid red;
   width: 100%;
-  font-size: 1.0625rem;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.anim-ck .info__details {
-  border: 1px solid red;
-  width: 100%;
-  font-size: 0.875rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -126,8 +143,6 @@ input {
 .anim-ck .trslt .price {
   width: 40%;
   text-align: left;
-  font-size: 0.875rem;
-  font-weight: bold;
   padding-top: 2rem;
 }
 
@@ -225,5 +240,37 @@ input[type=checkbox]:checked ~ .anim-ck > .trslt {
     transform: translateX(-50%);
   }
 }
+/* Div "Restaurant" */
+.restaurant {
+  position: relative;
+}
+.restaurant img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+.restaurant__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 1.5rem 1.5rem 0 0;
+  /*border: 1px solid black;*/
+}
+.restaurant__name h1 {
+  font-family: "Shrikhand", "cursive";
+  font-weight: 100;
+  border: 1px solid black;
+}
 
-/*# sourceMappingURL=rest2.css.map */
+/* Formulaire */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/*# sourceMappingURL=menu.css.map */

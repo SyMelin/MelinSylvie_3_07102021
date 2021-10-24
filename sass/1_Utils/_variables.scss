@@ -1,3 +1,5 @@
+/*-- Variables colours --*/
+
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
@@ -7,14 +9,25 @@ $color-white: #fff;
 $color-footer:#535353;
 $gradient: linear-gradient(175deg, $color-secondary, $color-primary);
 
+
+/*-- Variables fonts --*/
+
 $font-text: 'Roboto';
 $font-logo: 'Shrikhand';
 
+$fw100: 100;
+$fw400: 400;
+$fw500: 500;
+$fw600: 600;
+$fw900: 900;
+
+
+/*-- Variables sizes --*/
 
 $size-d: 1rem;
 
-$font-size: $size-d;
+$fs-d: $size-d;
 
-$gap-size: $size-d;
+$gs-d: $size-d;
 
-$radius: $size-d;
+$radius-d: $size-d;

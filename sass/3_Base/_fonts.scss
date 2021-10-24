@@ -6,17 +6,3 @@
 body{
     font-family: $font-text, sans-serif;
 }
-
-
-.form h2{
-    text-transform: uppercase;
-    font-weight: normal;
-}
-
-h3{
-    @extend %title3;
-}
-
-h4{
-    @include font-title;
-}

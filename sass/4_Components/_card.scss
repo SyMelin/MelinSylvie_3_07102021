@@ -16,13 +16,12 @@
         display: flex;
         justify-content: space-between;
         padding: 0.825rem 0.5rem;
-        .info{
+        & .info{
             color: black;
             h3, p{
                 margin: 0;
             }
             h3{
-                font-size: 1.1rem;
                 margin-bottom: 0.2rem;
             }
         }
@@ -36,8 +35,6 @@
         background-color: $color-tertiary;
         @include rounded-corner($size:0.1rem);
         color: adjust-color($color: $color-tertiary, $saturation: 32%, $lightness: -41%);
-        font-size: 0.8rem;
-        font-weight: bold;
     }
 }
 

@@ -1,3 +1,6 @@
+/*-- Variables colours --*/
+/*-- Variables fonts --*/
+/*-- Variables sizes --*/
 /*@function colortext($color){
     @if (lightness($color) > 25%){
 
@@ -9,21 +12,11 @@
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 h3 {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-}
-
-.form h2 {
-  text-transform: uppercase;
-  font-weight: normal;
-}
-
-h4 {
-  font-family: "Shrikhand", "cursive";
-  font-weight: 100;
 }
 
 /*{
@@ -35,6 +28,71 @@ body {
 
 header, .fonctionnement {
   background-color: #fff;
+}
+
+/*-- typography components --*/
+.btn {
+  font-weight: 500;
+}
+
+.card__bottom .info h3 {
+  font-size: 1.1rem;
+}
+.card .new {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/*-- typography layout --*/
+body {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: "Shrikhand", "cursive";
+  font-weight: 100;
+}
+
+/*-- typography page home --*/
+.selection__localisation {
+  font-size: 0.925rem;
+  font-weight: 600;
+}
+.selection__localisation .fas {
+  font-size: 1rem;
+}
+.selection h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.selection > p {
+  font-size: 1.1rem;
+}
+.selection .btn {
+  font-size: 0.875rem;
+}
+
+.fonctionnement h2 {
+  font-size: 1.5rem;
+}
+
+/*-- typography page menu --*/
+form h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.anim-ck .info__title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+.anim-ck .info__details {
+  font-size: 0.875rem;
+}
+.anim-ck .trslt .price {
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 /*.btn{
@@ -57,7 +115,6 @@ header, .fonctionnement {
   text-align: center;
   color: #fff;
   /*color: colortext($color: $color-background);*/
-  font-weight: 500;
   background-image: linear-gradient(175deg, #FF79DA, #9356DC);
   text-decoration: none;
   padding: 1rem 2rem 1rem 2rem;
@@ -116,7 +173,6 @@ header, .fonctionnement {
   margin: 0;
 }
 .card__bottom .info h3 {
-  font-size: 1.1rem;
   margin-bottom: 0.2rem;
 }
 .card .new {
@@ -128,22 +184,164 @@ header, .fonctionnement {
   background-color: #99E2D0;
   border-radius: 0.1rem;
   color: #0a9f7b;
-  font-size: 0.8rem;
-  font-weight: bold;
 }
 
-/*.dish{
-    @include rounded-corner($size:1rem);
-    @include shadow(0, 0.3rem, 0.3rem, darken($color-background, 15%));
-    background-color: $color-white;
-    display: flex;
-    /*justify-content: space-between;*/
-/*  &__price{
-        font-weight: bold;
-        border: 1px solid black;
-        margin-bottom: 0;
-    }
-}*/
+.item {
+  border-radius: 0.825rem;
+  box-shadow: 0 0.3rem 0.3rem #d0d0d0;
+  background-color: #fff;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.dish {
+  display: flex;
+  width: 120%;
+}
+
+input {
+  visibility: hidden;
+  z-index: -1;
+}
+
+.anim-ck {
+  box-sizing: border-box;
+  z-index: 1;
+  margin: 0;
+  margin-left: -0.5rem;
+  width: 120%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-between;*/
+  /*column-gap: 0.5rem;*/
+  align-items: center;
+  cursor: pointer;
+}
+.anim-ck .info {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 90%;
+  padding: 0.5rem 0 0.5rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.anim-ck .info__title, .anim-ck .info__details {
+  border: 1px solid red;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.anim-ck .trslt {
+  display: flex;
+  width: 35%;
+  height: 100%;
+  background-color: pink;
+}
+.anim-ck .trslt .price {
+  width: 40%;
+  text-align: left;
+  padding-top: 2rem;
+}
+
+.ckbox {
+  width: 60%;
+  height: 100%;
+  /* min-width: 3rem;*/
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /*padding-left: 0.8rem;*/
+  background-color: #99E2D0;
+  border-radius: 0 1rem 1rem 0;
+  position: relative;
+}
+.ckbox .checkmark {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: white;
+  border-radius: 20rem;
+}
+.ckbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+input[type=checkbox]:checked ~ .anim-ck > .trslt > .ckbox > .checkmark::after {
+  display: block;
+  top: 0.2rem;
+  left: 0.4rem;
+  width: 0.25rem;
+  height: 0.5rem;
+  border: solid #99E2D0;
+  border-width: 0 0.1875rem 0.1875rem 0;
+  transform: rotate(46deg);
+}
+
+input[type=checkbox]:checked ~ .anim-ck .info__title, input[type=checkbox]:checked ~ .anim-ck .info__details {
+  animation: widthI 2s ease-in-out forwards;
+}
+input[type=checkbox]:checked ~ .anim-ck > .trslt {
+  animation: moveRight 2s 0ms ease-in-out;
+  transform-origin: right;
+  animation-fill-mode: forwards;
+}
+
+.item {
+  animation: hidding 20ms 0ms ease-in-out both, fadeIn 1000ms 200ms forwards;
+}
+.item--1 {
+  animation-delay: 350ms;
+}
+.item--2 {
+  animation-delay: 700ms;
+}
+.item--3 {
+  animation-delay: 1050ms;
+}
+.item--4 {
+  animation-delay: 1400ms;
+}
+
+@keyframes hidding {
+  0%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.05;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes widthI {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 header {
   width: 100%;
   padding-top: 1.25rem;

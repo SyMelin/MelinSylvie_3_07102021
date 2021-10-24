@@ -1,38 +1,3 @@
-@import "../1_Utils/variables";
-@import "../1_Utils/functions";
-@import "../1_Utils/mixins";
-@import "../1_Utils/placeholders";
-
-@import "../3_Base/fonts";
-
-
-.restaurant{
-    position: relative;
-    img{
-        width: 100%;
-        height: 20rem;
-        object-fit: cover;
-    }
-    &__name{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        background-color: $color-background;
-        border-radius: 1.5rem 1.5rem 0 0;
-        /*border: 1px solid black;*/
-        h1{
-            @include font-title;
-            border: 1px solid black;
-        }
-    }
-}
-
-.container{
-    @include flex-col-gap($size: 1rem);
-}
 
 .item{
     @include rounded-corner($size:0.825rem);
@@ -73,19 +38,9 @@ input {
         padding: 0.5rem 0 0.5rem 0;
         white-space: nowrap;
         overflow: hidden;
-        &__title{
+        &__title, &__details{
             @include border;
             width: 100%;
-            font-size: 1.0625rem;
-            font-weight: 600;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        &__details{
-            @include border;
-            width: 100%;
-            font-size: 0.875rem;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -99,8 +54,6 @@ input {
         & .price{
             width: 40%;
             text-align: left;
-            font-size: 0.875rem;
-            font-weight: bold;
             padding-top: 2rem;
         }
    }
@@ -114,7 +67,7 @@ input {
     padding-bottom: 1rem;
     /*padding-left: 0.8rem;*/
     background-color: $color-tertiary;
-    border-radius: 0 $radius $radius 0;
+    border-radius: 0 $radius-d $radius-d 0;
     position: relative;
     & .checkmark{
         position: absolute;

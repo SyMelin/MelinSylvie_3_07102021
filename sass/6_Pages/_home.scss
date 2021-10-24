@@ -3,17 +3,15 @@
 @import "../1_Utils/mixins";
 @import "../1_Utils/placeholders";
 
+@import "../3_Base/typography";
 
-header{
-    a {
-        display: none;
-    }
-}
 
 body{
     margin: 0;
     z-index: 1;
     position: relative;
+
+    /*le pseudo-élément ::after imite le Loading spinner pour le moment*/
     &::after{
         content: "";
         width: 100%;
@@ -33,13 +31,14 @@ body{
     }
 }
 
-   
+/* animation "masquer" */
 @keyframes hidding{
     0%, 100% {
         opacity: 0;
     }
 }
-  
+ 
+/* animation "loading spinner"*/
 @keyframes lspinner{
     0%, 100%{
         opacity: 1;
@@ -47,8 +46,13 @@ body{
 }
 
 
+header{
+    a {
+        display: none;
+    }
+}
 
-
+/* Section "Selection" */
 .selection{
     display: flex;
     flex-direction: column;
@@ -57,15 +61,12 @@ body{
     &__localisation{
         display: flex;
         justify-content: center;
-        font-size: 0.925rem;
-        font-weight: 600;
         width: 100%;
         text-align: center;
         padding-top: 0.875rem;
         padding-bottom: 0.875rem;
         background-color: $color-background-dken;
         .fas {
-            font-size: $font-size;
             margin-right: $size-d;
         }
         span{
@@ -75,31 +76,26 @@ body{
     h1{
         width: 70%;
         text-align: center;
-        font-size: 1.5rem;
-        font-weight: 900;
         margin-top: 2rem;
         margin-bottom: $size-d;
     }
     > p {
         width: 90%; 
         text-align: center;
-        font-size: 1.1rem;
+        
         margin-top: 0;
         margin-bottom: 2rem;
     }
     .btn{
         padding-left: 1.25rem;
         padding-right: 1.25rem;
-        font-size: 0.875rem;
     }
 }
 
+/* Section "Fonctionnement" */
 .fonctionnement{
     margin-top: 0;
     padding: 1.75rem 5%;
-    h2{
-        font-size: 1.5rem;
-    }
     ol{
         list-style-position: inside;
         @include flex-col-gap;
@@ -112,6 +108,7 @@ body{
     }
 }
 
+/* Section "Rsetaurants" */
 .restaurants{
     margin-top: 0;
     padding: 1.75rem 5%;
