@@ -1,9 +1,7 @@
 
 
 
-
 /*-- typography components --*/
-
 .btn{
     font-weight: $fw500;
 }
@@ -22,6 +20,13 @@
     }
 }
 
+.heart{
+    
+    & .fa-heart{
+        font-size: 1.25rem;
+        transform: scale(1.1, 1.2);
+    }
+}
 
 /*-- typography layout --*/
 body{
@@ -39,7 +44,6 @@ h4{
 
 
 /*-- typography page home --*/
-
 .selection{
     &__localisation{
         font-size: 0.925rem;
@@ -68,7 +72,6 @@ h4{
 
 
 /*-- typography page menu --*/
-
 form{
     & h2{
         font-weight: $fw400;

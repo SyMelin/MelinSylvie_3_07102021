@@ -1,12 +1,3 @@
-/*-- Variables colours --*/
-/*-- Variables fonts --*/
-/*-- Variables sizes --*/
-/*@function colortext($color){
-    @if (lightness($color) > 25%){
-
-        @return $color-white;
-    }
-}/* A REVOIR!!! ET PLACER DANS COLOR.SCSS * */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Shrikhand&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
@@ -19,9 +10,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/*{
-    color: colortext($color: $color-background);
-}*/
 body {
   background-color: #f6f6f6;
 }
@@ -41,6 +29,11 @@ header, .fonctionnement {
 .card .new {
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+.heart .fa-heart {
+  font-size: 1.25rem;
+  transform: scale(1.1, 1.2);
 }
 
 /*-- typography layout --*/
@@ -114,7 +107,6 @@ form h2 {
   display: block;
   text-align: center;
   color: #fff;
-  /*color: colortext($color: $color-background);*/
   background-image: linear-gradient(175deg, #FF79DA, #9356DC);
   text-decoration: none;
   padding: 1rem 2rem 1rem 2rem;
@@ -146,7 +138,12 @@ form h2 {
   transition: opacity 300ms cubic-bezier(0.17, 0.67, 0.25, 1.1);
 }
 
+.cardbox {
+  position: relative;
+}
+
 .card {
+  z-index: 1;
   display: block;
   text-decoration: none;
   position: relative;
@@ -158,15 +155,14 @@ form h2 {
   width: 100%;
   height: 10rem;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
   border-radius: 1rem 1rem 0 0;
 }
 .card__bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0.825rem 0.5rem;
-}
-.card__bottom .info {
   color: black;
 }
 .card__bottom .info h3, .card__bottom .info p {
@@ -186,6 +182,94 @@ form h2 {
   color: #0a9f7b;
 }
 
+.heart {
+  z-index: 2;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  padding: 0.05rem 0.1rem;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+.heart--InTitle {
+  background-color: #f6f6f6;
+}
+.heart:not(:active) .fa-heart {
+  /*
+  &--edge{
+      animation: fadeIntH 800ms alternate ease-in-out;
+
+     animation: fadeInH 800ms ease-in-out paused;
+    transition: opacity 1000ms step-end;
+  }*/
+}
+.heart:not(:active) .fa-heart--filled {
+  animation: fadeInH 800ms ease-in-out forwards;
+  /*     animation: fadeOutH 800ms ease-in-out paused backwards; 
+       transition: opacity 1000ms 800ms step-start;*/
+}
+.heart:active .fa-heart {
+  /*
+  &--filled{
+      animation: fadeInH 800ms ease-in-out running forwards;
+      animation: fadeOutH 800ms ease-in-out running;
+      transition: opacity step-start;
+      animation: fadeOnH 400ms ease-in-out;
+  }*/
+}
+.heart:active .fa-heart--edge {
+  /* animation: fadeOutH 800ms ease-in-out paused forwards;*/
+  /*   animation: fadeInH 800ms ease-in-out running;*/
+  /*  transition: opacity 1000ms step-start;*/
+  /* animation: fadeInH 40ms ease-in-out;*/
+}
+.heart .fa-heart {
+  color: #9356DC;
+  display: block;
+}
+.heart .fa-heart--edge {
+  color: #000;
+  opacity: 1;
+}
+.heart .fa-heart--filled {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  /*  right: 0.11rem;*/
+  opacity: 0;
+  background: -webkit-linear-gradient(175deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes fadeOutH {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeInH {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*
+&::after{
+    z-index: -1;
+    font-family: 'Font Awesome 5 Free';
+    content:'\f004';
+    opacity: 1;
+    transform: scale(1.1, 1.2);
+
+    right: 2rem;
+}*/
 .item {
   border-radius: 0.825rem;
   box-shadow: 0 0.3rem 0.3rem #d0d0d0;
@@ -385,13 +469,6 @@ footer ul li a {
 footer ul li a i {
   font-size: 0.825rem;
   margin-right: 0.825rem;
-}
-
-.dish-container {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  border: 1px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */

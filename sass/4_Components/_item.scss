@@ -101,7 +101,7 @@ input[type="checkbox"]:checked{
     ~.anim-ck{
         .info{
             &__title, &__details{
-           animation: widthI 2s ease-in-out forwards;
+            animation: widthI 2s ease-in-out forwards;
             }
         }
         >.trslt{
