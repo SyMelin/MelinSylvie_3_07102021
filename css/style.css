@@ -205,24 +205,30 @@ form h2 {
   }*/
 }
 .heart:not(:active) .fa-heart--filled {
-  animation: fadeInH 800ms ease-in-out forwards;
+  animation: bouge 1500ms ease-in-out forwards;
+  /* fadeInH 1500ms backwards;*/
+  transition: width 1500ms step-end;
+  /*  animation: fadeInH 800ms ease-in-out forwards;
   /*     animation: fadeOutH 800ms ease-in-out paused backwards; 
        transition: opacity 1000ms 800ms step-start;*/
 }
 .heart:active .fa-heart {
   /*
-  &--filled{
-      animation: fadeInH 800ms ease-in-out running forwards;
-      animation: fadeOutH 800ms ease-in-out running;
-      transition: opacity step-start;
-      animation: fadeOnH 400ms ease-in-out;
-  }*/
-}
-.heart:active .fa-heart--edge {
-  /* animation: fadeOutH 800ms ease-in-out paused forwards;*/
+  &--edge{
+     /* animation: fadeOutH 800ms ease-in-out paused forwards;*/
   /*   animation: fadeInH 800ms ease-in-out running;*/
   /*  transition: opacity 1000ms step-start;*/
-  /* animation: fadeInH 40ms ease-in-out;*/
+  /* animation: fadeInH 40ms ease-in-out;
+  }*/
+}
+.heart:active .fa-heart--filled {
+  width: 1.5rem;
+  /*  transition: width 1500ms step-start;*/
+  /*
+  animation: fadeInH 800ms ease-in-out running forwards;
+  animation: fadeOutH 800ms ease-in-out running;
+  transition: opacity step-start;
+  animation: fadeOnH 400ms ease-in-out;*/
 }
 .heart .fa-heart {
   color: #9356DC;
@@ -236,14 +242,30 @@ form h2 {
   position: absolute;
   z-index: -1;
   bottom: 0;
+  right: 2rem;
   /*  right: 0.11rem;*/
-  opacity: 1;
+  opacity: 0;
+  width: 0;
   background: -webkit-linear-gradient(175deg, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+@keyframes bouge {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  10% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-5rem);
+  }
+}
 @keyframes fadeOutH {
   0% {
     opacity: 1;
