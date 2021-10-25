@@ -304,7 +304,6 @@ input {
   cursor: pointer;
 }
 .anim-ck .info {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -314,7 +313,6 @@ input {
   overflow: hidden;
 }
 .anim-ck .info__title, .anim-ck .info__details {
-  border: 1px solid red;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Shrikhand&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
@@ -340,16 +341,6 @@ input[type=checkbox]:checked ~ .anim-ck > .trslt {
   text-transform: uppercase;
   display: block;
   margin: 1.5rem 1rem;
-  animation: hidding 20ms 0ms ease-in-out both, fadeIn 1000ms 200ms forwards;
-}
-.box__title--1 {
-  animation-delay: 0ms;
-}
-.box__title--2 {
-  animation-delay: 1400ms;
-}
-.box__title--3 {
-  animation-delay: 2800ms;
 }
 
 .container {
@@ -358,20 +349,63 @@ input[type=checkbox]:checked ~ .anim-ck > .trslt {
   gap: 1rem;
 }
 
-.item {
-  animation: hidding 20ms 20ms ease-in-out both, fadeIn 1000ms 220ms forwards;
+/* durée totale de l'animation sur un .item */
+.box {
+  animation: hidding 20ms 0ms ease-in-out both, fadeInB 1000ms 220ms forwards;
 }
-.item--1 {
+.box--1 {
   animation-delay: 350ms;
 }
-.item--2 {
+.box--1 .item {
+  animation: hidding 20ms 20ms ease-in-out both, fadeInI 1000ms 220ms forwards, moveUp 1000ms 220ms forwards;
+}
+.box--1 .item--1 {
   animation-delay: 700ms;
 }
-.item--3 {
+.box--1 .item--2 {
   animation-delay: 1050ms;
 }
-.item--4 {
+.box--1 .item--3 {
   animation-delay: 1400ms;
+}
+.box--1 .item--4 {
+  animation-delay: 1750ms;
+}
+.box--2 {
+  animation-delay: 2100ms;
+}
+.box--2 .item {
+  animation: hidding 20ms 20ms ease-in-out both, fadeInI 1000ms 220ms forwards, moveUp 1000ms 220ms forwards;
+}
+.box--2 .item--1 {
+  animation-delay: 2450ms;
+}
+.box--2 .item--2 {
+  animation-delay: 2800ms;
+}
+.box--2 .item--3 {
+  animation-delay: 3150ms;
+}
+.box--2 .item--4 {
+  animation-delay: 3500ms;
+}
+.box--3 {
+  animation-delay: 3850ms;
+}
+.box--3 .item {
+  animation: hidding 20ms 20ms ease-in-out both, fadeInI 1000ms 220ms forwards, moveUp 1000ms 220ms forwards;
+}
+.box--3 .item--1 {
+  animation-delay: 4200ms;
+}
+.box--3 .item--2 {
+  animation-delay: 4550ms;
+}
+.box--3 .item--3 {
+  animation-delay: 4900ms;
+}
+.box--3 .item--4 {
+  animation-delay: 5250ms;
 }
 
 @keyframes hidding {
@@ -379,7 +413,15 @@ input[type=checkbox]:checked ~ .anim-ck > .trslt {
     opacity: 0;
   }
 }
-@keyframes fadeIn {
+@keyframes fadeInB {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInI {
   0% {
     opacity: 0;
   }
@@ -388,6 +430,14 @@ input[type=checkbox]:checked ~ .anim-ck > .trslt {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(0em);
+  }
+  100% {
+    transform: translateY(-1em);
   }
 }
 

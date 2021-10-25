@@ -32,14 +32,12 @@ input {
     align-items: center;
     cursor: pointer;
     & .info{
-        @include border;
         @include flex-col-gap($size: 0.25rem);
         width: 90%;
         padding: 0.5rem 0 0.5rem 0;
         white-space: nowrap;
         overflow: hidden;
         &__title, &__details{
-            @include border;
             width: 100%;
             white-space: nowrap;
             overflow: hidden;
