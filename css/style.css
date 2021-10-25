@@ -378,22 +378,6 @@ input[type=checkbox]:checked ~ .anim-ck > .trslt {
   animation-fill-mode: forwards;
 }
 
-.item {
-  animation: hidding 20ms 0ms ease-in-out both, fadeIn 1000ms 200ms forwards;
-}
-.item--1 {
-  animation-delay: 350ms;
-}
-.item--2 {
-  animation-delay: 700ms;
-}
-.item--3 {
-  animation-delay: 1050ms;
-}
-.item--4 {
-  animation-delay: 1400ms;
-}
-
 @keyframes hidding {
   0%, 100% {
     opacity: 0;

@@ -111,16 +111,6 @@ input[type="checkbox"]:checked{
         }
     }
 }
-
-.item{
-    animation: hidding 20ms 0ms ease-in-out both, fadeIn 1000ms 200ms forwards;
-    @for $i from 1 through 4 {
-        &--#{$i} {
-            animation-delay: 350ms * $i;
-        }
-    }
-}
-
    
 @keyframes hidding{
     0%, 100% {
@@ -139,7 +129,6 @@ input[type="checkbox"]:checked{
         opacity: 1;
     }
 }
-
 
 @keyframes widthI{
     from{

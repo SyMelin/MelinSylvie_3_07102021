@@ -23,6 +23,11 @@ body {
   font-weight: 500;
 }
 
+.heart .fa-heart {
+  font-size: 1.25rem;
+  transform: scale(1.1, 1.2);
+}
+
 /*-- typography layout --*/
 body {
   font-size: 1rem;
@@ -75,6 +80,94 @@ form h2 {
   font-weight: 500;
 }
 
+.heart {
+  z-index: 2;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  padding: 0.05rem 0.1rem;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+.heart--InTitle {
+  background-color: #f6f6f6;
+}
+.heart:not(:active) .fa-heart {
+  /*
+  &--edge{
+      animation: fadeIntH 800ms alternate ease-in-out;
+
+     animation: fadeInH 800ms ease-in-out paused;
+    transition: opacity 1000ms step-end;
+  }*/
+}
+.heart:not(:active) .fa-heart--filled {
+  animation: fadeInH 800ms ease-in-out forwards;
+  /*     animation: fadeOutH 800ms ease-in-out paused backwards; 
+       transition: opacity 1000ms 800ms step-start;*/
+}
+.heart:active .fa-heart {
+  /*
+  &--filled{
+      animation: fadeInH 800ms ease-in-out running forwards;
+      animation: fadeOutH 800ms ease-in-out running;
+      transition: opacity step-start;
+      animation: fadeOnH 400ms ease-in-out;
+  }*/
+}
+.heart:active .fa-heart--edge {
+  /* animation: fadeOutH 800ms ease-in-out paused forwards;*/
+  /*   animation: fadeInH 800ms ease-in-out running;*/
+  /*  transition: opacity 1000ms step-start;*/
+  /* animation: fadeInH 40ms ease-in-out;*/
+}
+.heart .fa-heart {
+  color: #9356DC;
+  display: block;
+}
+.heart .fa-heart--edge {
+  color: #000;
+  opacity: 1;
+}
+.heart .fa-heart--filled {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  /*  right: 0.11rem;*/
+  opacity: 0;
+  background: -webkit-linear-gradient(175deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes fadeOutH {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeInH {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*
+&::after{
+    z-index: -1;
+    font-family: 'Font Awesome 5 Free';
+    content:'\f004';
+    opacity: 1;
+    transform: scale(1.1, 1.2);
+
+    right: 2rem;
+}*/
 .item {
   border-radius: 0.825rem;
   box-shadow: 0 0.3rem 0.3rem #d0d0d0;
@@ -183,22 +276,6 @@ input[type=checkbox]:checked ~ .anim-ck > .trslt {
   animation-fill-mode: forwards;
 }
 
-.item {
-  animation: hidding 20ms 0ms ease-in-out both, fadeIn 1000ms 200ms forwards;
-}
-.item--1 {
-  animation-delay: 350ms;
-}
-.item--2 {
-  animation-delay: 700ms;
-}
-.item--3 {
-  animation-delay: 1050ms;
-}
-.item--4 {
-  animation-delay: 1400ms;
-}
-
 @keyframes hidding {
   0%, 100% {
     opacity: 0;
@@ -258,10 +335,60 @@ input[type=checkbox]:checked ~ .anim-ck > .trslt {
 }
 
 /* Formulaire */
+.box__title {
+  font-size: 1.275rem;
+  text-transform: uppercase;
+  display: block;
+  margin: 1.5rem 1rem;
+  animation: hidding 20ms 0ms ease-in-out both, fadeIn 1000ms 200ms forwards;
+}
+.box__title--1 {
+  animation-delay: 0ms;
+}
+.box__title--2 {
+  animation-delay: 1400ms;
+}
+.box__title--3 {
+  animation-delay: 2800ms;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.item {
+  animation: hidding 20ms 20ms ease-in-out both, fadeIn 1000ms 220ms forwards;
+}
+.item--1 {
+  animation-delay: 350ms;
+}
+.item--2 {
+  animation-delay: 700ms;
+}
+.item--3 {
+  animation-delay: 1050ms;
+}
+.item--4 {
+  animation-delay: 1400ms;
+}
+
+@keyframes hidding {
+  0%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.05;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=menu.css.map */
