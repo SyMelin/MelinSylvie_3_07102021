@@ -1,13 +1,4 @@
 @charset "UTF-8";
-/*-- Variables colours --*/
-/*-- Variables fonts --*/
-/*-- Variables sizes --*/
-/*@function colortext($color){
-    @if (lightness($color) > 25%){
-
-        @return $color-white;
-    }
-}/* A REVOIR!!! ET PLACER DANS COLOR.SCSS * */
 h3 {
   font-size: 1rem;
   font-weight: 600;
@@ -24,6 +15,11 @@ h3 {
 .card .new {
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+.heart .fa-heart {
+  font-size: 1.25rem;
+  transform: scale(1.1, 1.2);
 }
 
 /*-- typography layout --*/
@@ -177,7 +173,7 @@ header a {
   box-shadow: 0 0.3rem 0.3rem #d0d0d0;
 }
 
-/* Section "Rsetaurants" */
+/* Section "Restaurants" */
 .restaurants {
   margin-top: 0;
   padding: 1.75rem 5%;
@@ -191,6 +187,12 @@ header a {
 
 #resto3 .new, #resto4 .new {
   display: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
 }
 
 /*# sourceMappingURL=home.css.map */
