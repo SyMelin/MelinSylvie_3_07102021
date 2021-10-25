@@ -89,10 +89,8 @@ form{
             font-size: 0.875rem;
         }
     }
-    & .trslt{
-        & .price{
-            font-size: 0.875rem;
-            font-weight: $fw500;
-        }
+    & .price{
+        font-size: 0.875rem;
+        font-weight: $fw500;
     }
 }

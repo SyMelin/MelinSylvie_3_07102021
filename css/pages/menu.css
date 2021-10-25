@@ -76,20 +76,22 @@ form h2 {
 .anim-ck .info__details {
   font-size: 0.875rem;
 }
-.anim-ck .trslt .price {
+.anim-ck .price {
   font-size: 0.875rem;
   font-weight: 500;
 }
 
 .heart {
-  z-index: 2;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+.heart--InCard {
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
   padding: 0.05rem 0.1rem;
-  cursor: pointer;
-  border: none;
-  background-color: white;
+  z-index: 2;
 }
 .heart--InTitle {
   background-color: #f6f6f6;
@@ -104,24 +106,30 @@ form h2 {
   }*/
 }
 .heart:not(:active) .fa-heart--filled {
-  animation: fadeInH 800ms ease-in-out forwards;
+  animation: bouge 1500ms ease-in-out backwards;
+  /* fadeInH 1500ms backwards;*/
+  /*  transition:  width 6000ms step-end;*/
+  /*  animation: fadeInH 800ms ease-in-out forwards;
   /*     animation: fadeOutH 800ms ease-in-out paused backwards; 
        transition: opacity 1000ms 800ms step-start;*/
 }
 .heart:active .fa-heart {
   /*
-  &--filled{
-      animation: fadeInH 800ms ease-in-out running forwards;
-      animation: fadeOutH 800ms ease-in-out running;
-      transition: opacity step-start;
-      animation: fadeOnH 400ms ease-in-out;
-  }*/
-}
-.heart:active .fa-heart--edge {
-  /* animation: fadeOutH 800ms ease-in-out paused forwards;*/
+  &--edge{
+     /* animation: fadeOutH 800ms ease-in-out paused forwards;*/
   /*   animation: fadeInH 800ms ease-in-out running;*/
   /*  transition: opacity 1000ms step-start;*/
-  /* animation: fadeInH 40ms ease-in-out;*/
+  /* animation: fadeInH 40ms ease-in-out;
+  }*/
+}
+.heart:active .fa-heart--filled {
+  /* width: 1.5rem;*/
+  /*   transition: width 10ms step-start;*/
+  /*
+  animation: fadeInH 800ms ease-in-out running forwards;
+  animation: fadeOutH 800ms ease-in-out running;
+  transition: opacity step-start;
+  animation: fadeOnH 400ms ease-in-out;*/
 }
 .heart .fa-heart {
   color: #9356DC;
@@ -135,14 +143,41 @@ form h2 {
   position: absolute;
   z-index: -1;
   bottom: 0;
-  /*  right: 0.11rem;*/
+  right: 0.1rem;
   opacity: 0;
+  /*  width: 0;*/
   background: -webkit-linear-gradient(175deg, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/*
+@keyframes bouge{
+    0%{
+        transform: translateX(2rem);
+    }
+    10%{
+        transform: translateX(0);
+      }
+    100%{
+        transform: translateX(0);
+    }
+}*/
+@keyframes bouge {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  10% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 @keyframes fadeOutH {
   0% {
     opacity: 1;
@@ -169,144 +204,6 @@ form h2 {
 
     right: 2rem;
 }*/
-.item {
-  border-radius: 0.825rem;
-  box-shadow: 0 0.3rem 0.3rem #d0d0d0;
-  background-color: #fff;
-  padding: 0;
-  overflow: hidden;
-  width: 100%;
-}
-
-.dish {
-  display: flex;
-  width: 120%;
-}
-
-input {
-  visibility: hidden;
-  z-index: -1;
-}
-
-.anim-ck {
-  box-sizing: border-box;
-  z-index: 1;
-  margin: 0;
-  margin-left: -0.5rem;
-  width: 120%;
-  height: 4rem;
-  display: flex;
-  flex-direction: row;
-  /*justify-content: space-between;*/
-  /*column-gap: 0.5rem;*/
-  align-items: center;
-  cursor: pointer;
-}
-.anim-ck .info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  width: 90%;
-  padding: 0.5rem 0 0.5rem 0;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.anim-ck .info__title, .anim-ck .info__details {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.anim-ck .trslt {
-  display: flex;
-  width: 35%;
-  height: 100%;
-  background-color: pink;
-}
-.anim-ck .trslt .price {
-  width: 40%;
-  text-align: left;
-  padding-top: 2rem;
-}
-
-.ckbox {
-  width: 60%;
-  height: 100%;
-  /* min-width: 3rem;*/
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  /*padding-left: 0.8rem;*/
-  background-color: #99E2D0;
-  border-radius: 0 1rem 1rem 0;
-  position: relative;
-}
-.ckbox .checkmark {
-  position: absolute;
-  top: 1.5rem;
-  left: 1rem;
-  height: 1.25rem;
-  width: 1.25rem;
-  background-color: white;
-  border-radius: 20rem;
-}
-.ckbox .checkmark::after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-input[type=checkbox]:checked ~ .anim-ck > .trslt > .ckbox > .checkmark::after {
-  display: block;
-  top: 0.2rem;
-  left: 0.4rem;
-  width: 0.25rem;
-  height: 0.5rem;
-  border: solid #99E2D0;
-  border-width: 0 0.1875rem 0.1875rem 0;
-  transform: rotate(46deg);
-}
-
-input[type=checkbox]:checked ~ .anim-ck .info__title, input[type=checkbox]:checked ~ .anim-ck .info__details {
-  animation: widthI 2s ease-in-out forwards;
-}
-input[type=checkbox]:checked ~ .anim-ck > .trslt {
-  animation: moveRight 2s 0ms ease-in-out;
-  transform-origin: right;
-  animation-fill-mode: forwards;
-}
-
-@keyframes hidding {
-  0%, 100% {
-    opacity: 0;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.05;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes widthI {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 70%;
-  }
-}
-@keyframes moveRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 /* Div "Restaurant" */
 .restaurant {
   position: relative;
@@ -347,6 +244,173 @@ input[type=checkbox]:checked ~ .anim-ck > .trslt {
   gap: 1rem;
 }
 
+/* .item */
+.item {
+  border-radius: 0.825rem;
+  box-shadow: 0 0.3rem 0.3rem #d0d0d0;
+  background-color: #fff;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.dish {
+  display: flex;
+  width: 120%;
+}
+
+input {
+  visibility: hidden;
+  z-index: -1;
+}
+
+.anim-ck {
+  box-sizing: border-box;
+  z-index: 1;
+  margin: 0;
+  margin-left: -0.5rem;
+  width: 120%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-between;*/
+  /*column-gap: 0.5rem;*/
+  align-items: flex-end;
+  cursor: pointer;
+}
+.anim-ck .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 85%;
+  padding: 0.5rem 0 0.5rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 1px solid red;
+}
+.anim-ck .info__title, .anim-ck .info__details {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.anim-ck .price {
+  width: 17%;
+  border: 1px solid red;
+  text-align: left;
+  background-color: pink;
+  padding-bottom: 0.425rem;
+}
+.anim-ck .trslt {
+  display: flex;
+  width: 18%;
+  height: 100%;
+}
+
+.ckbox {
+  width: 100%;
+  height: 100%;
+  /* min-width: 3rem;*/
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /*padding-left: 0.8rem;*/
+  background-color: #99E2D0;
+  border-radius: 0 1rem 1rem 0;
+  position: relative;
+}
+.ckbox .checkmark {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: #fff;
+  border-radius: 20rem;
+}
+.ckbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+input[type=checkbox]:checked ~ .anim-ck > .trslt > .ckbox > .checkmark::after {
+  display: block;
+  top: 0.2rem;
+  left: 0.4rem;
+  width: 0.25rem;
+  height: 0.5rem;
+  border: solid #99E2D0;
+  border-width: 0 0.1875rem 0.1875rem 0;
+  transform: rotate(46deg);
+}
+
+input[type=checkbox]:checked ~ .anim-ck .info__title, input[type=checkbox]:checked ~ .anim-ck .info__details {
+  animation: widthI 400ms 50ms ease-in-out forwards;
+}
+input[type=checkbox]:checked ~ .anim-ck .price {
+  animation: moveRightP 300ms 50ms ease-in-out;
+  transform-origin: right;
+  animation-fill-mode: forwards;
+}
+input[type=checkbox]:checked ~ .anim-ck .trslt {
+  /* &__ckbox{*/
+  animation: moveRightCk 500ms ease-in-out;
+  transform-origin: right;
+  animation-fill-mode: forwards;
+}
+input[type=checkbox]:checked ~ .anim-ck .trslt .checkmark::after {
+  animation: spin 500ms ease-in-out;
+}
+
+@keyframes hidding {
+  0%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.05;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes widthI {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes moveRightP {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-70%);
+  }
+}
+@keyframes moveRightCk {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/*-- Animation: apparition progrssive des différents plats --*/
 /* durée totale de l'animation sur un .item */
 .box {
   animation: hidding 20ms 0ms ease-in-out both, fadeInB 1000ms 220ms forwards;

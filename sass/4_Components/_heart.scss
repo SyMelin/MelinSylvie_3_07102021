@@ -1,15 +1,19 @@
 .heart{
-    z-index: 2;
-    position:absolute;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    padding: 0.05rem 0.1rem;
     cursor: pointer;
     border: none;
     background-color: white;
+    &--InCard{
+        position:absolute;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        padding: 0.05rem 0.1rem;
+        z-index: 2;
+    }
     &--InTitle{
         background-color: $color-background;
     }
+
+
     &:not(:active){
         & .fa-heart{/*
             &--edge{
@@ -19,15 +23,16 @@
               transition: opacity 1000ms step-end;
             }*/
             &--filled{
-                animation: bouge 1500ms ease-in-out forwards;/* fadeInH 1500ms backwards;*/
-                transition:  width 1500ms step-end;
-                 
+                animation: bouge 1500ms ease-in-out backwards;/* fadeInH 1500ms backwards;*/
+              /*  transition:  width 6000ms step-end;*/
+                
               /*  animation: fadeInH 800ms ease-in-out forwards;
            /*     animation: fadeOutH 800ms ease-in-out paused backwards; 
                 transition: opacity 1000ms 800ms step-start;*/
             }
         }
     }
+
     
     &:active{
         & .fa-heart{/*
@@ -38,8 +43,8 @@
                /* animation: fadeInH 40ms ease-in-out;
             }*/
             &--filled{
-              width: 1.5rem;
-              /*  transition: width 1500ms step-start;*/
+           /* width: 1.5rem;*/
+         /*   transition: width 10ms step-start;*/
                
                 /*
                 animation: fadeInH 800ms ease-in-out running forwards;
@@ -61,10 +66,9 @@
             position: absolute;
             z-index: -1;
             bottom: 0;
-            right: 2rem;
-          /*  right: 0.11rem;*/
+            right: 0.1rem;
             opacity: 0;
-            width: 0;
+          /*  width: 0;*/
             background: -webkit-#{$gradient};
             background-clip: text;
             -webkit-background-clip: text;
@@ -73,15 +77,31 @@
     }
 }
 
+/*
 @keyframes bouge{
     0%{
-      opacity: 0; transform: translateX(0);
+        transform: translateX(2rem);
     }
     10%{
-        opacity: 0; transform: translateX(-5rem);
+        transform: translateX(0);
       }
     100%{
-        opacity: 1; transform: translateX(-5rem);
+        transform: translateX(0);
+    }
+}*/
+
+
+
+
+@keyframes bouge{
+    0%{
+      opacity: 0; transform: translateX(-5rem);
+    }
+    10%{
+        opacity: 0; transform: translateX(0);
+      }
+    100%{
+        opacity: 1; transform: translateX(0);
     }
 }
 

@@ -1,3 +1,8 @@
+/* le code pour .item se trouve actuellement dans le partiel de la page menu */
+
+
+
+
 
 .item{
     @include rounded-corner($size:0.825rem);
@@ -73,7 +78,7 @@ input {
         left: 1rem;
         height: 1.25rem;
         width: 1.25rem;
-        background-color: white;
+        background-color: $color-white;
         border-radius: 20rem;
         &::after{
             content:"";
@@ -99,17 +104,17 @@ input[type="checkbox"]:checked{
     ~.anim-ck{
         .info{
             &__title, &__details{
-            animation: widthI 2s ease-in-out forwards;
+            animation: widthI 500ms ease-in-out forwards;
             }
         }
         >.trslt{
-            animation: moveRight 2s 0ms ease-in-out;
+            animation: moveRight 500ms 0ms ease-in-out;
             transform-origin: right;
             animation-fill-mode: forwards;
         }
     }
 }
-   
+
 @keyframes hidding{
     0%, 100% {
         opacity: 0;
