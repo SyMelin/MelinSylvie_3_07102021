@@ -20,9 +20,9 @@
         </header>
         <main>
             <div class="restaurant">
-                <img src="../images/restaurants/rest2_la_note_enchantee.jpg" alt="Bienvenue à La note enchantée"/>
+                <img src="../images/restaurants/rest1_la_palette_du_gout.jpg" alt="Bienvenue à La palette du goût"/>
                 <div class="restaurant__name">
-                    <h1>La note enchantée</h1>
+                    <h1>La palette du goût</h1>
                     <button type="button" value="like" class="heart heart--InTitle">
                         <i class="far fa-heart fa-heart--edge"></i>
                         <i class="fas fa-heart fa-heart--filled"></i>
@@ -30,19 +30,21 @@
                 </div>
             </div>
             <form method="post" action="#.php">
-                <div class="box box1">
-                    <h2>Entrées</h2>
+                <div class="box box--1">
+                    <span class="box__title box__title--1">Entrées</span>
                     <div class="container container--1">
                         <div class="item item--1">
                             <label class="dish dish--1" for="appetizer1">
                                 <input type="checkbox" name="appetizer1" id="appetizer1" />
                                 <span class="anim-ck">
                                     <span class="info">
-                                        <span class="info__title">Ravioles de foie gras</span>
-                                        <span class="info__details">Accompagnés de leur crème à la truffe</span>
+                                        <span class="info__description">
+                                            <span class="info__description--title"></span>
+                                            <span class="info__description--details"></span>
+                                        </span>
+                                        <span class="info__price">€</span>
                                     </span>
                                     <span class="trslt">
-                                        <span class="price">25€</span>
                                         <span class="ckbox">
                                             <span class="checkmark"></span>
                                         </span>
@@ -55,28 +57,32 @@
                                 <input type="checkbox" name="appetizer2" id="appetizer2" />
                                 <span class="anim-ck">
                                     <span class="info">
-                                        <span class="info__title">Caviar osciètre</span>
-                                        <span class="info__details">Sur blini à la farine de blé noir</span>
+                                        <span class="info__description">
+                                            <span class="info__description--title"></span>
+                                            <span class="info__description--details"></span>
+                                        </span>
+                                        <span class="info__price">€</span>
                                     </span>
                                     <span class="trslt">
-                                        <span class="price">35€</span>
                                         <span class="ckbox">
                                             <span class="checkmark"></span>
                                         </span>
                                     </span>
                                 </span>
                             </label>
-                        </div> 
+                        </div>
                         <div class="item item--3">
                             <label class="dish dish--3" for="appetizer3">
                                 <input type="checkbox" name="appetizer3" id="appetizer3" />
                                 <span class="anim-ck">
                                     <span class="info">
-                                        <span class="info__title">Homard et espuma de potiron</span>
-                                        <span class="info__details">Mariné aux zests d'orange</span>
+                                        <span class="info__description">
+                                            <span class="info__description--title"></span>
+                                            <span class="info__description--details"></span>
+                                        </span>
+                                        <span class="info__price">€</span>
                                     </span>
                                     <span class="trslt">
-                                        <span class="price">20€</span>
                                         <span class="ckbox">
                                             <span class="checkmark"></span>
                                         </span>
@@ -89,11 +95,13 @@
                                 <input type="checkbox" name="appetizer4" id="appetizer4" />
                                 <span class="anim-ck">
                                     <span class="info">
-                                        <span class="info__title">Foie gras de canard cuit entier</span>
-                                        <span class="info__details">Confiture de figue et pain toasté</span>
+                                        <span class="info__description">
+                                            <span class="info__description--title"></span>
+                                            <span class="info__description--details"></span>
+                                        </span>
+                                        <span class="info__price">€</span>
                                     </span>
                                     <span class="trslt">
-                                        <span class="price">35€</span>
                                         <span class="ckbox">
                                             <span class="checkmark"></span>
                                         </span>
@@ -103,19 +111,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="box box2">
-                    <h2>Plats</h2>
-                    <div class="container container--1">
+                <div class="box box--2">
+                    <span class="box__title box__title--2">Plats</span>
+                    <div class="container container--2">
                         <div class="item item--1">
                             <label class="dish dish--1" for="maincourse1">
                                 <input type="checkbox" name="maincourse1" id="maincourse1" />
                                 <span class="anim-ck">
                                     <span class="info">
-                                        <span class="info__title"></span>
-                                        <span class="info__details"></span>
+                                        <span class="info__description">
+                                            <span class="info__description--title"></span>
+                                            <span class="info__description--details"></span>
+                                        </span>
+                                        <span class="info__price">€</span>
                                     </span>
                                     <span class="trslt">
-                                        <span class="price"></span>
                                         <span class="ckbox">
                                             <span class="checkmark"></span>
                                         </span>
@@ -128,28 +138,13 @@
                                 <input type="checkbox" name="maincourse2" id="maincourse2" />
                                 <span class="anim-ck">
                                     <span class="info">
-                                        <span class="info__title"></span>
-                                        <span class="info__details"></span>
-                                    </span>
-                                    <span class="trslt">
-                                        <span class="price"></span>
-                                        <span class="ckbox">
-                                            <span class="checkmark"></span>
+                                        <span class="info__description">
+                                            <span class="info__description--title"></span>
+                                            <span class="info__description--details"></span>
                                         </span>
-                                    </span>
-                                </span>
-                            </label>
-                        </div> 
-                        <div class="item item--3">
-                            <label class="dish dish--3" for="maincourse3">
-                                <input type="checkbox" name="maincourse3" id="maincourse3" />
-                                <span class="anim-ck">
-                                    <span class="info">
-                                        <span class="info__title"></span>
-                                        <span class="info__details"></span>
+                                        <span class="info__price">€</span>
                                     </span>
                                     <span class="trslt">
-                                        <span class="price">€</span>
                                         <span class="ckbox">
                                             <span class="checkmark"></span>
                                         </span>
@@ -157,16 +152,18 @@
                                 </span>
                             </label>
                         </div>
-                        <div class="item item--4">
-                            <label class="dish dish--4" for="maincourse4">
-                                <input type="checkbox" name="maincourse4" id="maincourse4" />
+                        <div class="item item--3">
+                            <label class="dish dish--3" for="maincourse3">
+                                <input type="checkbox" name="maincourse3" id="maincourse3" />
                                 <span class="anim-ck">
                                     <span class="info">
-                                        <span class="info__title"></span>
-                                        <span class="info__details"></span>
+                                        <span class="info__description">
+                                            <span class="info__description--title"></span>
+                                            <span class="info__description--details"></span>
+                                        </span>
+                                        <span class="info__price">€</span>
                                     </span>
                                     <span class="trslt">
-                                        <span class="price">€</span>
                                         <span class="ckbox">
                                             <span class="checkmark"></span>
                                         </span>
@@ -176,19 +173,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="box box3">
-                    <h2>Desserts</h2>
-                    <div class="container container--1">
+                <div class="box box--3">
+                    <span class="box__title box__title--3">Desserts</span>
+                    <div class="container container--3">
                         <div class="item item--1">
-                            <label class="dish dish--1" for="maincourse1">
-                                <input type="checkbox" name="maincourse1" id="maincourse1" />
+                            <label class="dish dish--1" for="dessert1">
+                                <input type="checkbox" name="dessert1" id="dessert1" />
                                 <span class="anim-ck">
                                     <span class="info">
-                                        <span class="info__title"></span>
-                                        <span class="info__details"></span>
+                                        <span class="info__description">
+                                            <span class="info__description--title"></span>
+                                            <span class="info__description--details"></span>
+                                        </span>
+                                        <span class="info__price">€</span>
                                     </span>
                                     <span class="trslt">
-                                        <span class="price"></span>
                                         <span class="ckbox">
                                             <span class="checkmark"></span>
                                         </span>
@@ -197,32 +196,17 @@
                             </label>
                         </div>
                         <div class="item item--2">
-                            <label class="dish dish--2" for="maincourse2">
-                                <input type="checkbox" name="maincourse2" id="maincourse2" />
+                            <label class="dish dish--2" for="dessert2">
+                                <input type="checkbox" name="dessert2" id="dessert2" />
                                 <span class="anim-ck">
                                     <span class="info">
-                                        <span class="info__title"></span>
-                                        <span class="info__details"></span>
-                                    </span>
-                                    <span class="trslt">
-                                        <span class="price"></span>
-                                        <span class="ckbox">
-                                            <span class="checkmark"></span>
+                                        <span class="info__description">
+                                            <span class="info__description--title"></span>
+                                            <span class="info__description--details"></span>
                                         </span>
-                                    </span>
-                                </span>
-                            </label>
-                        </div> 
-                        <div class="item item--3">
-                            <label class="dish dish--3" for="maincourse3">
-                                <input type="checkbox" name="maincourse3" id="maincourse3" />
-                                <span class="anim-ck">
-                                    <span class="info">
-                                        <span class="info__title"></span>
-                                        <span class="info__details"></span>
+                                        <span class="info__price">€</span>
                                     </span>
                                     <span class="trslt">
-                                        <span class="price">€</span>
                                         <span class="ckbox">
                                             <span class="checkmark"></span>
                                         </span>
@@ -230,16 +214,18 @@
                                 </span>
                             </label>
                         </div>
-                        <div class="item item--4">
-                            <label class="dish dish--4" for="maincourse4">
-                                <input type="checkbox" name="maincourse4" id="maincourse4" />
+                        <div class="item item--3">
+                            <label class="dish dish--3" for="dessert3">
+                                <input type="checkbox" name="dessert3" id="dessert3" />
                                 <span class="anim-ck">
                                     <span class="info">
-                                        <span class="info__title"></span>
-                                        <span class="info__details"></span>
+                                        <span class="info__description">
+                                            <span class="info__description--title"></span>
+                                            <span class="info__description--details"></span>
+                                        </span>
+                                        <span class="info__price">€</span>
                                     </span>
                                     <span class="trslt">
-                                        <span class="price">€</span>
                                         <span class="ckbox">
                                             <span class="checkmark"></span>
                                         </span>
@@ -253,13 +239,6 @@
                     <button type="submit" value="Commander" class="btn btn--form">Commander</button>
                 </p>
             </form>
-                 
-                  
-                    <h2>Desserts</h2>
-
-                -->
-                    
-
         </main>
         <footer>
             <h4>ohmyfood</h4>
@@ -267,7 +246,7 @@
                 <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
                 <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
                 <li><a href="#">Mentions légales</a></li>
-                <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
+                <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
             </ul>
         </footer>
     </body>
