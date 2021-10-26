@@ -1,3 +1,6 @@
+$opaHf: 0;
+
+
 .heart{
     cursor: pointer;
     border: none;
@@ -12,8 +15,6 @@
     &--InTitle{
         background-color: $color-background;
     }
-
-
     &:not(:active){
         & .fa-heart{/*
             &--edge{
@@ -23,8 +24,9 @@
               transition: opacity 1000ms step-end;
             }*/
             &--filled{
-                animation: bouge 1500ms ease-in-out backwards;/* fadeInH 1500ms backwards;*/
-              /*  transition:  width 6000ms step-end;*/
+                animation: bouge 1500ms ease-in-out backwards, holdoncolor 1ms 1500ms infinite;
+                /* fadeInH 1500ms backwards;*/
+              transition:  width 6000ms step-end;
                 
               /*  animation: fadeInH 800ms ease-in-out forwards;
            /*     animation: fadeOutH 800ms ease-in-out paused backwards; 
@@ -32,8 +34,6 @@
             }
         }
     }
-
-    
     &:active{
         & .fa-heart{/*
             &--edge{
@@ -43,8 +43,8 @@
                /* animation: fadeInH 40ms ease-in-out;
             }*/
             &--filled{
-           /* width: 1.5rem;*/
-         /*   transition: width 10ms step-start;*/
+            width: 1.5rem;
+         transition: width 10ms step-start;
                
                 /*
                 animation: fadeInH 800ms ease-in-out running forwards;
@@ -54,7 +54,6 @@
             }
         }
     }
-
     .fa-heart{
         color: $color-primary;
         display: block;
@@ -67,8 +66,8 @@
             z-index: -1;
             bottom: 0;
             right: 0.1rem;
-            opacity: 0;
-          /*  width: 0;*/
+            opacity: $opaHf;
+           width: 0;
             background: -webkit-#{$gradient};
             background-clip: text;
             -webkit-background-clip: text;
@@ -76,6 +75,8 @@
         }
     }
 }
+
+
 
 /*
 @keyframes bouge{
@@ -104,6 +105,14 @@
         opacity: 1; transform: translateX(0);
     }
 }
+
+@keyframes holdoncolor{
+    0%, 100%{
+        opacity: 1;
+    }
+}
+
+
 
 @keyframes fadeOutH{
     0%{
