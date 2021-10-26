@@ -99,6 +99,7 @@ input {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            @include border;
         }
     }
     & .price{
@@ -137,11 +138,19 @@ input {
         &::after{
             content:"";
             position: absolute;
-            display: none;
+           /* display: none;*/
+           display: block;
+        top: 0.2rem;
+        left: 0.4rem;
+        width: 0.25rem;
+        height: 0.5rem;
+        border: solid $color-tertiary;
+        border-width: 0 0.1875rem 0.1875rem 0;
+        transform: rotate(46deg);
         }
     }
 }
-
+/*
 input[type="checkbox"]:checked ~.anim-ck >.trslt>.ckbox >.checkmark::after{
     display: block;
     top: 0.2rem;
@@ -152,26 +161,26 @@ input[type="checkbox"]:checked ~.anim-ck >.trslt>.ckbox >.checkmark::after{
     border-width: 0 0.1875rem 0.1875rem 0;
     transform: rotate(46deg);
 }
-
+*/
 
 input[type="checkbox"]:checked{
-    ~.anim-ck{
+    + .anim-ck{
         .info{
             &__title, &__details{
-            animation: widthI 400ms 50ms ease-in-out forwards;
+            animation: widthI 300ms 100ms ease-in-out forwards;
             }
         }
         .price{
-                animation: moveRightP 300ms 50ms ease-in-out;
+                animation: moveLeftP 300ms 200ms ease-in-out both;
                 transform-origin: right;
-                animation-fill-mode: forwards;
+
             }
         .trslt{ 
             
            /* &__ckbox{*/
-                animation: moveRightCk 500ms ease-in-out;
+                animation: moveLeftCk 500ms ease-in-out both;
                 transform-origin: right;
-                animation-fill-mode: forwards;
+                
                 .checkmark::after{
                     animation: spin 500ms ease-in-out;
                 }
@@ -179,6 +188,23 @@ input[type="checkbox"]:checked{
         }
     }
 }
+
+input[type="checkbox"]:not(:checked){
+    + .anim-ck{/*
+        .info{
+            &__title, &__details{
+            animation: widthI 300ms 100ms ease-in-out reverse;
+            }
+        }/*
+        .price{
+            animation: moveLeftP 300ms 100ms ease-in-out reverse;
+        }*/
+        .trslt{
+         animation: moveLeftP 500ms ease-in-out reverse;
+        }
+    }
+}
+
 
 @keyframes hidding{
     0%, 100% {
@@ -216,7 +242,7 @@ input[type="checkbox"]:checked{
         width: 70%;
     }
 }
-@keyframes moveRightP{
+@keyframes moveLeftP{
     0%{
     transform: translateX(0);
     }
@@ -224,7 +250,7 @@ input[type="checkbox"]:checked{
     transform: translateX(-70%);
     }
 }
-@keyframes moveRightCk{
+@keyframes moveLeftCk{
     0%{
     transform: translateX(0);
     }

@@ -293,6 +293,7 @@ input {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  border: 1px solid red;
 }
 .anim-ck .price {
   width: 17%;
@@ -330,10 +331,7 @@ input {
 .ckbox .checkmark::after {
   content: "";
   position: absolute;
-  display: none;
-}
-
-input[type=checkbox]:checked ~ .anim-ck > .trslt > .ckbox > .checkmark::after {
+  /* display: none;*/
   display: block;
   top: 0.2rem;
   left: 0.4rem;
@@ -344,22 +342,47 @@ input[type=checkbox]:checked ~ .anim-ck > .trslt > .ckbox > .checkmark::after {
   transform: rotate(46deg);
 }
 
-input[type=checkbox]:checked ~ .anim-ck .info__title, input[type=checkbox]:checked ~ .anim-ck .info__details {
-  animation: widthI 400ms 50ms ease-in-out forwards;
+/*
+input[type="checkbox"]:checked ~.anim-ck >.trslt>.ckbox >.checkmark::after{
+    display: block;
+    top: 0.2rem;
+    left: 0.4rem;
+    width: 0.25rem;
+    height: 0.5rem;
+    border: solid $color-tertiary;
+    border-width: 0 0.1875rem 0.1875rem 0;
+    transform: rotate(46deg);
 }
-input[type=checkbox]:checked ~ .anim-ck .price {
-  animation: moveRightP 300ms 50ms ease-in-out;
+*/
+input[type=checkbox]:checked + .anim-ck .info__title, input[type=checkbox]:checked + .anim-ck .info__details {
+  animation: widthI 300ms 100ms ease-in-out forwards;
+}
+input[type=checkbox]:checked + .anim-ck .price {
+  animation: moveLeftP 300ms 200ms ease-in-out both;
   transform-origin: right;
-  animation-fill-mode: forwards;
 }
-input[type=checkbox]:checked ~ .anim-ck .trslt {
+input[type=checkbox]:checked + .anim-ck .trslt {
   /* &__ckbox{*/
-  animation: moveRightCk 500ms ease-in-out;
+  animation: moveLeftCk 500ms ease-in-out both;
   transform-origin: right;
-  animation-fill-mode: forwards;
 }
-input[type=checkbox]:checked ~ .anim-ck .trslt .checkmark::after {
+input[type=checkbox]:checked + .anim-ck .trslt .checkmark::after {
   animation: spin 500ms ease-in-out;
+}
+
+input[type=checkbox]:not(:checked) + .anim-ck {
+  /*
+  .info{
+      &__title, &__details{
+      animation: widthI 300ms 100ms ease-in-out reverse;
+      }
+  }/*
+  .price{
+      animation: moveLeftP 300ms 100ms ease-in-out reverse;
+  }*/
+}
+input[type=checkbox]:not(:checked) + .anim-ck .trslt {
+  animation: moveLeftP 500ms ease-in-out reverse;
 }
 
 @keyframes hidding {
@@ -394,7 +417,7 @@ input[type=checkbox]:checked ~ .anim-ck .trslt .checkmark::after {
     width: 70%;
   }
 }
-@keyframes moveRightP {
+@keyframes moveLeftP {
   0% {
     transform: translateX(0);
   }
@@ -402,7 +425,7 @@ input[type=checkbox]:checked ~ .anim-ck .trslt .checkmark::after {
     transform: translateX(-70%);
   }
 }
-@keyframes moveRightCk {
+@keyframes moveLeftCk {
   0% {
     transform: translateX(0);
   }
