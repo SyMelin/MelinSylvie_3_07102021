@@ -79,18 +79,18 @@ form{
     }
 }
 
-.anim-ck{
-    & .info{
-        &__title{
+.info{
+    &__description{
+        &--title{
             font-size: 1.0625rem;
             font-weight: $fw600;
         }
-        &__details{
+        &--details{
             font-size: 0.875rem;
         }
     }
-    & .price{
+    &__price{
         font-size: 0.875rem;
-        font-weight: $fw500;
+        font-weight: $fw900;
     }
 }

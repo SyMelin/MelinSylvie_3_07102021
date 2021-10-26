@@ -69,16 +69,16 @@ form h2 {
   text-transform: uppercase;
 }
 
-.anim-ck .info__title {
+.info__description--title {
   font-size: 1.0625rem;
   font-weight: 600;
 }
-.anim-ck .info__details {
+.info__description--details {
   font-size: 0.875rem;
 }
-.anim-ck .price {
+.info__price {
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 900;
 }
 
 .heart {
@@ -256,7 +256,7 @@ form h2 {
 
 .dish {
   display: flex;
-  width: 120%;
+  /*width: 100%;*/
 }
 
 input {
@@ -265,47 +265,56 @@ input {
 }
 
 .anim-ck {
-  box-sizing: border-box;
+  /* box-sizing: border-box;*/
   z-index: 1;
   margin: 0;
-  margin-left: -0.5rem;
-  width: 120%;
+  margin-left: -1rem;
+  width: 100%;
   height: 4rem;
   display: flex;
   flex-direction: row;
-  /*justify-content: space-between;*/
-  /*column-gap: 0.5rem;*/
   align-items: flex-end;
   cursor: pointer;
 }
 .anim-ck .info {
+  z-index: 1;
+  border: 1px solid red;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+.anim-ck .info__description {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  width: 85%;
-  padding: 0.5rem 0 0.5rem 0;
+  width: 90%;
+  padding: 0.5rem 0;
   white-space: nowrap;
   overflow: hidden;
   border: 1px solid red;
 }
-.anim-ck .info__title, .anim-ck .info__details {
+.anim-ck .info__description--title, .anim-ck .info__description--details {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   border: 1px solid red;
 }
-.anim-ck .price {
-  width: 17%;
-  border: 1px solid red;
+.anim-ck .info__price {
+  width: 20%;
+  max-width: 3rem;
   text-align: left;
+  margin-bottom: 0.5rem;
   background-color: pink;
-  padding-bottom: 0.425rem;
 }
 .anim-ck .trslt {
+  z-index: 2;
   display: flex;
-  width: 18%;
+  width: 20%;
+  min-width: 3.5rem;
   height: 100%;
+  position: absolute;
+  right: -20%;
 }
 
 .ckbox {
@@ -316,7 +325,6 @@ input {
   padding-bottom: 1rem;
   /*padding-left: 0.8rem;*/
   background-color: #99E2D0;
-  border-radius: 0 1rem 1rem 0;
   position: relative;
 }
 .ckbox .checkmark {
@@ -354,37 +362,38 @@ input[type="checkbox"]:checked ~.anim-ck >.trslt>.ckbox >.checkmark::after{
     transform: rotate(46deg);
 }
 */
-input[type=checkbox]:checked + .anim-ck .info__title, input[type=checkbox]:checked + .anim-ck .info__details {
-  animation: widthI 300ms 100ms ease-in-out forwards;
+input[type=checkbox]:checked + .anim-ck .info {
+  animation: widthI 350ms 50ms ease-in-out forwards;
 }
-input[type=checkbox]:checked + .anim-ck .price {
-  animation: moveLeftP 300ms 200ms ease-in-out both;
-  transform-origin: right;
+input[type=checkbox]:checked + .anim-ck .info__description--title, input[type=checkbox]:checked + .anim-ck .info__description--details {
+  animation: widthID 350ms 100ms ease-in-out forwards;
 }
 input[type=checkbox]:checked + .anim-ck .trslt {
   /* &__ckbox{*/
-  animation: moveLeftCk 500ms ease-in-out both;
+  animation: moveLeftCk 350ms ease-in-out both;
   transform-origin: right;
 }
 input[type=checkbox]:checked + .anim-ck .trslt .checkmark::after {
-  animation: spin 500ms ease-in-out;
+  animation: spin 350ms ease-in-out;
+  animation-iteration-count: 1;
 }
 
-input[type=checkbox]:not(:checked) + .anim-ck {
-  /*
-  .info{
-      &__title, &__details{
-      animation: widthI 300ms 100ms ease-in-out reverse;
-      }
-  }/*
-  .price{
-      animation: moveLeftP 300ms 100ms ease-in-out reverse;
-  }*/
-}
-input[type=checkbox]:not(:checked) + .anim-ck .trslt {
-  animation: moveLeftP 500ms ease-in-out reverse;
-}
-
+/*
+input[type="checkbox"]:not(:checked){
+    + .anim-ck{/*
+        .info{
+            &__title, &__details{
+            animation: widthI 300ms 100ms ease-in-out reverse;
+            }
+        }/*
+        .price{
+            animation: moveLeftP 300ms 100ms ease-in-out reverse;
+        }
+        .trslt{
+         animation: moveLeftP 500ms ease-in-out reverse;
+        }
+    }
+}*/
 @keyframes hidding {
   0%, 100% {
     opacity: 0;
@@ -414,15 +423,15 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
     width: 100%;
   }
   to {
-    width: 70%;
+    width: 85%;
   }
 }
-@keyframes moveLeftP {
-  0% {
-    transform: translateX(0);
+@keyframes widthID {
+  from {
+    width: 100%;
   }
-  100% {
-    transform: translateX(-70%);
+  to {
+    width: 95%;
   }
 }
 @keyframes moveLeftCk {
@@ -430,10 +439,10 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-80%);
   }
 }
-/*-- Animation: apparition progrssive des différents plats --*/
+/*-- Animation: apparition progressive des différents plats --*/
 /* durée totale de l'animation sur un .item */
 .box {
   animation: hidding 20ms 0ms ease-in-out both, fadeInB 1000ms 220ms forwards;
