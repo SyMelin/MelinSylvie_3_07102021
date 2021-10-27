@@ -1,17 +1,17 @@
-@import "1_Utils/variables";
-@import "1_Utils/functions";
-@import "1_Utils/mixins";
-@import "1_Utils/placeholders";
+@import "Utils/variables";
+@import "Utils/functions";
+@import "Utils/mixins";
+@import "Utils/placeholders";
 
-@import "3_Base/fonts";
-@import "3_Base/colors";
-@import "3_Base/typography";
+@import "Base/fonts";
+@import "Base/colors";
+@import "Base/typography";
 
 
-@import "4_Components/bouton";
-@import "4_Components/card";
-@import "4_Components/heart";
+@import "Components/bouton";
+@import "Components/card";
+@import "Components/heart";
 
-@import "5_Layout/header";
-@import "5_Layout/footer";
-@import "5_Layout/container";
+@import "Layout/header";
+@import "Layout/footer";
+@import "Layout/container";

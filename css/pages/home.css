@@ -62,16 +62,16 @@ form h2 {
   text-transform: uppercase;
 }
 
-.anim-ck .info__title {
+.info__description--title {
   font-size: 1.0625rem;
   font-weight: 600;
 }
-.anim-ck .info__details {
+.info__description--details {
   font-size: 0.875rem;
 }
-.anim-ck .trslt .price {
+.info__price {
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 900;
 }
 
 body {
