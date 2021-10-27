@@ -7,23 +7,24 @@
 /* Div "Restaurant" */
 .restaurant{
     position: relative;
-    img{
+    &__img{
         width: 100%;
         height: 20rem;
         object-fit: cover;
     }
     &__name{
+        box-sizing: border-box;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         position: absolute;
         bottom: 0;
         width: 100%;
+        padding: 1.5rem 1rem 0.5rem 1rem;
         background-color: $color-background;
         border-radius: 1.5rem 1.5rem 0 0;
         /*border: 1px solid black;*/
         h1{
-            @include font-title;
             border: 1px solid black;
         }
     }

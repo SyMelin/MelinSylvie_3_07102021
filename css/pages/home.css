@@ -1,79 +1,4 @@
 @charset "UTF-8";
-h3 {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-/*-- typography components --*/
-.btn {
-  font-weight: 500;
-}
-
-.card__bottom .info h3 {
-  font-size: 1.1rem;
-}
-.card .new {
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.heart .fa-heart {
-  font-size: 1.25rem;
-  transform: scale(1.1, 1.2);
-}
-
-/*-- typography layout --*/
-body {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-h4 {
-  font-family: "Shrikhand", "cursive";
-  font-weight: 100;
-}
-
-/*-- typography page home --*/
-.selection__localisation {
-  font-size: 0.925rem;
-  font-weight: 600;
-}
-.selection__localisation .fas {
-  font-size: 1rem;
-}
-.selection h1 {
-  font-size: 1.5rem;
-  font-weight: 900;
-}
-.selection > p {
-  font-size: 1.1rem;
-}
-.selection .btn {
-  font-size: 0.875rem;
-}
-
-.fonctionnement h2 {
-  font-size: 1.5rem;
-}
-
-/*-- typography page menu --*/
-form h2 {
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.info__description--title {
-  font-size: 1.0625rem;
-  font-weight: 600;
-}
-.info__description--details {
-  font-size: 0.875rem;
-}
-.info__price {
-  font-size: 0.875rem;
-  font-weight: 900;
-}
-
 body {
   margin: 0;
   z-index: 1;
@@ -112,11 +37,12 @@ body header, body main, body footer {
     opacity: 1;
   }
 }
-header a {
+/*-- Header --*/
+.header__link--back {
   display: none;
 }
 
-/* Section "Selection" */
+/*-- Section "Selection" --*/
 .selection {
   display: flex;
   flex-direction: column;
@@ -173,7 +99,7 @@ header a {
   box-shadow: 0 0.3rem 0.3rem #d0d0d0;
 }
 
-/* Section "Restaurants" */
+/*-- Section "Restaurants" --*/
 .restaurants {
   margin-top: 0;
   padding: 1.75rem 5%;

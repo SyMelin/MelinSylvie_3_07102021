@@ -7,11 +7,14 @@ header{
     align-items: center;
     position: relative;
     box-shadow: 0 3px 2px darken($color-background, 15);
-    a{
+    .header{
+        &__link--back{
         position: absolute;
         left: 10px;
-    }
-    img{
-        width: 10rem;
+        color: #000;
+        }
+        &__logo{
+            width: 10rem;
+        }
     }
 }
