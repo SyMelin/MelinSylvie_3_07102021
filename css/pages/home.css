@@ -105,7 +105,7 @@ body header, body main, body footer {
   padding: 1.75rem 5%;
 }
 
-.card-container {
+.restaurants__container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -113,12 +113,6 @@ body header, body main, body footer {
 
 #resto3 .new, #resto4 .new {
   display: none;
-}
-
-.heart {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
 }
 
 /*# sourceMappingURL=home.css.map */

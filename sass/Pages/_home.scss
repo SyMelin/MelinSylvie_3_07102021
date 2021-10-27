@@ -44,7 +44,7 @@ body{
 
 /*-- Header --*/
 .header__link--back{
-        display: none;
+    display: none;
 }
 
 /*-- Section "Selection" --*/
@@ -109,7 +109,7 @@ body{
     padding: 1.75rem 5%;
 }
 
-.card-container{
+.restaurants__container{
     @include flex-col-gap;
 }
 
@@ -118,8 +118,3 @@ body{
         display: none;
     }
 }
-
-.heart{
-    position:absolute;
-    bottom: 1.5rem;
-    right: 1.5rem;}

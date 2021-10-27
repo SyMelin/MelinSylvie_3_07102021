@@ -20,7 +20,6 @@ form{
 }
 
 
-
 /*-- typography Components _animChecked --*/
 .anim-ck{
     .info{
@@ -50,12 +49,16 @@ form{
 /*-- typography Components _card --*/
 .card{
     &__bottom{
-        & .info{
+        .info{
             h3{
                 font-size: 1.1rem;
+                font-weight: $fw600;
             }
         }
     }
+}
+
+.card{
     .new{
         font-size: 0.8rem;
         font-weight: $fw500; 
@@ -94,16 +97,13 @@ form{
     }
 }
 
-.fonctionnement{
+.main--index{
     h2{
         font-size: 1.5rem;
-    }
+        font-weight: $fw600;
+    } 
 }
 
-/*-- typography Pages _home --*/
-h1{
-    font-size: 2rem;
-}
 
 /*-- typography Pages _menu --*/
 .restaurant__name{
