@@ -107,11 +107,12 @@ header {
   position: relative;
   box-shadow: 0 3px 2px #d0d0d0;
 }
-header a {
+header .header__link--back {
   position: absolute;
   left: 10px;
+  color: #000;
 }
-header img {
+header .header__logo {
   width: 10rem;
 }
 

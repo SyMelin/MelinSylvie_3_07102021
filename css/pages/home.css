@@ -68,11 +68,12 @@ body header, body main, body footer {
     opacity: 1;
   }
 }
-header a {
+/*-- Header --*/
+.header__link--back {
   display: none;
 }
 
-/* Section "Selection" */
+/*-- Section "Selection" --*/
 .selection {
   display: flex;
   flex-direction: column;
@@ -129,7 +130,7 @@ header a {
   box-shadow: 0 0.3rem 0.3rem #d0d0d0;
 }
 
-/* Section "Restaurants" */
+/*-- Section "Restaurants" --*/
 .restaurants {
   margin-top: 0;
   padding: 1.75rem 5%;
@@ -142,12 +143,6 @@ header a {
 
 #resto3 .new, #resto4 .new {
   display: none;
-}
-
-.heart {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
 }
 
 /*# sourceMappingURL=home.css.map */

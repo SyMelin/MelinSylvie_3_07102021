@@ -75,14 +75,12 @@ body{
     }
 }
 
-
-header{
-    a {
-        display: none;
-    }
+/*-- Header --*/
+.header__link--back{
+    display: none;
 }
 
-/* Section "Selection" */
+/*-- Section "Selection" --*/
 .selection{
     display: flex;
     flex-direction: column;
@@ -138,12 +136,12 @@ header{
     }
 }
 
-/* Section "Restaurants" */
+/*-- Section "Restaurants" --*/
 .restaurants{
     margin-top: 0;
     padding: 1.75rem 5%;
     &__container{
-    @include flex-col-gap;
+        @include flex-col-gap;
     }
 }
 
@@ -152,8 +150,3 @@ header{
         display: none;
     }
 }
-
-.heart{
-    position:absolute;
-    bottom: 1.5rem;
-    right: 1.5rem;}
