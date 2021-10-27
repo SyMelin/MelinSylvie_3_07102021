@@ -2,11 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Shrikhand&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
-h3 {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -19,25 +14,7 @@ header, .fonctionnement {
   background-color: #fff;
 }
 
-/*-- typography components --*/
-.btn {
-  font-weight: 500;
-}
-
-.card__bottom .info h3 {
-  font-size: 1.1rem;
-}
-.card .new {
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.heart .fa-heart {
-  font-size: 1.25rem;
-  transform: scale(1.1, 1.2);
-}
-
-/*-- typography layout --*/
+/*-- typography valable partout --*/
 body {
   font-size: 1rem;
   font-weight: 400;
@@ -48,7 +25,48 @@ h4 {
   font-weight: 100;
 }
 
-/*-- typography page home --*/
+/*-- typography Layout _form --*/
+form .form-box__title {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/*-- typography Components _animChecked --*/
+.anim-ck .info__description--title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+.anim-ck .info__description--details {
+  font-size: 0.875rem;
+}
+.anim-ck .info__price {
+  font-size: 0.875rem;
+  font-weight: 900;
+}
+
+/*-- typography Components _bouton --*/
+.btn {
+  font-weight: 500;
+}
+
+/*-- typography Components _card --*/
+.card__bottom .info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card .new {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/*-- typography Components _heart --*/
+.heart .fa-heart {
+  font-size: 1.25rem;
+  transform: scale(1.1, 1.2);
+}
+
+/*-- typography Pages _home --*/
 .selection__localisation {
   font-size: 0.925rem;
   font-weight: 600;
@@ -67,26 +85,16 @@ h4 {
   font-size: 0.875rem;
 }
 
-.fonctionnement h2 {
+.main--index h2 {
   font-size: 1.5rem;
-}
-
-/*-- typography page menu --*/
-form h2 {
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.info__description--title {
-  font-size: 1.0625rem;
   font-weight: 600;
 }
-.info__description--details {
-  font-size: 0.875rem;
-}
-.info__price {
-  font-size: 0.875rem;
-  font-weight: 900;
+
+/*-- typography Pages _menu --*/
+.restaurant__name h1 {
+  font-size: 1.825rem;
+  font-family: "Shrikhand", "cursive";
+  font-weight: 100;
 }
 
 header {
@@ -398,21 +406,6 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
     transform: translateX(0%);
   }
 }
-/*.btn{
-    /*border: none;*/
-/* @include bouton;
-    @include shadow(0, 0.3rem, 0.3rem, darken($color-background, 15%));
-    filter: brightness(1);
-    transition: shadow 350ms, filter 400ms;
-    transition-delay: 0, 150ms;
-    &:hover{
-        filter: brightness(1.3);
-        @include shadow(0, 0.2rem, 0.2rem, darken($color-background, 75%));
-        }
-    &--form{
-        border: none;
-    }
-}*/
 .btn {
   display: block;
   text-align: center;
@@ -541,6 +534,9 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
 .heart--InTitle {
   background-color: #f6f6f6;
   position: relative;
+}
+.heart--InTitle .fa-heart {
+  margin-right: 0.75rem;
 }
 .heart--InTitle .fa-heart--filled {
   right: 0;

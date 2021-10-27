@@ -15,12 +15,12 @@
     </head>
     <body>
         <header>
-            <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
-            <img src="../images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood" />
+            <a class="header__link--back" href="../index.html"><i class="fas fa-arrow-left"></i></a>
+            <img class="header__logo" src="../images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood" />
         </header>
         <main>
             <div class="restaurant">
-                <img src="../images/restaurants/rest1_la_palette_du_gout.jpg" alt="Bienvenue à La palette du goût"/>
+                <img class="restaurant__img" src="../images/restaurants/rest1_la_palette_du_gout.jpg" alt="Bienvenue à La palette du goût"/>
                 <div class="restaurant__name">
                     <h1>La palette du goût</h1>
                     <button type="button" value="like" class="heart heart--InTitle">
@@ -30,9 +30,9 @@
                 </div>
             </div>
             <form method="post" action="#.php">
-                <div class="box box--1">
-                    <span class="box__title box__title--1">Entrées</span>
-                    <div class="container container--1">
+                <div class="form-box form-box--1">
+                    <span class="form-box__title form-box__title--1">Entrées</span>
+                    <div class="form-box__container form-box__container--1">
                         <div class="item item--1">
                             <label class="dish dish--1" for="appetizer1">
                                 <input type="checkbox" name="appetizer1" id="appetizer1" />
@@ -111,9 +111,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="box box--2">
-                    <span class="box__title box__title--2">Plats</span>
-                    <div class="container container--2">
+                <div class="form-box form-box--2">
+                    <span class="form-box__title form-box__title--2">Plats</span>
+                    <div class="form-box__container form-box__container--2">
                         <div class="item item--1">
                             <label class="dish dish--1" for="maincourse1">
                                 <input type="checkbox" name="maincourse1" id="maincourse1" />
@@ -173,9 +173,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="box box--3">
-                    <span class="box__title box__title--3">Desserts</span>
-                    <div class="container container--3">
+                <div class="form-box form-box--3">
+                    <span class="form-box__title form-box__title--3">Desserts</span>
+                    <div class="form-box__container form-box__container--3">
                         <div class="item item--1">
                             <label class="dish dish--1" for="dessert1">
                                 <input type="checkbox" name="dessert1" id="dessert1" />
@@ -235,7 +235,7 @@
                         </div>
                     </div>
                 </div>
-                <p>
+                <p class="form-button">
                     <button type="submit" value="Commander" class="btn btn--form">Commander</button>
                 </p>
             </form>
