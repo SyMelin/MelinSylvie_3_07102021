@@ -1,0 +1,155 @@
+/*-- .anim-ck = élement qui remplit un .item --*/
+
+.anim-ck{
+    margin: 0;
+    margin-left: -0.5rem; /* pour se placer au-dessus de input masqué dessous */
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    cursor: pointer;
+    & .info{
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        &__description{
+            @include flex-col-gap($size: 0.25rem);
+            width: 90%;
+            padding: 0.5rem 0;
+            white-space: nowrap;
+            overflow: hidden;
+            &--title, &--details{
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        &__price{
+            width: 20%;
+            max-width: 3rem;
+            text-align: left;
+            margin-bottom: 0.5rem;
+            /*background-color: pink;*/
+        }
+    }
+    & .trslt{
+        display: flex;
+        width: 20%;
+        min-width: 3.5rem;
+        height: 100%;
+        position: absolute;
+        right: -20%;
+   }
+}
+
+
+/* Animation quand la checkbox est cochée */ /*Animation quand la checkbox est décochée */
+
+$animCk-dur: 350ms;
+$animNotCk_dur: 300ms;
+
+input[type="checkbox"]{
+    &:checked{
+        + .anim-ck{
+            .info{
+                animation: shrinkI $animCk-dur 50ms ease-in-out forwards;
+                &__description{
+                    &--title, &--details{
+                    animation: shrinkID $animCk-dur 100ms ease-in-out forwards;
+                    }
+                }
+            }
+            .trslt{ 
+            /* &__ckbox{ */
+                animation: moveLeftCk $animCk-dur ease-in-out forwards;
+                transform-origin: right;
+                .checkmark::after{
+                    animation: spin $animCk-dur ease-in-out;
+                    animation-iteration-count: 1;
+                }
+            }
+        }
+    }
+    &:not(:checked){
+        + .anim-ck{
+            .info{
+                animation: growI $animNotCk_dur ease-in-out;
+                &__description{
+                    &--title, &--details{
+                    animation: growID $animNotCk_dur ease-in-out;
+                    }
+                }
+            }
+            .trslt{
+                animation: moveRightCk $animNotCk_dur ease-in-out;
+            }
+        }
+    }
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shrinkI{
+    from{
+        width: 100%;
+    }
+    to{
+        width: 85%;
+    }
+}
+
+@keyframes shrinkID{
+    from{
+        width: 100%;
+    }
+    to{
+        width: 95%;
+    }
+}
+
+@keyframes growI{
+    from{
+        width: 85%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes growID{
+    from{
+        width: 95%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes moveLeftCk{
+    0%{
+    transform: translateX(0);
+    }
+    100%{
+    transform: translateX(-80%);
+    }
+}
+
+@keyframes moveRightCk{
+    0%{
+    transform: translateX(-80%);
+    }
+    100%{
+    transform: translateX(0%);
+    }
+}
+
+

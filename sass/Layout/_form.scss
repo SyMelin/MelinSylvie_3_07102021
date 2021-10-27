@@ -1,0 +1,98 @@
+/* Formulaire */
+form{
+    padding-bottom: 2rem;
+    .form-box{
+        &__title{
+            font-size: 1.275rem;
+            text-transform: uppercase;
+            display: block;
+            margin: 1.5rem $size-d;
+        }
+        &__container{
+            @include flex-col-gap($size: $gs-d);
+        }
+    }
+    .form-button{
+        display: flex;
+        justify-content: center;
+    }/* Bouton Commander */
+}
+
+.item{
+    @include rounded-corner($size:0.825rem);
+    @include shadow(0, 0.3rem, 0.3rem, darken($color-background, 15%));
+    background-color: $color-white;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    & .dish{
+        display: flex;
+        /*width: 100%;*/
+        & input {
+            visibility: hidden;
+            z-index: -1;
+        }
+        & .anim-ck{
+            z-index: 1;
+        }
+    }
+}
+
+
+/*-- Animation: apparition progressive des différents plats --*/
+
+$anim-delay: 350ms;
+$anim-dur: 1220ms; /* durée totale de l'animation sur un .item */
+
+.form-box{
+    animation: hidding 20ms 0ms ease-in-out both, fadeInB 1000ms 220ms forwards;
+    @for $i from 1 through 3 {
+        &--#{$i}{
+            animation-delay: ($anim-delay * 4) * ($i - 1) + $anim-delay * ($i);
+            & .item{
+                animation: hidding 20ms 20ms ease-in-out both, fadeInI 1000ms 220ms forwards, moveUp 1000ms 220ms forwards;
+                @for $j from 1 through 4 {
+                    &--#{$j}{
+                        animation-delay: $anim-delay * $j + ($anim-delay * 4) * ($i - 1) + $anim-delay * ($i);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes hidding{
+    0%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInB {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInI {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0.05;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp{
+    0%{
+        transform: translateY(0em);
+        }
+    100%{
+        transform: translateY(-1em);
+    }
+}

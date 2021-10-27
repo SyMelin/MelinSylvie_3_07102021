@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Shrikhand&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
@@ -88,6 +89,315 @@ form h2 {
   font-weight: 900;
 }
 
+header {
+  width: 100%;
+  padding-top: 1.25rem;
+  padding-bottom: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 3px 2px #d0d0d0;
+}
+header a {
+  position: absolute;
+  left: 10px;
+}
+header img {
+  width: 10rem;
+}
+
+footer {
+  color: #fff;
+  background-color: #535353;
+  padding: 1.5rem;
+}
+footer h4 {
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+footer ul li {
+  font-size: 0.925rem;
+  margin-bottom: 0.3rem;
+}
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+footer ul li a i {
+  font-size: 0.825rem;
+  margin-right: 0.825rem;
+}
+
+/* Formulaire */
+form {
+  padding-bottom: 2rem;
+  /* Bouton Commander */
+}
+form .form-box__title {
+  font-size: 1.275rem;
+  text-transform: uppercase;
+  display: block;
+  margin: 1.5rem 1rem;
+}
+form .form-box__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+form .form-button {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  border-radius: 0.825rem;
+  box-shadow: 0 0.3rem 0.3rem #d0d0d0;
+  background-color: #fff;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.item .dish {
+  display: flex;
+  /*width: 100%;*/
+}
+.item .dish input {
+  visibility: hidden;
+  z-index: -1;
+}
+.item .dish .anim-ck {
+  z-index: 1;
+}
+
+/*-- Animation: apparition progressive des différents plats --*/
+/* durée totale de l'animation sur un .item */
+.form-box {
+  animation: hidding 20ms 0ms ease-in-out both, fadeInB 1000ms 220ms forwards;
+}
+.form-box--1 {
+  animation-delay: 350ms;
+}
+.form-box--1 .item {
+  animation: hidding 20ms 20ms ease-in-out both, fadeInI 1000ms 220ms forwards, moveUp 1000ms 220ms forwards;
+}
+.form-box--1 .item--1 {
+  animation-delay: 700ms;
+}
+.form-box--1 .item--2 {
+  animation-delay: 1050ms;
+}
+.form-box--1 .item--3 {
+  animation-delay: 1400ms;
+}
+.form-box--1 .item--4 {
+  animation-delay: 1750ms;
+}
+.form-box--2 {
+  animation-delay: 2100ms;
+}
+.form-box--2 .item {
+  animation: hidding 20ms 20ms ease-in-out both, fadeInI 1000ms 220ms forwards, moveUp 1000ms 220ms forwards;
+}
+.form-box--2 .item--1 {
+  animation-delay: 2450ms;
+}
+.form-box--2 .item--2 {
+  animation-delay: 2800ms;
+}
+.form-box--2 .item--3 {
+  animation-delay: 3150ms;
+}
+.form-box--2 .item--4 {
+  animation-delay: 3500ms;
+}
+.form-box--3 {
+  animation-delay: 3850ms;
+}
+.form-box--3 .item {
+  animation: hidding 20ms 20ms ease-in-out both, fadeInI 1000ms 220ms forwards, moveUp 1000ms 220ms forwards;
+}
+.form-box--3 .item--1 {
+  animation-delay: 4200ms;
+}
+.form-box--3 .item--2 {
+  animation-delay: 4550ms;
+}
+.form-box--3 .item--3 {
+  animation-delay: 4900ms;
+}
+.form-box--3 .item--4 {
+  animation-delay: 5250ms;
+}
+
+@keyframes hidding {
+  0%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeInB {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInI {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.05;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(0em);
+  }
+  100% {
+    transform: translateY(-1em);
+  }
+}
+/*-- .anim-ck = élement qui remplit un .item --*/
+.anim-ck {
+  margin: 0;
+  margin-left: -0.5rem;
+  /* pour se placer au-dessus de input masqué dessous */
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  cursor: pointer;
+}
+.anim-ck .info {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+.anim-ck .info__description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 90%;
+  padding: 0.5rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.anim-ck .info__description--title, .anim-ck .info__description--details {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.anim-ck .info__price {
+  width: 20%;
+  max-width: 3rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  /*background-color: pink;*/
+}
+.anim-ck .trslt {
+  display: flex;
+  width: 20%;
+  min-width: 3.5rem;
+  height: 100%;
+  position: absolute;
+  right: -20%;
+}
+
+/* Animation quand la checkbox est cochée */
+/*Animation quand la checkbox est décochée */
+input[type=checkbox]:checked + .anim-ck .info {
+  animation: shrinkI 350ms 50ms ease-in-out forwards;
+}
+input[type=checkbox]:checked + .anim-ck .info__description--title, input[type=checkbox]:checked + .anim-ck .info__description--details {
+  animation: shrinkID 350ms 100ms ease-in-out forwards;
+}
+input[type=checkbox]:checked + .anim-ck .trslt {
+  /* &__ckbox{ */
+  animation: moveLeftCk 350ms ease-in-out forwards;
+  transform-origin: right;
+}
+input[type=checkbox]:checked + .anim-ck .trslt .checkmark::after {
+  animation: spin 350ms ease-in-out;
+  animation-iteration-count: 1;
+}
+input[type=checkbox]:not(:checked) + .anim-ck .info {
+  animation: growI 300ms ease-in-out;
+}
+input[type=checkbox]:not(:checked) + .anim-ck .info__description--title, input[type=checkbox]:not(:checked) + .anim-ck .info__description--details {
+  animation: growID 300ms ease-in-out;
+}
+input[type=checkbox]:not(:checked) + .anim-ck .trslt {
+  animation: moveRightCk 300ms ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes shrinkI {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 85%;
+  }
+}
+@keyframes shrinkID {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 95%;
+  }
+}
+@keyframes growI {
+  from {
+    width: 85%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes growID {
+  from {
+    width: 95%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes moveLeftCk {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-80%);
+  }
+}
+@keyframes moveRightCk {
+  0% {
+    transform: translateX(-80%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 /*.btn{
     /*border: none;*/
 /* @include bouton;
@@ -182,6 +492,37 @@ form h2 {
   color: #0a9f7b;
 }
 
+.ckbox {
+  width: 100%;
+  height: 100%;
+  /* min-width: 3rem;*/
+  padding: 1rem 0;
+  background-color: #99E2D0;
+  position: relative;
+}
+.ckbox .checkmark {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: #fff;
+  border-radius: 20rem;
+}
+.ckbox .checkmark::after {
+  content: "";
+  position: absolute;
+  /* display: none;*/
+  display: block;
+  top: 0.2rem;
+  left: 0.4rem;
+  width: 0.25rem;
+  height: 0.5rem;
+  border: solid #99E2D0;
+  border-width: 0 0.1875rem 0.1875rem 0;
+  transform: rotate(46deg);
+}
+
 .heart {
   cursor: pointer;
   border: none;
@@ -194,47 +535,20 @@ form h2 {
   padding: 0.05rem 0.1rem;
   z-index: 2;
 }
+.heart--InCard .fa-heart--filled {
+  right: 0.1rem;
+}
 .heart--InTitle {
   background-color: #f6f6f6;
+  position: relative;
 }
-.heart:not(:active) .fa-heart {
-  /*
-  &--edge{
-      animation: fadeIntH 800ms alternate ease-in-out;
-
-     animation: fadeInH 800ms ease-in-out paused;
-    transition: opacity 1000ms step-end;
-  }*/
-}
-.heart:not(:active) .fa-heart--filled {
-  animation: bouge 1500ms ease-in-out backwards, holdoncolor 1ms 1500ms infinite;
-  /* fadeInH 1500ms backwards;*/
-  transition: width 6000ms step-end;
-  /*  animation: fadeInH 800ms ease-in-out forwards;
-  /*     animation: fadeOutH 800ms ease-in-out paused backwards; 
-       transition: opacity 1000ms 800ms step-start;*/
-}
-.heart:active .fa-heart {
-  /*
-  &--edge{
-     /* animation: fadeOutH 800ms ease-in-out paused forwards;*/
-  /*   animation: fadeInH 800ms ease-in-out running;*/
-  /*  transition: opacity 1000ms step-start;*/
-  /* animation: fadeInH 40ms ease-in-out;
-  }*/
-}
-.heart:active .fa-heart--filled {
-  width: 1.5rem;
-  transition: width 10ms step-start;
-  /*
-  animation: fadeInH 800ms ease-in-out running forwards;
-  animation: fadeOutH 800ms ease-in-out running;
-  transition: opacity step-start;
-  animation: fadeOnH 400ms ease-in-out;*/
+.heart--InTitle .fa-heart--filled {
+  right: 0;
 }
 .heart .fa-heart {
   color: #9356DC;
   display: block;
+  bottom: 0;
 }
 .heart .fa-heart--edge {
   color: #000;
@@ -242,117 +556,19 @@ form h2 {
 }
 .heart .fa-heart--filled {
   position: absolute;
-  z-index: -1;
-  bottom: 0;
-  right: 0.1rem;
   opacity: 0;
-  width: 0;
-  background: -webkit-linear-gradient(175deg, #FF79DA, #9356DC);
+  background: -webkit-linear-gradient(60deg, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-/*
-@keyframes bouge{
-    0%{
-        transform: translateX(2rem);
-    }
-    10%{
-        transform: translateX(0);
-      }
-    100%{
-        transform: translateX(0);
-    }
-}*/
-@keyframes bouge {
-  0% {
-    opacity: 0;
-    transform: translateX(-5rem);
-  }
-  10% {
-    opacity: 0;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.heart:hover .fa-heart--edge {
+  opacity: 0;
+  transition: 1500ms ease-in-out;
 }
-@keyframes holdoncolor {
-  0%, 100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeOutH {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fadeInH {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/*
-&::after{
-    z-index: -1;
-    font-family: 'Font Awesome 5 Free';
-    content:'\f004';
-    opacity: 1;
-    transform: scale(1.1, 1.2);
-
-    right: 2rem;
-}*/
-header {
-  width: 100%;
-  padding-top: 1.25rem;
-  padding-bottom: 0.75rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  box-shadow: 0 3px 2px #d0d0d0;
-}
-header a {
-  position: absolute;
-  left: 10px;
-}
-header img {
-  width: 10rem;
-}
-
-footer {
-  color: #fff;
-  background-color: #535353;
-  padding: 1.5rem;
-}
-footer h4 {
-  margin: 0;
-  margin-bottom: 1.5rem;
-}
-footer ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-}
-footer ul li {
-  font-size: 0.925rem;
-  margin-bottom: 0.3rem;
-}
-footer ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-footer ul li a i {
-  font-size: 0.825rem;
-  margin-right: 0.825rem;
+.heart:hover .fa-heart--filled {
+  opacity: 1;
+  transition: 1500ms ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

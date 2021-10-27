@@ -12,6 +12,13 @@
     @include rounded-corner($size: 5rem);
 }
 
+@mixin heartFilled{
+    background: -webkit-#{$gradient-heart};
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 @mixin font-title{
     font-family: $font-logo, 'cursive';
     font-weight: $fw100;

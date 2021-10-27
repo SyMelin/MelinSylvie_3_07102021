@@ -1,6 +1,3 @@
-$opaHf: 0;
-
-
 .heart{
     cursor: pointer;
     border: none;
@@ -11,134 +8,45 @@ $opaHf: 0;
         right: 1.5rem;
         padding: 0.05rem 0.1rem;
         z-index: 2;
+        & .fa-heart{
+            &--filled{
+                right: 0.1rem;  
+            }
+        }
     }
     &--InTitle{
         background-color: $color-background;
-    }
-    &:not(:active){
-        & .fa-heart{/*
-            &--edge{
-                animation: fadeIntH 800ms alternate ease-in-out;
-            
-               animation: fadeInH 800ms ease-in-out paused;
-              transition: opacity 1000ms step-end;
-            }*/
+        position: relative;
+        & .fa-heart{
             &--filled{
-                animation: bouge 1500ms ease-in-out backwards, holdoncolor 1ms 1500ms infinite;
-                /* fadeInH 1500ms backwards;*/
-              transition:  width 6000ms step-end;
-                
-              /*  animation: fadeInH 800ms ease-in-out forwards;
-           /*     animation: fadeOutH 800ms ease-in-out paused backwards; 
-                transition: opacity 1000ms 800ms step-start;*/
+                right: 0;     
             }
         }
     }
-    &:active{
-        & .fa-heart{/*
-            &--edge{
-               /* animation: fadeOutH 800ms ease-in-out paused forwards;*/
-             /*   animation: fadeInH 800ms ease-in-out running;*/
-              /*  transition: opacity 1000ms step-start;*/
-               /* animation: fadeInH 40ms ease-in-out;
-            }*/
-            &--filled{
-            width: 1.5rem;
-         transition: width 10ms step-start;
-               
-                /*
-                animation: fadeInH 800ms ease-in-out running forwards;
-                animation: fadeOutH 800ms ease-in-out running;
-                transition: opacity step-start;
-                animation: fadeOnH 400ms ease-in-out;*/
-            }
-        }
-    }
-    .fa-heart{
+    & .fa-heart{
         color: $color-primary;
         display: block;
+        bottom: 0;
         &--edge{
             color: #000;
-            opacity: 1;
+            opacity: $opaHeart;
         }
         &--filled{
             position: absolute;
-            z-index: -1;
-            bottom: 0;
-            right: 0.1rem;
-            opacity: $opaHf;
-           width: 0;
-            background: -webkit-#{$gradient};
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;      
+            opacity: $opaHeart-inv;
+            @include heartFilled;      
+        }
+    }
+    &:hover{
+        & .fa-heart{
+              &--edge{
+                  opacity: $opaHeart-inv;
+                  transition: 1500ms ease-in-out;
+              }
+              &--filled{
+                  opacity: $opaHeart;
+                  transition: 1500ms ease-in-out;
+              }  
         }
     }
 }
-
-
-
-/*
-@keyframes bouge{
-    0%{
-        transform: translateX(2rem);
-    }
-    10%{
-        transform: translateX(0);
-      }
-    100%{
-        transform: translateX(0);
-    }
-}*/
-
-
-
-
-@keyframes bouge{
-    0%{
-      opacity: 0; transform: translateX(-5rem);
-    }
-    10%{
-        opacity: 0; transform: translateX(0);
-      }
-    100%{
-        opacity: 1; transform: translateX(0);
-    }
-}
-
-@keyframes holdoncolor{
-    0%, 100%{
-        opacity: 1;
-    }
-}
-
-
-
-@keyframes fadeOutH{
-    0%{
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes fadeInH {
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-    /*
-    &::after{
-        z-index: -1;
-        font-family: 'Font Awesome 5 Free';
-        content:'\f004';
-        opacity: 1;
-        transform: scale(1.1, 1.2);
-        
-        right: 2rem;
-    }*/
