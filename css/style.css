@@ -207,9 +207,9 @@ form h2 {
   }*/
 }
 .heart:not(:active) .fa-heart--filled {
-  animation: bouge 1500ms ease-in-out backwards;
+  animation: bouge 1500ms ease-in-out backwards, holdoncolor 1ms 1500ms infinite;
   /* fadeInH 1500ms backwards;*/
-  /*  transition:  width 6000ms step-end;*/
+  transition: width 6000ms step-end;
   /*  animation: fadeInH 800ms ease-in-out forwards;
   /*     animation: fadeOutH 800ms ease-in-out paused backwards; 
        transition: opacity 1000ms 800ms step-start;*/
@@ -224,8 +224,8 @@ form h2 {
   }*/
 }
 .heart:active .fa-heart--filled {
-  /* width: 1.5rem;*/
-  /*   transition: width 10ms step-start;*/
+  width: 1.5rem;
+  transition: width 10ms step-start;
   /*
   animation: fadeInH 800ms ease-in-out running forwards;
   animation: fadeOutH 800ms ease-in-out running;
@@ -246,7 +246,7 @@ form h2 {
   bottom: 0;
   right: 0.1rem;
   opacity: 0;
-  /*  width: 0;*/
+  width: 0;
   background: -webkit-linear-gradient(175deg, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
@@ -277,6 +277,11 @@ form h2 {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@keyframes holdoncolor {
+  0%, 100% {
+    opacity: 1;
   }
 }
 @keyframes fadeOutH {
