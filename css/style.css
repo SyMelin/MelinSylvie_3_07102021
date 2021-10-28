@@ -148,11 +148,16 @@ form {
   padding-bottom: 2rem;
   /* Bouton Commander */
 }
+form .form-box {
+  margin: 0;
+  padding: 0.5rem;
+  border: 1px solid red;
+}
 form .form-box__title {
   font-size: 1.275rem;
   text-transform: uppercase;
   display: block;
-  margin: 1.5rem 1rem;
+  margin: 3rem 0.5rem;
 }
 form .form-box__container {
   display: flex;
@@ -566,6 +571,11 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
 .heart:hover .fa-heart--filled {
   opacity: 1;
   transition: 1500ms ease-in-out;
+}
+
+.underlined {
+  border-bottom: 0.2rem solid #99E2D0;
+  padding-bottom: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

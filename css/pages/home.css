@@ -23,7 +23,7 @@ body::before {
   bottom: 0;
   left: 0;
   opacity: 0;
-  animation: lspinner 0;
+  animation: lspinner 20ms;
   /* de 1 à 3s */
 }
 body::after {
@@ -39,12 +39,12 @@ body::after {
   top: 14rem;
   left: 41%;
   opacity: 0;
-  animation: lspinner 0, loading 0 linear both;
+  animation: lspinner 20ms, loading 20ms linear both;
   /* de 1 à 3s */
 }
 body header, body main, body footer {
   opacity: 1;
-  animation: hidding 0;
+  animation: hidding 20ms;
   /* de 1 à 3s */
 }
 

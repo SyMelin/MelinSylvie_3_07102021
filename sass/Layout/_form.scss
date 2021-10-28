@@ -2,16 +2,20 @@
 form{
     padding-bottom: 2rem;
     .form-box{
+        margin: 0;
+        padding: 0.5rem;
+        @include border;
         &__title{
             font-size: 1.275rem;
             text-transform: uppercase;
             display: block;
-            margin: 1.5rem $size-d;
+            margin: 3rem 0.5rem;
         }
         &__container{
             @include flex-col-gap($size: $gs-d);
         }
     }
+
     .form-button{
         display: flex;
         justify-content: center;
