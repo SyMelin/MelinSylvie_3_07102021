@@ -579,9 +579,12 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   transition: 1500ms ease-in-out;
 }
 
-ol .li--fct--1 {
+ol .li--fct {
+  z-index: 2;
   display: inline-flex;
   line-height: 4rem;
+  width: 100%;
+  opacity: 1;
   padding-top: 0.25rem;
   align-items: center;
   position: relative;
@@ -589,165 +592,98 @@ ol .li--fct--1 {
   border-radius: 1.25rem;
   box-shadow: 0 0.25rem 0.875rem #dddddd;
 }
-ol .li--fct--1 .fas {
-  position: relative;
-  z-index: 2;
-  width: 1rem;
-  height: 1rem;
-  padding: 0.25rem;
-  margin: 0;
-}
-ol .li--fct--1 .fas::after {
+ol .li--fct::after {
   position: absolute;
   top: 0;
-  right: 0;
-  z-index: 1;
-}
-ol .li--fct--1 .fas--number--1 {
-  margin-left: -0.75rem;
-  margin-right: 0.5rem;
-}
-ol .li--fct--1 .fas--number--1::after {
-  content: "1";
-  font-family: "Roboto";
-  font-weight: 500;
-  background-color: #9356DC;
-  color: #f6f6f6;
-  font-size: 0.8rem;
-  font-weight: 400;
-  border-radius: 1rem;
-  width: 1.5rem;
-  padding-top: 0.45rem;
-  padding-bottom: 0.25rem;
-  text-align: center;
-  margin-left: 0rem;
-}
-ol .li--fct--1 .fas--img--1 {
-  margin-right: 1.5rem;
-}
-ol .li--fct--1 .fas--img--1::after {
-  content: "\f3cd";
-  font-family: "Font Awesome 5 Free";
-  color: #777777;
-  font-size: 1.25rem;
-  font-family: 600;
-  padding-top: 0.125rem;
-}
-ol .li--fct--2 {
-  display: inline-flex;
-  line-height: 4rem;
-  padding-top: 0.25rem;
-  align-items: center;
-  position: relative;
-  background-color: #f6f6f6;
-  border-radius: 1.25rem;
-  box-shadow: 0 0.25rem 0.875rem #dddddd;
-}
-ol .li--fct--2 .fas {
-  position: relative;
-  z-index: 2;
-  width: 1rem;
-  height: 1rem;
-  padding: 0.25rem;
-  margin: 0;
-}
-ol .li--fct--2 .fas::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-}
-ol .li--fct--2 .fas--number--2 {
-  margin-left: -0.75rem;
-  margin-right: 0.5rem;
-}
-ol .li--fct--2 .fas--number--2::after {
-  content: "2";
-  font-family: "Roboto";
-  font-weight: 500;
-  background-color: #9356DC;
-  color: #f6f6f6;
-  font-size: 0.8rem;
-  font-weight: 400;
-  border-radius: 1rem;
-  width: 1.5rem;
-  padding-top: 0.45rem;
-  padding-bottom: 0.25rem;
-  text-align: center;
-  margin-left: 0rem;
-}
-ol .li--fct--2 .fas--img--2 {
-  margin-right: 1.5rem;
-}
-ol .li--fct--2 .fas--img--2::after {
-  content: "\f0ca";
-  font-family: "Font Awesome 5 Free";
-  color: #777777;
-  font-size: 1.25rem;
-  font-family: 600;
-  padding-top: 0.125rem;
-}
-ol .li--fct--3 {
-  display: inline-flex;
-  line-height: 4rem;
-  padding-top: 0.25rem;
-  align-items: center;
-  position: relative;
-  background-color: #f6f6f6;
-  border-radius: 1.25rem;
-  box-shadow: 0 0.25rem 0.875rem #dddddd;
-}
-ol .li--fct--3 .fas {
-  position: relative;
-  z-index: 2;
-  width: 1rem;
-  height: 1rem;
-  padding: 0.25rem;
-  margin: 0;
-}
-ol .li--fct--3 .fas::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-}
-ol .li--fct--3 .fas--number--3 {
-  margin-left: -0.75rem;
-  margin-right: 0.5rem;
-}
-ol .li--fct--3 .fas--number--3::after {
-  content: "3";
-  font-family: "Roboto";
-  font-weight: 500;
-  background-color: #9356DC;
-  color: #f6f6f6;
-  font-size: 0.8rem;
-  font-weight: 400;
-  border-radius: 1rem;
-  width: 1.5rem;
-  padding-top: 0.45rem;
-  padding-bottom: 0.25rem;
-  text-align: center;
-  margin-left: 0rem;
-}
-ol .li--fct--3 .fas--img--3 {
-  margin-right: 1.5rem;
-}
-ol .li--fct--3 .fas--img--3::after {
-  content: "\f54e";
-  font-family: "Font Awesome 5 Free";
-  color: #777777;
-  font-size: 1.25rem;
-  font-family: 600;
-  padding-top: 0.125rem;
-}
-ol #li--fct--colored {
+  left: 0;
+  content: "";
+  z-index: -1;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
   background-color: #f2eafb;
+  border-radius: 1.25rem;
+  box-shadow: 0 0.25rem 0.875rem #dddddd;
 }
-ol #li--fct--colored #fas--img--colored::after {
+ol .li--fct .fas {
+  position: relative;
+  width: 1.5rem;
+  height: 1rem;
+  margin: 0;
+}
+ol .li--fct .fas::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+ol .li--fct .fas--number {
+  margin-left: -0.75rem;
+  margin-right: 1rem;
+}
+ol .li--fct .fas--number::after {
+  font-family: "Roboto";
+  background-color: #9356DC;
+  color: #f6f6f6;
+  font-size: 0.8rem;
+  font-weight: 400;
+  border-radius: 1rem;
+  width: 1.5rem;
+  padding-top: 0.45rem;
+  padding-bottom: 0.25rem;
+  text-align: center;
+  margin-left: 0rem;
+}
+ol .li--fct .fas--number--1::after {
+  content: "1";
+  opacity: 1;
+}
+ol .li--fct .fas--number--2::after {
+  content: "2";
+  opacity: 1;
+}
+ol .li--fct .fas--number--3::after {
+  content: "3";
+  opacity: 1;
+}
+ol .li--fct .fas--img {
+  margin-right: 1rem;
+  color: #777777;
+  font-size: 1.25rem;
+}
+ol .li--fct .fas--img::after {
+  font-family: "Font Awesome 5 Free";
   color: #9356DC;
+  font-size: 1.25rem;
+}
+ol .li--fct .fas--img--1::after {
+  content: "\f3cd";
+  opacity: 0;
+}
+ol .li--fct .fas--img--2::after {
+  content: "\f0ca";
+  opacity: 0;
+}
+ol .li--fct .fas--img--3::after {
+  content: "\f54e";
+  opacity: 0;
+}
+ol .li--fct:hover::after {
+  opacity: 1;
+}
+ol .li--fct:hover .fas--img::after {
+  opacity: 1;
 }
 
+/*
+    #li--fct--colored{
+        & #fas--img{
+            &--colored{
+                &::after{
+                    color: $color-primary;
+                }
+            }
+        }
+    }*/
 /*2500ms*/
 /*$leftSpinAft: 100% / 2 - $widthSpinAft;*/
 body::before {
