@@ -75,6 +75,12 @@ form{
     }
 }
 
+/*-- typography Components _liFct --*/
+.li__text{
+    font-size: 1rem;
+    font-weight: $fw700;
+}
+
 
 /*-- typography Pages _home --*/
 .selection{
@@ -99,8 +105,8 @@ form{
 
 .main--index{
     h2{
-        font-size: 1.5rem;
-        font-weight: $fw600;
+        font-size: 1.4375rem;
+        font-weight: $fw900;
     } 
 }
 

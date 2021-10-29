@@ -1,0 +1,67 @@
+$animLoad-dur: 20ms; /*2500ms*/
+$widthSpinAft: 3rem;
+/*$leftSpinAft: 100% / 2 - $widthSpinAft;*/
+
+body{
+    &::before{
+        content: "ohmyfood";
+        color: $color-white;
+        font-family: $font-logo;
+        font-size: 2.825rem;
+        text-align: center;
+        width: 100%;
+        padding-top: 20rem;
+        background: $gradient;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        animation: lspinner $animLoad-dur; /* de 1 à 3s */
+    }
+    &::after{
+        content:"";
+        font-family: "Font Awesome 5 Free";
+        width: $widthSpinAft;
+        height: $widthSpinAft;
+        z-index: -1;
+        position: absolute;
+        border: 0.875rem solid $color-tertiary;
+        border-right-color: $color-background-dken;
+        @include rounded-corner($size: 20rem);
+        top: 14rem;
+        left: 41%;
+        opacity: 0;
+        animation: lspinner $animLoad-dur, loading $animLoad-dur linear both;/* de 1 à 3s */
+    }
+    & header, main, footer{
+        opacity: 1;
+        animation: hidding $animLoad-dur; /* de 1 à 3s */
+    }
+}
+
+@keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+/* animation "masquer" */
+@keyframes hidding{
+    0%, 100% {
+        opacity: 0;
+    }
+}
+ 
+/* animation "loading spinner"*/
+@keyframes lspinner{
+    0%, 100%{
+        opacity: 1;
+    }
+}
