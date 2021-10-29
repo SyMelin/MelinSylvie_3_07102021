@@ -1,0 +1,74 @@
+$icoNum: o;
+$icoImg: \f3cd, \f0ca, \f54e;
+
+
+
+ol{
+    @for $i from 1 through 3 {
+        .li--fct--#{$i}{
+            display: inline-flex;
+            line-height: 4rem;
+            padding-top: 0.25rem;
+            align-items: center;
+            position: relative;
+            background-color: $color-background;
+            @include rounded-corner($size: 1.25rem);
+            @include shadow(0, 0.25rem, 0.875rem, darken($color-background, 10%));
+            & .fas{
+                position: relative;
+                z-index: 2;
+                width: 1rem;
+                height: 1rem;
+                padding: 0.25rem;
+                margin: 0;
+                &::after{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 1;
+                }
+                &--number--#{$i}{
+                    margin-left: -0.75rem;
+                    margin-right: 0.5rem;
+                    &::after{
+                        content: '#{$i}';
+                        font-family: $font-text;
+                        font-weight: $fw500;
+                        background-color: $color-primary;
+                        color: $color-background;
+                        font-size: 0.8rem;
+                        font-weight: $fw400;
+                        @include rounded-corner;
+                        width: 1.5rem;
+                        padding-top: 0.45rem;
+                        padding-bottom: 0.25rem;
+                        text-align: center;
+                        margin-left: 0rem;
+                        
+                    }
+                }
+                &--img--#{$i}{
+                    margin-right: 1.5rem;
+                    &::after{
+                        content: '#{nth($icoImg, $i)}';
+                        font-family: "Font Awesome 5 Free";
+                        color: darken($color: $color-background, $amount: 50%);
+                        font-size: 1.25rem;
+                        font-family: $fw600;
+                        padding-top: 0.125rem;
+                    }
+                }
+            }
+        }
+    }
+    #li--fct--colored{
+        background-color: lighten($color-primary, 35%);
+        & #fas--img{
+            &--colored{
+                &::after{
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}
