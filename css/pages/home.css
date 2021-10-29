@@ -10,13 +10,13 @@ body {
 }
 
 /*-- Section "Selection" --*/
-.selection {
+.localisation {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 3.5rem;
 }
-.selection__localisation {
+.localisation__name {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -25,25 +25,25 @@ body {
   padding-bottom: 0.875rem;
   background-color: #e9e9e9;
 }
-.selection__localisation .fas {
+.localisation__name .fas {
   margin-right: 1rem;
 }
-.selection__localisation span {
+.localisation__name span {
   text-align: left;
 }
-.selection h1 {
+.localisation h1 {
   width: 70%;
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
-.selection > p {
+.localisation > p {
   width: 90%;
   text-align: center;
   margin-top: 0;
   margin-bottom: 2rem;
 }
-.selection .btn {
+.localisation .btn {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }

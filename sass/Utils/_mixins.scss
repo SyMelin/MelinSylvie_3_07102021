@@ -21,7 +21,7 @@
 
 @mixin font-title{
     font-family: $font-logo, 'cursive';
-    font-weight: $fw100;
+    font-weight: map-get($map: $fw, $key: thin);
 }
 
 @mixin flex-col-gap($size: $gs-d){

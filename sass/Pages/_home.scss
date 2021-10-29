@@ -15,12 +15,12 @@ body{
 }
 
 /*-- Section "Selection" --*/
-.selection{
+.localisation{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 3.5rem;
-    &__localisation{
+    &__name{
         display: flex;
         justify-content: center;
         width: 100%;
@@ -57,7 +57,7 @@ body{
 /* Section "Fonctionnement" */
 .fonctionnement{
     margin-top: 0;
-    padding: 1.75rem 5%;
+    padding: $padHome;
     & ol{
         list-style-position: inside;
         @include flex-col-gap($size: 1.75rem);
@@ -69,7 +69,7 @@ body{
 /*-- Section "Restaurants" --*/
 .restaurants{
     margin-top: 0;
-    padding: 1.75rem 5%;
+    padding: $padHome;
     &__container{
         @include flex-col-gap;
     }

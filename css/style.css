@@ -20,28 +20,31 @@ body {
   font-weight: 400;
 }
 
-h4 {
-  font-family: "Shrikhand", "cursive";
-  font-weight: 100;
-}
-
 /*-- typography Layout _form --*/
 form .form-box__title {
+  font-size: 1.275rem;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+/*-- typography Layout _footer --*/
+.footer__title {
+  font-family: "Shrikhand", "cursive";
+  font-weight: 100;
+  font-size: 1rem;
 }
 
 /*-- typography Components _animChecked --*/
 .anim-ck .info__description--title {
   font-size: 1.0625rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .anim-ck .info__description--details {
   font-size: 0.875rem;
 }
 .anim-ck .info__price {
   font-size: 0.875rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 /*-- typography Components _bouton --*/
@@ -52,7 +55,10 @@ form .form-box__title {
 /*-- typography Components _card --*/
 .card__bottom .info h3 {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
+}
+.card__bottom .info p {
+  font-size: 1rem;
 }
 
 .card .new {
@@ -72,22 +78,33 @@ form .form-box__title {
   font-weight: 700;
 }
 
-/*-- typography Pages _home --*/
-.selection__localisation {
-  font-size: 0.925rem;
-  font-weight: 600;
+.li--fct .fas--number::after {
+  font-family: "Roboto";
+  font-size: 0.8rem;
 }
-.selection__localisation .fas {
+.li--fct .fas--img {
+  font-size: 1.25rem;
+}
+.li--fct .fas--img::after {
+  font-size: 1.25rem;
+}
+
+/*-- typography Pages _home --*/
+.localisation__name {
+  font-size: 0.925rem;
+  font-weight: 700;
+}
+.localisation__name .fas {
   font-size: 1rem;
 }
-.selection h1 {
+.localisation h1 {
   font-size: 1.5rem;
   font-weight: 900;
 }
-.selection > p {
+.localisation > p {
   font-size: 1.1rem;
 }
-.selection .btn {
+.localisation .btn {
   font-size: 0.875rem;
 }
 
@@ -127,7 +144,7 @@ footer {
   background-color: #535353;
   padding: 1.5rem;
 }
-footer h4 {
+footer .footer__title {
   margin: 0;
   margin-bottom: 1.5rem;
 }
@@ -160,8 +177,6 @@ form .form-box {
   border: 1px solid red;
 }
 form .form-box__title {
-  font-size: 1.275rem;
-  text-transform: uppercase;
   display: block;
   margin: 3rem 0.5rem;
 }
@@ -580,7 +595,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
 }
 
 ol .li--fct {
-  z-index: 2;
+  z-index: 1;
   display: inline-flex;
   line-height: 4rem;
   width: 100%;
@@ -621,11 +636,8 @@ ol .li--fct .fas--number {
   margin-right: 1rem;
 }
 ol .li--fct .fas--number::after {
-  font-family: "Roboto";
   background-color: #9356DC;
   color: #f6f6f6;
-  font-size: 0.8rem;
-  font-weight: 400;
   border-radius: 1rem;
   width: 1.5rem;
   padding-top: 0.45rem;
@@ -648,12 +660,10 @@ ol .li--fct .fas--number--3::after {
 ol .li--fct .fas--img {
   margin-right: 1rem;
   color: #777777;
-  font-size: 1.25rem;
 }
 ol .li--fct .fas--img::after {
   font-family: "Font Awesome 5 Free";
   color: #9356DC;
-  font-size: 1.25rem;
 }
 ol .li--fct .fas--img--1::after {
   content: "\f3cd";
@@ -674,16 +684,6 @@ ol .li--fct:hover .fas--img::after {
   opacity: 1;
 }
 
-/*
-    #li--fct--colored{
-        & #fas--img{
-            &--colored{
-                &::after{
-                    color: $color-primary;
-                }
-            }
-        }
-    }*/
 /*2500ms*/
 /*$leftSpinAft: 100% / 2 - $widthSpinAft;*/
 body::before {

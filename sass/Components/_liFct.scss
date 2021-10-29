@@ -5,7 +5,7 @@ $icoImg: \f3cd, \f0ca, \f54e;
 
 ol{
     .li--fct{
-        z-index: 2;
+        z-index: 1;
         display: inline-flex;
         line-height: 4rem;
         width: 100%;
@@ -43,11 +43,8 @@ ol{
                 margin-left: -0.75rem;
                 margin-right: 1rem;
                 &::after{
-                    font-family: $font-text;
                     background-color: $color-primary;
                     color: $color-background;
-                    font-size: 0.8rem;
-                    font-weight: $fw400;
                     @include rounded-corner;
                     width: 1.5rem;
                     padding-top: 0.45rem;
@@ -67,11 +64,10 @@ ol{
             &--img{
                 margin-right: 1rem;
                 color: darken($color: $color-background, $amount: 50%);
-                font-size: 1.25rem;
+               
                 &::after{
                     font-family: "Font Awesome 5 Free";
                     color: $color-primary;
-                    font-size: 1.25rem;
                 }
                 @for $i from 1 through 3 {
                     &--#{$i}{
@@ -95,13 +91,3 @@ ol{
         }
     }
 }
-/*
-    #li--fct--colored{
-        & #fas--img{
-            &--colored{
-                &::after{
-                    color: $color-primary;
-                }
-            }
-        }
-    }*/

@@ -1,11 +1,7 @@
 /*-- typography valable partout --*/
 body{
     font-size: $fs-d;
-    font-weight: $fw400;
-}
-
-h4{
-    @include font-title;
+    font-weight: map-get($map: $fw, $key: regular);
 }
 
 
@@ -13,10 +9,18 @@ h4{
 form{
     & .form-box{
         &__title{
-        font-weight: $fw400;
-        text-transform: uppercase;
+            font-size: map-get($map: $fsTitles, $key: formBox);
+            font-weight: map-get($map: $fw, $key: regular);
+            text-transform: uppercase;
         }
     }
+}
+
+
+/*-- typography Layout _footer --*/
+.footer__title{
+    @include font-title;
+    font-size: map-get($map: $fsTitles, $key: footer);
 }
 
 
@@ -25,16 +29,16 @@ form{
     .info{
         &__description{
             &--title{
-                font-size: 1.0625rem;
-                font-weight: $fw600;
+                font-size: map-get($map: $fsAnimCk, $key: title);
+                font-weight: map-get($map: $fw, $key: bold);
             }
             &--details{
-                font-size: 0.875rem;
+                font-size: map-get($map: $fsAnimCk, $key: details);
             }
         }
         &__price{
-            font-size: 0.875rem;
-            font-weight: $fw900;
+            font-size: map-get($map: $fsAnimCk, $key: details);
+            font-weight: map-get($map: $fw, $key: bold);
         }
     }
 }
@@ -42,7 +46,7 @@ form{
 
 /*-- typography Components _bouton --*/
 .btn{
-    font-weight: $fw500;
+    font-weight: map-get($map: $fw, $key: medium);
 }
 
 
@@ -51,62 +55,83 @@ form{
     &__bottom{
         .info{
             h3{
-                font-size: 1.1rem;
-                font-weight: $fw600;
+                font-size: map-get($map: $fsCard, $key: title);
+                font-weight: map-get($map: $fw, $key: bold);
+            }
+            p{
+                font-size: map-get($map: $fsCard, $key: place);
             }
         }
     }
 }
 
 .card{
-    .new{
-        font-size: 0.8rem;
-        font-weight: $fw500; 
+    & .new{
+        font-size: map-get($map: $fs, $key: new);
+        font-weight: map-get($map: $fw, $key: medium);
     }
 }
 
 
 /*-- typography Components _heart --*/
 .heart{
-    
     & .fa-heart{
-        font-size: 1.25rem;
+        font-size: map-get($map: $fs, $key: heart);
         transform: scale(1.1, 1.2);
     }
 }
 
+
 /*-- typography Components _liFct --*/
 .li__text{
-    font-size: 1rem;
-    font-weight: $fw700;
+    font-size: map-get($map: $fsLiFct, $key: text);
+    font-weight: map-get($map: $fw, $key: bold);
+}
+
+.li--fct{
+    & .fas{
+        &--number{
+            &::after{
+                font-family: $font-text;
+                font-size: map-get($map: $fsLiFct, $key: nbAfter);
+            }
+        }
+        &--img{
+            font-size: map-get($map: $fsLiFct, $key: img);
+            &::after{
+                font-size: map-get($map: $fsLiFct, $key: imgAfter);
+            }
+
+        }
+    }
 }
 
 
 /*-- typography Pages _home --*/
-.selection{
-    &__localisation{
-        font-size: 0.925rem;
-        font-weight: $fw600;
+.localisation{
+    &__name{
+        font-size: $fs3;
+        font-weight: map-get($map: $fw, $key: bold);
         .fas{
             font-size: $fs-d; 
         }
     }
     h1{
-        font-size: 1.5rem;
-        font-weight: $fw900; 
+        font-size: map-get($map: $fsTitles, $key: localisation);
+        font-weight: map-get($map: $fw, $key: black); 
     }
     > p{
         font-size: 1.1rem; 
     }
     .btn{
-        font-size: 0.875rem;
+        font-size: map-get($map: $fs, $key: bouton);
     }
 }
 
 .main--index{
     h2{
-        font-size: 1.4375rem;
-        font-weight: $fw900;
+        font-size: map-get($map: $fsTitles, $key: mainh2);
+        font-weight: map-get($map: $fw, $key: black);
     } 
 }
 
@@ -114,7 +139,7 @@ form{
 /*-- typography Pages _menu --*/
 .restaurant__name{
     h1{
-        font-size: 1.825rem;
+        font-size: map-get($map: $fsTitles, $key: name);
         @include font-title;
     }
 }
