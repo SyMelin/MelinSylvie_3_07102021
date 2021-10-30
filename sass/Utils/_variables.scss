@@ -25,6 +25,16 @@ $opaHeart: 1;
 $opaHeart-inv: 1 - $opaHeart;
 
 $padHome: 1.75rem 5%;
+$padBouton: 1rem 2rem 1rem 2rem;
+/*
+$shadow: (
+    default: 0 0 0 blue,
+    bouton: 0 0.3rem 0.75rem clrBgDken(15%),
+    boutonAft: 0 0.1rem 0.5rem clrBgDken(75%)
+    );*/
+
+$SSC: (0 0.3rem 0.3rem blue);
+
 
 
 $fsTitles: (localisation: 1.5rem, mainh2: 1.4375rem, footer: $fs-d, name: 1.825rem, formBox: 1.275rem);

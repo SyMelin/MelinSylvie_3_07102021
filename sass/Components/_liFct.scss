@@ -14,7 +14,7 @@ ol{
         align-items: center;
         position: relative;
         background-color: $color-background;
-        @include rounded-corner($size: 1.25rem);
+        @include rounded-corner($radius: 1.25rem);
         @include shadow(0, 0.25rem, 0.875rem, clrBgDken(10%));
         &::after{
             position: absolute;
@@ -26,7 +26,7 @@ ol{
             height: 100%;
             width: 100%;
             background-color: lighten($color: $color-primary, $amount: 35%);
-            @include rounded-corner($size: 1.25rem);
+            @include rounded-corner($radius: 1.25rem);
             @include shadow(0, 0.25rem, 0.875rem, clrBgDken(10%));
         }
         & .fas{

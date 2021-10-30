@@ -1,6 +1,20 @@
-@mixin rounded-corner($size: $radius-d){
-    border-radius: $size;
+@mixin rounded-corner($radius: $radius-d){
+    border-radius: $radius;
 }
+@mixin shadow($size1, $size2, $size3, $color){
+    box-shadow: $size1 $size2 $size3 $color;
+}
+
+@mixin S($SS: $SSC){
+    box-shadow: $SS;
+}
+
+
+
+@mixin shadowNew2($map, $key){
+    box-shadow: map-get($map: $shadow, $key: boutonAft );
+}
+
 
 @mixin bouton{
     display: block;
@@ -8,8 +22,8 @@
     color: $color-white;
     background-image: $gradient;
     text-decoration: none;
-    padding: 1rem 2rem 1rem 2rem;
-    @include rounded-corner($size: 5rem);
+    padding: $padBouton;
+    @include rounded-corner($radius: 5rem);
 }
 
 @mixin heartFilled{
@@ -28,10 +42,6 @@
         display: flex;
         flex-direction: column;
         gap: $size;
-}
-
-@mixin shadow ($size1, $size2, $size3, $color){
-    box-shadow: $size1 $size2 $size3 $color;
 }
 
 @mixin border{

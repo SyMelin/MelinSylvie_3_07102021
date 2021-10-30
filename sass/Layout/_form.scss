@@ -21,7 +21,7 @@ form{
 }
 
 .item{
-    @include rounded-corner($size:0.825rem);
+    @include rounded-corner($radius: 0.825rem);
     @include shadow(0, 0.3rem, 0.3rem, clrBgDken(15%));
     background-color: $color-white;
     padding: 0;

@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/*
+$shadow: (
+    default: 0 0 0 blue,
+    bouton: 0 0.3rem 0.75rem clrBgDken(15%),
+    boutonAft: 0 0.1rem 0.5rem clrBgDken(75%)
+    );*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Shrikhand&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
@@ -478,7 +484,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   display: block;
   text-decoration: none;
   position: relative;
-  box-shadow: 0 0.3rem 0.3rem #e9e9e9;
+  box-shadow: 0 0.3rem 0.3rem blue;
   border-radius: 1rem;
   background-color: #fff;
 }

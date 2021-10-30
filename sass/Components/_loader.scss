@@ -30,7 +30,7 @@ body{
         position: absolute;
         border: 0.875rem solid $color-tertiary;
         border-right-color: clrBgDken(5%);
-        @include rounded-corner($size: 20rem);
+        @include rounded-corner($radius: 20rem);
         top: 14rem;
         left: 41%;
         opacity: 0;

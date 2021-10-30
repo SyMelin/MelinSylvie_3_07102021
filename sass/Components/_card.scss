@@ -7,7 +7,7 @@
     display: block;
     text-decoration: none;
     position: relative;
-    @include shadow(0, 0.3rem, 0.3rem, clrBgDken(5%));
+    @include S;
     @include rounded-corner;
     background-color: $color-white;
     &__img{
@@ -39,7 +39,7 @@
         right: 0.875rem;
         padding: 0.4rem 0.725rem 0.3rem 0.725rem;
         background-color: $color-tertiary;
-        @include rounded-corner($size:0.1rem);
+        @include rounded-corner($radius:0.1rem);
         color: adjust-color($color: $color-tertiary, $saturation: 32%, $lightness: -41%);
     }
 }
