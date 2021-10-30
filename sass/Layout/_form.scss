@@ -22,7 +22,7 @@ form{
 
 .item{
     @include rounded-corner($radius: 0.825rem);
-    @include shadow(0, 0.3rem, 0.3rem, clrBgDken(15%));
+    @include shadow($mapKey: mapGetShadow(item), $color: clrBgDken(15%));
     background-color: $color-white;
     padding: 0;
     overflow: hidden;

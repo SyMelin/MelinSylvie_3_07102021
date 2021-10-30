@@ -7,7 +7,7 @@
     display: block;
     text-decoration: none;
     position: relative;
-    @include S($SS: $SSC, $color: clrBgDken(5%));
+    @include shadow($mapKey: mapGetShadow(card), $color: clrBgDken(5%));
     @include rounded-corner;
     background-color: $color-white;
     &__img{

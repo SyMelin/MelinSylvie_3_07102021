@@ -26,17 +26,16 @@ $opaHeart-inv: 1 - $opaHeart;
 
 $padHome: 1.75rem 5%;
 $padBouton: 1rem 2rem 1rem 2rem;
-/*
+
 $shadow: (
     default: (0 0 0),
     bouton: (0 0.3rem 0.75rem),
     boutonAft: (0 0.1rem 0.5rem),
-    card: (0 0.3rem 0.3rem);
-    );*/
-
-$SSC: (0 0.3rem 0.3rem);
-
-
+    card: (0 0.3rem 0.3rem),
+    header: (0 3px 2px),
+    item: (0 0.3rem 0.3rem),
+    liFct: (0 0.25rem 0.875rem)
+);
 
 $fsTitles: (localisation: 1.5rem, mainh2: 1.4375rem, footer: $fs-d, name: 1.825rem, formBox: 1.275rem);
 $fsAnimCk: (title: 1.0625rem, details: 0.875rem, price: 0.875rem);

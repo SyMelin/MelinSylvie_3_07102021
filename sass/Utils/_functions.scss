@@ -1,3 +1,7 @@
 @function clrBgDken($amount){
     @return darken($color-background, $amount);
 }
+
+@function mapGetShadow($key){
+    @return map-get($shadow, $key)
+}

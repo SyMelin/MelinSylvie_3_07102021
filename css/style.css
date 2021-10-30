@@ -1,11 +1,4 @@
 @charset "UTF-8";
-/*
-$shadow: (
-    default: (0 0 0),
-    bouton: (0 0.3rem 0.75rem),
-    boutonAft: (0 0.1rem 0.5rem),
-    card: (0 0.3rem 0.3rem);
-    );*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Shrikhand&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
@@ -449,7 +442,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   text-decoration: none;
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 5rem;
-  box-shadow: 0 0.3rem 0.3rem #d0d0d0;
+  box-shadow: 0 0.3rem 0.75rem #d0d0d0;
   position: relative;
   z-index: 1;
 }
@@ -614,6 +607,7 @@ ol .li--fct {
   background-color: #f6f6f6;
   border-radius: 1.25rem;
   box-shadow: 0 0.25rem 0.875rem #dddddd;
+  /*  @include shadow(0, 0.25rem, 0.875rem, clrBgDken(10%));*/
 }
 ol .li--fct::after {
   position: absolute;

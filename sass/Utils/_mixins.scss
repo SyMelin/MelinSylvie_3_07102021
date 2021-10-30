@@ -1,20 +1,10 @@
 @mixin rounded-corner($radius: $radius-d){
     border-radius: $radius;
 }
-@mixin shadow($size1, $size2, $size3, $color){
-    box-shadow: $size1 $size2 $size3 $color;
+
+@mixin shadow($mapKey: mapGetShadow(card), $color: none){
+    box-shadow: ($mapKey $color);
 }
-
-@mixin S($SS: $SSC, $color: blue){
-    box-shadow: ($SS $color);
-}
-
-
-
-@mixin shadowNew2($map, $key){
-    box-shadow: map-get($map: $shadow, $key: boutonAft );
-}
-
 
 @mixin bouton{
     display: block;
