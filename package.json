@@ -1,13 +1,15 @@
 {
   "name": "projet_3",
   "version": "1.0.0",
-  "description": "\"\"",
+  "description": "Sylvie Melin's Project 3",
   "main": "index.js",
   "scripts": {
-    "sass-s":"sass --watch ./sass/main.scss:./css/style.css",
-    "sass-h":"sass --watch ./sass/Pages/_home.scss:./css/pages/home.css",
-    "sass-m":"sass --watch ./sass/Pages/_menu.scss:./css/pages/menu.css"
-
+    "sass-s":"sass --watch ./sass/main.scss:./css/style.css -w --style nested",
+    "sass-h":"sass --watch ./sass/Pages/_home.scss:./css/pages/home.css -w --style nested",
+    "sass-m":"sass --watch ./sass/Pages/_menu.scss:./css/pages/menu.css -w --style nested",
+    "prefix-s": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/",
+    "prefix-h": "postcss ./css/pages/home.css --use autoprefixer -d ./css/prefixed/pages/",
+    "prefix-mnpm": "postcss ./css/pages/menu.css --use autoprefixer -d ./css/prefixed/pages/"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   ],
   "author": "sylvie melin",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/SyMelin/MelinSylvie_3_07102021/issues"
   },
