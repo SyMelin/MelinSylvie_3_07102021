@@ -6,7 +6,7 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
-    box-shadow: 0 3px 2px darken($color-background, 15);
+    box-shadow: 0 3px 2px clrBgDken(15);
     .header{
         &__link--back{
         position: absolute;

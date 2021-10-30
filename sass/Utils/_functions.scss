@@ -1,0 +1,3 @@
+@function clrBgDken($amount){
+    @return darken($color-background, $amount);
+}

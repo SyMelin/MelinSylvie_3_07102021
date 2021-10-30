@@ -8,6 +8,7 @@ body {
 
 body {
   background-color: #f6f6f6;
+  color: #000;
 }
 
 header, .fonctionnement {
@@ -441,7 +442,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   text-decoration: none;
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 5rem;
-  box-shadow: 0 0.3rem 0.3rem #c3c3c3;
+  box-shadow: 0 0.3rem 0.3rem #d0d0d0;
   position: relative;
   z-index: 1;
 }
@@ -493,7 +494,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   justify-content: space-between;
   align-items: center;
   padding: 0.825rem 0.5rem;
-  color: black;
+  color: #000;
 }
 .card__bottom .info h3, .card__bottom .info p {
   margin: 0;

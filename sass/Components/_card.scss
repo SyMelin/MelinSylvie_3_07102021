@@ -7,7 +7,7 @@
     display: block;
     text-decoration: none;
     position: relative;
-    @include shadow(0, 0.3rem, 0.3rem, darken($color-background, 5%));
+    @include shadow(0, 0.3rem, 0.3rem, clrBgDken(5%));
     @include rounded-corner;
     background-color: $color-white;
     &__img{
@@ -22,7 +22,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 0.825rem 0.5rem;
-        color: black;
+        color: $color-black;
         & .info{
             h3, p{
                 margin: 0;

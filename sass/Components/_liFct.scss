@@ -15,7 +15,7 @@ ol{
         position: relative;
         background-color: $color-background;
         @include rounded-corner($size: 1.25rem);
-        @include shadow(0, 0.25rem, 0.875rem, darken($color-background, 10%));
+        @include shadow(0, 0.25rem, 0.875rem, clrBgDken(10%));
         &::after{
             position: absolute;
             top: 0;
@@ -27,7 +27,7 @@ ol{
             width: 100%;
             background-color: lighten($color: $color-primary, $amount: 35%);
             @include rounded-corner($size: 1.25rem);
-            @include shadow(0, 0.25rem, 0.875rem, darken($color-background, 10%));
+            @include shadow(0, 0.25rem, 0.875rem, clrBgDken(10%));
         }
         & .fas{
             position: relative;
@@ -63,7 +63,7 @@ ol{
             }
             &--img{
                 margin-right: 1rem;
-                color: darken($color: $color-background, $amount: 50%);
+                color: clrBgDken(50%);
                
                 &::after{
                     font-family: "Font Awesome 5 Free";

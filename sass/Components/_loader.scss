@@ -29,7 +29,7 @@ body{
         z-index: -1;
         position: absolute;
         border: 0.875rem solid $color-tertiary;
-        border-right-color: $color-background-dken;
+        border-right-color: clrBgDken(5%);
         @include rounded-corner($size: 20rem);
         top: 14rem;
         left: 41%;

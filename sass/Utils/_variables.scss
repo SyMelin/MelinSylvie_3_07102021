@@ -2,8 +2,8 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-background: #f6f6f6;
-$color-background-dken: darken($color-background, 5%);
 $color-white: #fff;
+$color-black: #000;
 $color-footer:#535353;
 
 $angle-d: 175deg;
@@ -15,13 +15,6 @@ $font-text: 'Roboto';
 $font-logo: 'Shrikhand';
 
 $fw: (thin: 100, light: 300, regular: 400, medium: 500, bold: 700, black: 900);
-
-$fw100: 100;
-$fw400: 400;
-$fw500: 500;
-$fw600: 600;
-$fw700: 700;
-$fw900: 900;
 
 $size-d: 1rem;
 $fs-d: $size-d;
