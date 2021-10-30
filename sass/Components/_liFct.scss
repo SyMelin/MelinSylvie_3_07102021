@@ -14,7 +14,7 @@ ol{
         align-items: center;
         position: relative;
         background-color: $color-background;
-        @include rounded-corner($radius: 1.25rem);
+        border-radius: $radiusL;
         @include shadow($mapKey: mapGetShadow(liFct), $color: clrBgDken(10%));
       /*  @include shadow(0, 0.25rem, 0.875rem, clrBgDken(10%));*/
         &::after{
@@ -27,7 +27,7 @@ ol{
             height: 100%;
             width: 100%;
             background-color: lighten($color: $color-primary, $amount: 35%);
-            @include rounded-corner($radius: 1.25rem);
+            border-radius: $radiusL;
             @include shadow($mapKey: mapGetShadow(liFct), $color: clrBgDken(10%));
         }
         & .fas{
@@ -46,7 +46,7 @@ ol{
                 &::after{
                     background-color: $color-primary;
                     color: $color-background;
-                    @include rounded-corner;
+                    border-radius: $radiusM;
                     width: 1.5rem;
                     padding-top: 0.45rem;
                     padding-bottom: 0.25rem;

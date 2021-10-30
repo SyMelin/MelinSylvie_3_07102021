@@ -1,11 +1,11 @@
-@mixin rounded-corner($radius: $radius-d){
+/*@mixin rounded-corner($radius: $radius-d){
     border-radius: $radius;
-}
+}*/
 
 @mixin shadow($mapKey: mapGetShadow(card), $color: none){
     box-shadow: ($mapKey $color);
 }
-
+/*
 @mixin bouton{
     display: block;
     text-align: center;
@@ -13,9 +13,9 @@
     background-image: $gradient;
     text-decoration: none;
     padding: $padBouton;
-    @include rounded-corner($radius: 5rem);
+    border-radius: 5rem;
 }
-
+*/
 @mixin heartFilled{
     background: -webkit-#{$gradient-heart};
     background-clip: text;

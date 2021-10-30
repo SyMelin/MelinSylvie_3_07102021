@@ -1,4 +1,29 @@
 @charset "UTF-8";
+/*
+padding: 0.5rem 0;
+padding: 0.825rem 0.5rem;
+padding: 0.4rem 0.725rem 0.3rem 0.725rem;
+padding: 1rem 0;
+padding: 0.05rem 0.1rem;
+padding: 1.5rem;
+padding: 0.5rem;
+padding: 0;
+padding: 1.5rem 1rem 0.5rem 1rem;
+*/
+/*@mixin rounded-corner($radius: $radius-d){
+    border-radius: $radius;
+}*/
+/*
+@mixin bouton{
+    display: block;
+    text-align: center;
+    color: $color-white;
+    background-image: $gradient;
+    text-decoration: none;
+    padding: $padBouton;
+    border-radius: 5rem;
+}
+*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Shrikhand&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
@@ -442,7 +467,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   text-decoration: none;
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 5rem;
-  box-shadow: 0 0.3rem 0.75rem #d0d0d0;
+  box-shadow: 0 0.3rem 0.75rem #b6b6b6;
   position: relative;
   z-index: 1;
 }

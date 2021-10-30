@@ -1,6 +1,12 @@
 .btn{
-    @include bouton;
-    @include shadow($mapKey: mapGetShadow(bouton), $color: clrBgDken(15%));
+    display: block;
+    text-align: center;
+    color: $color-white;
+    background-image: $gradient;
+    text-decoration: none;
+    padding: $padBouton;
+    border-radius: $radius2XL;
+    @include shadow($mapKey: mapGetShadow(bouton), $color: clrBgDken(25%));
     position: relative;
     z-index:1;
     &--form{
@@ -22,7 +28,7 @@
         filter: brightness(1.15);
         border: none;
         @include shadow($mapKey: mapGetShadow(boutonAft), $color: clrBgDken(75%));
-        @include rounded-corner($radius: 5rem);
+        border-radius: $radius2XL;
         opacity: 0;
         z-index: -1;
         transition: opacity 300ms cubic-bezier(.17,.67,.25,1.1);

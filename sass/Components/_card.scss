@@ -8,14 +8,14 @@
     text-decoration: none;
     position: relative;
     @include shadow($mapKey: mapGetShadow(card), $color: clrBgDken(5%));
-    @include rounded-corner;
+    border-radius: $radiusM;
     background-color: $color-white;
     &__img{
         width: 100%;
         height: 10rem;
         object-fit: cover;
         object-position: center;
-        border-radius: 1rem 1rem 0 0;
+        border-radius: $radiusM $radiusM 0 0;
     }
     &__bottom{
         display: flex;
@@ -39,7 +39,7 @@
         right: 0.875rem;
         padding: 0.4rem 0.725rem 0.3rem 0.725rem;
         background-color: $color-tertiary;
-        @include rounded-corner($radius:0.1rem);
+        border-radius: $radiusXS;
         color: adjust-color($color: $color-tertiary, $saturation: 32%, $lightness: -41%);
     }
 }

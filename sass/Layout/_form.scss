@@ -21,7 +21,7 @@ form{
 }
 
 .item{
-    @include rounded-corner($radius: 0.825rem);
+    border-radius: $radiusS;
     @include shadow($mapKey: mapGetShadow(item), $color: clrBgDken(15%));
     background-color: $color-white;
     padding: 0;

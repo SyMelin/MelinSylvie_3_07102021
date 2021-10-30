@@ -12,7 +12,7 @@
         height: 1.25rem;
         width: 1.25rem;
         background-color: $color-white;
-        border-radius: 20rem;
+        border-radius: $radius3XL;
         &::after{
             content:"";
             position: absolute;

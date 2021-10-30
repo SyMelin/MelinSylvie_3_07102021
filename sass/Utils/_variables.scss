@@ -19,7 +19,6 @@ $fw: (thin: 100, light: 300, regular: 400, medium: 500, bold: 700, black: 900);
 $size-d: 1rem;
 $fs-d: $size-d;
 $gs-d: $size-d;
-$radius-d: $size-d;
 
 $opaHeart: 1;
 $opaHeart-inv: 1 - $opaHeart;
@@ -53,3 +52,23 @@ $fs7: 1.4375rem;
 $fs8: 1.5rem;
 $fs9: 1.825rem;
 $fsLoader: 2.825rem;
+
+$radiusXS: 0.1rem;
+$radiusS: 0.825rem;
+$radiusM: 1rem;
+$radiusL: 1.25rem;
+$radiusXL: 1.5rem;
+$radius2XL: 5rem;
+$radius3XL: 20rem;
+
+/*
+padding: 0.5rem 0;
+padding: 0.825rem 0.5rem;
+padding: 0.4rem 0.725rem 0.3rem 0.725rem;
+padding: 1rem 0;
+padding: 0.05rem 0.1rem;
+padding: 1.5rem;
+padding: 0.5rem;
+padding: 0;
+padding: 1.5rem 1rem 0.5rem 1rem;
+*/
