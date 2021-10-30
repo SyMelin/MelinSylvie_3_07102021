@@ -5,8 +5,8 @@
     box-shadow: $size1 $size2 $size3 $color;
 }
 
-@mixin S($SS: $SSC){
-    box-shadow: $SS;
+@mixin S($SS: $SSC, $color: blue){
+    box-shadow: ($SS $color);
 }
 
 
