@@ -729,7 +729,7 @@ body::before {
   bottom: 0;
   left: 0;
   opacity: 0;
-  animation: lspinner 20ms;
+  animation: showing 1500ms;
   /* de 1 à 3s */
 }
 body::after {
@@ -738,23 +738,25 @@ body::after {
   width: 3rem;
   height: 3rem;
   z-index: -1;
-  position: absolute;
+  position: fixed;
   border: 0.875rem solid #99E2D0;
   border-right-color: #e9e9e9;
   border-radius: 20rem;
   top: 14rem;
-  left: 41%;
+  left: 0;
+  right: 0;
+  margin: auto;
   opacity: 0;
-  animation: lspinner 20ms, loading 20ms linear both;
+  animation: showing 750ms 2, spin 750ms linear both 2;
   /* de 1 à 3s */
 }
 body header, body main, body footer {
   opacity: 1;
-  animation: hidding 20ms;
+  animation: hidding 1500ms;
   /* de 1 à 3s */
 }
 
-@keyframes loading {
+@keyframes spin {
   0% {
     transform: rotate(0deg);
   }
@@ -769,7 +771,7 @@ body header, body main, body footer {
   }
 }
 /* animation "loading spinner"*/
-@keyframes lspinner {
+@keyframes showing {
   0%, 100% {
     opacity: 1;
   }

@@ -1,4 +1,4 @@
-$animLoad-dur: 20ms; /*2500ms*/
+$animLoad-dur: 1500ms; /*2500ms*/
 $widthSpinAft: 3rem;
 /*$leftSpinAft: 100% / 2 - $widthSpinAft;*/
 
@@ -19,22 +19,24 @@ body{
         bottom: 0;
         left: 0;
         opacity: 0;
-        animation: lspinner $animLoad-dur; /* de 1 à 3s */
+        animation: showing $animLoad-dur; /* de 1 à 3s */
     }
     &::after{
         content:"";
         font-family: "Font Awesome 5 Free";
-        width: $widthSpinAft;
-        height: $widthSpinAft;
+        width: 3rem;
+        height: 3rem;
         z-index: -1;
-        position: absolute;
+        position: fixed;
         border: 0.875rem solid $color-tertiary;
         border-right-color: clrBgDken(5%);
         border-radius: $radius3XL;
         top: 14rem;
-        left: 41%;
+        left: 0;
+        right: 0;
+        margin: auto;
         opacity: 0;
-        animation: lspinner $animLoad-dur, loading $animLoad-dur linear both;/* de 1 à 3s */
+        animation: showing 750ms 2, spin 750ms linear both 2;/* de 1 à 3s */
     }
     & header, main, footer{
         opacity: 1;
@@ -42,7 +44,7 @@ body{
     }
 }
 
-@keyframes loading {
+@keyframes spin {
     0% {
       transform: rotate(0deg);
     }
@@ -60,7 +62,7 @@ body{
 }
  
 /* animation "loading spinner"*/
-@keyframes lspinner{
+@keyframes showing{
     0%, 100%{
         opacity: 1;
     }
