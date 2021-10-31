@@ -1,3 +1,28 @@
+/*
+padding: 0.5rem 0;
+padding: 0.825rem 0.5rem;
+padding: 0.4rem 0.725rem 0.3rem 0.725rem;
+padding: 1rem 0;
+padding: 0.05rem 0.1rem;
+padding: 1.5rem;
+padding: 0.5rem;
+padding: 0;
+padding: 1.5rem 1rem 0.5rem 1rem;
+*/
+/*@mixin rounded-corner($radius: $radius-d){
+    border-radius: $radius;
+}*/
+/*
+@mixin bouton{
+    display: block;
+    text-align: center;
+    color: $color-white;
+    background-image: $gradient;
+    text-decoration: none;
+    padding: $padBouton;
+    border-radius: 5rem;
+}
+*/
 body {
   margin: 0;
   z-index: 1;
@@ -52,6 +77,19 @@ body {
 .fonctionnement {
   margin-top: 0;
   padding: 1.75rem 5%;
+  /*
+  @media screen and (min-width: 768px) {
+      & ol {
+          display: flex;
+          flex-flow: nowrap row;
+          justify-content: space-between;
+          column-gap: 2.5rem;
+          & li {
+              min-width: 30%;
+              white-space: nowrap;
+          }
+      }
+  }*/
 }
 .fonctionnement ol {
   list-style-position: inside;
@@ -59,6 +97,18 @@ body {
   flex-direction: column;
   gap: 1.75rem;
   padding-left: 0.875rem;
+}
+@media screen and (min-width: 769px) {
+  .fonctionnement ol {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+    column-gap: 2.5rem;
+  }
+  .fonctionnement ol li {
+    min-width: 30%;
+    white-space: nowrap;
+  }
 }
 
 /*-- Section "Restaurants" --*/
@@ -70,6 +120,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+@media screen and (min-width: 769px) {
+  .restaurants__container {
+    flex-flow: wrap row;
+    justify-content: space-between;
+    row-gap: 2rem;
+  }
 }
 
 #resto3 .new, #resto4 .new {

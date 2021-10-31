@@ -62,8 +62,31 @@ body{
         list-style-position: inside;
         @include flex-col-gap($size: 1.75rem);
         padding-left: 0.875rem;
-        
+        @include tabletANDdesktop {
+            display: flex;
+            flex-flow: nowrap row;
+            justify-content: space-between;
+            column-gap: 2.5rem;
+            & li {
+                min-width: 30%;
+                white-space: nowrap;
+            }
+        }
     }
+
+    /*
+    @media screen and (min-width: 768px) {
+        & ol {
+            display: flex;
+            flex-flow: nowrap row;
+            justify-content: space-between;
+            column-gap: 2.5rem;
+            & li {
+                min-width: 30%;
+                white-space: nowrap;
+            }
+        }
+    }*/
 }
 
 /*-- Section "Restaurants" --*/
@@ -72,6 +95,11 @@ body{
     padding: $padHome;
     &__container{
         @include flex-col-gap;
+        @include tabletANDdesktop {
+            flex-flow: wrap row;
+            justify-content: space-between;
+            row-gap: 2rem;
+        }
     }
 }
 

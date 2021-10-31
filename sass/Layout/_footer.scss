@@ -10,9 +10,25 @@ footer{
         list-style-type: none;
         padding-left: 0;
         margin: 0;
+        @include tabletANDdesktop{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @include tablet-only{
+            flex-direction: column;
+            height: 3rem;
+        }
         li{
             font-size: 0.925rem;
             margin-bottom: 0.3rem;
+            @include tabletANDdesktop{
+                width: 50%;
+            }
+            @include desktop-only{
+                width: 25%;
+            }
             a{
                 color: $color-white;
                 text-decoration: none;

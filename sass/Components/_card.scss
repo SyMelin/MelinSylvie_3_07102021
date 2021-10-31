@@ -1,5 +1,11 @@
 .cardbox{
     position: relative;
+    @include tablet-only{
+        min-width: 48%;
+    }
+    @include desktop-only{
+        min-width: 23%;
+    }
 }
 
 .card{

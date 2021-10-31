@@ -179,9 +179,33 @@ footer ul {
   padding-left: 0;
   margin: 0;
 }
+@media screen and (min-width: 769px) {
+  footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  footer ul {
+    flex-direction: column;
+    height: 3rem;
+  }
+}
 footer ul li {
   font-size: 0.925rem;
   margin-bottom: 0.3rem;
+}
+@media screen and (min-width: 769px) {
+  footer ul li {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer ul li {
+    width: 25%;
+  }
 }
 footer ul li a {
   color: #fff;
@@ -496,6 +520,16 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
 
 .cardbox {
   position: relative;
+}
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .cardbox {
+    min-width: 48%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cardbox {
+    min-width: 23%;
+  }
 }
 
 .card {

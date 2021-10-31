@@ -37,3 +37,35 @@
 @mixin border{
     border: 1px solid red;
 }
+
+
+@mixin mobile-only{
+    @media screen and (max-width: map-get($map: $breakpoints, $key: mobile)) {
+        @content;
+    }
+}
+
+
+@mixin mobileANDtablet{
+    @media screen and (max-width: map-get($map: $breakpoints, $key: tablet)) {
+        @content;
+    }
+}
+
+@mixin tablet-only{
+    @media screen and (min-width: (map-get($map: $breakpoints, $key: mobile )) + 1) and (max-width: map-get($map: $breakpoints, $key: tablet)) {
+        @content;
+    }
+}
+
+@mixin tabletANDdesktop{
+    @media screen and (min-width: (map-get($map: $breakpoints, $key: mobile)) + 1) {
+        @content;
+    }
+}
+
+@mixin desktop-only{
+    @media screen and (min-width: (map-get($map: $breakpoints, $key: tablet)) + 1) {
+        @content;
+    }
+}
