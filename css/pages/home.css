@@ -84,24 +84,31 @@ body {
   margin: 1rem auto;
 }
 
-/* Section "Fonctionnement" */
-.fonctionnement {
+/* Section "Fonctionnement" et "Restaurant" */
+.fonctionnement, .restaurants {
+  /* @include border;*/
   margin-top: 0;
-  padding: 1.75rem 5%;
+  padding: 1.75rem 5% 2.75rem 5%;
 }
+.fonctionnement h2, .restaurants h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Section "Fonctionnement" */
 .fonctionnement ol {
+  padding: 0.25rem 0;
+  padding-left: 0.875rem;
   list-style-position: inside;
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
-  padding-left: 0.875rem;
 }
 @media screen and (min-width: 768px) {
   .fonctionnement ol {
     display: flex;
     flex-flow: nowrap row;
     justify-content: space-between;
-    column-gap: 2.5rem;
+    column-gap: 1.75rem;
   }
   .fonctionnement ol li {
     min-width: 30%;
@@ -110,11 +117,6 @@ body {
 }
 
 /*-- Section "Restaurants" --*/
-.restaurants {
-  margin-top: 0;
-  padding: 1.75rem 5%;
-}
-
 #resto3 .new, #resto4 .new {
   display: none;
 }
