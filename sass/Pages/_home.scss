@@ -73,34 +73,12 @@ body{
             }
         }
     }
-
-    /*
-    @media screen and (min-width: 768px) {
-        & ol {
-            display: flex;
-            flex-flow: nowrap row;
-            justify-content: space-between;
-            column-gap: 2.5rem;
-            & li {
-                min-width: 30%;
-                white-space: nowrap;
-            }
-        }
-    }*/
 }
 
 /*-- Section "Restaurants" --*/
 .restaurants{
     margin-top: 0;
     padding: $padHome;
-    &__container{
-        @include flex-col-gap;
-        @include tabletANDdesktop {
-            flex-flow: wrap row;
-            justify-content: space-between;
-            row-gap: 2rem;
-        }
-    }
 }
 
 #resto3, #resto4{
