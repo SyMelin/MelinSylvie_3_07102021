@@ -4,6 +4,24 @@ body{
     font-weight: map-get($map: $fw, $key: regular);
 }
 
+/*-- typography Layout _footer --*/
+footer{
+    & li{
+        font-size: 1rem;
+        font-weight: map-get($map: $fw, $key: regular);
+        transform: scaleY(1.05);
+        letter-spacing: 0.02rem;
+        & a{
+            font-size: 0.875rem;
+            & .fas{
+                font-size: 0.75rem;
+            }
+            & .fa-hands-helping{
+                transform: scaleX(0.75);
+            }
+        }
+    }
+}
 
 /*-- typography Layout _form --*/
 form{
@@ -16,12 +34,6 @@ form{
     }
 }
 
-
-/*-- typography Layout _footer --*/
-.footer__title{
-    @include font-title;
-    font-size: map-get($map: $fsTitles, $key: footer);
-}
 
 
 /*-- typography Components _animChecked --*/

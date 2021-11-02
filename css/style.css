@@ -50,18 +50,28 @@ body {
   font-weight: 400;
 }
 
+/*-- typography Layout _footer --*/
+footer li {
+  font-size: 1rem;
+  font-weight: 400;
+  transform: scaleY(1.05);
+  letter-spacing: 0.02rem;
+}
+footer li a {
+  font-size: 0.875rem;
+}
+footer li a .fas {
+  font-size: 0.75rem;
+}
+footer li a .fa-hands-helping {
+  transform: scaleX(0.75);
+}
+
 /*-- typography Layout _form --*/
 form .form-box__title {
   font-size: 1.275rem;
   font-weight: 400;
   text-transform: uppercase;
-}
-
-/*-- typography Layout _footer --*/
-.footer__title {
-  font-family: "Shrikhand", "cursive";
-  font-weight: 100;
-  font-size: 1rem;
 }
 
 /*-- typography Components _animChecked --*/
@@ -154,7 +164,7 @@ form .form-box__title {
 .restaurant__name h1 {
   font-size: 1.625rem;
   font-family: "Shrikhand", "cursive";
-  font-weight: 100;
+  font-weight: 400;
 }
 
 header {
@@ -179,11 +189,13 @@ header .header__logo {
 footer {
   color: #fff;
   background-color: #535353;
-  padding: 1.5rem;
+  padding: 1.5rem 5%;
 }
-footer .footer__title {
-  margin: 0;
-  margin-bottom: 1.5rem;
+footer .footer__logo {
+  filter: invert(1);
+  height: 1rem;
+  width: auto;
+  margin-bottom: 1rem;
 }
 footer ul {
   list-style-type: none;
@@ -201,14 +213,13 @@ footer ul {
 @media screen and (min-width: 768px) and (max-width: 991px) {
   footer ul {
     flex-direction: column;
-    height: 3rem;
+    height: 3.5rem;
   }
 }
 footer ul li {
-  font-size: 0.925rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   footer ul li {
     width: 50%;
   }
@@ -222,9 +233,8 @@ footer ul li a {
   color: #fff;
   text-decoration: none;
 }
-footer ul li a i {
-  font-size: 0.825rem;
-  margin-right: 0.825rem;
+footer ul li a .fas {
+  margin-right: 0.5rem;
 }
 
 /* Formulaire */
@@ -776,7 +786,7 @@ ol .li--fct:hover .fas--img::after {
 
 /*2500ms*/
 /*$leftSpinAft: 100% / 2 - $widthSpinAft;*/
-body::before {
+.body--home::before {
   content: "ohmyfood";
   color: #fff;
   font-family: "Shrikhand";
@@ -795,7 +805,7 @@ body::before {
   animation: showing 1500ms;
   /* de 1 à 3s */
 }
-body::after {
+.body--home::after {
   content: "";
   font-family: "Font Awesome 5 Free";
   width: 3rem;
@@ -813,7 +823,7 @@ body::after {
   animation: showing 750ms 2, spin 750ms linear both 2;
   /* de 1 à 3s */
 }
-body header, body main, body footer {
+.body--home header, .body--home main, .body--home footer {
   opacity: 1;
   animation: hidding 1500ms;
   /* de 1 à 3s */

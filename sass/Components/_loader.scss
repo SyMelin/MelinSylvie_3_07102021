@@ -2,7 +2,7 @@ $animLoad-dur: 1500ms; /*2500ms*/
 $widthSpinAft: 3rem;
 /*$leftSpinAft: 100% / 2 - $widthSpinAft;*/
 
-body{
+.body--home{
     &::before{
         content: "ohmyfood";
         color: $color-white;

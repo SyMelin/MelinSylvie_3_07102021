@@ -23,7 +23,7 @@ $gs-d: $size-d;
 $opaHeart: 1;
 $opaHeart-inv: 1 - $opaHeart;
 
-$padHome: 1.75rem 5% 5rem 5%;
+$padHome: 1.75rem 5% 2.75rem 5%;
 $padBouton: 1rem 2rem 1rem 2rem;
 
 $shadow: (
@@ -36,7 +36,7 @@ $shadow: (
     liFct: (0 0.25rem 0.875rem)
 );
 
-$fsTitles: (localisation: 1.4375rem, mainh2: 1.4375rem, footer: $fs-d, name: 1.625rem, formBox: 1.275rem);
+$fsTitles: (localisation: 1.4375rem, mainh2: 1.4375rem, name: 1.625rem, formBox: 1.275rem);
 $fsAnimCk: (title: 1.0625rem, details: 0.875rem, price: 0.875rem);
 $fsLiFct: (nbAfter: 0.8rem, img:1.25rem, imgAfter: 1.25rem, text: $fs-d);
 $fsCard: (title: 1.1rem, place: $fs-d);

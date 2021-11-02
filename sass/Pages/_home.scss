@@ -64,7 +64,7 @@ body{
 .fonctionnement, .restaurants{
    /* @include border;*/
     margin-top: 0;
-    padding: 1.75rem 5% 2.75rem 5%;
+    padding: $padHome;
     & h2{
         margin-bottom: 1.5rem;
     }
