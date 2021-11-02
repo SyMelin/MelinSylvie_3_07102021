@@ -141,7 +141,7 @@ form .form-box__title {
 
 /*-- typography Pages _menu --*/
 .restaurant__name h1 {
-  font-size: 1.825rem;
+  font-size: 1.625rem;
   font-family: "Shrikhand", "cursive";
   font-weight: 100;
 }
@@ -636,10 +636,11 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   position: relative;
 }
 .heart--InTitle .fa-heart {
-  margin-right: 0.75rem;
+  margin-right: 0.25rem;
 }
 .heart--InTitle .fa-heart--filled {
-  right: 0;
+  top: 0.05rem;
+  right: 0.35rem;
 }
 .heart .fa-heart {
   color: #9356DC;
