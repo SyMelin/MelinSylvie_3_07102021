@@ -558,7 +558,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   width: 100%;
   height: 10rem;
   object-fit: cover;
-  object-position: center;
+  object-position: 50% 95%;
   border-radius: 1rem 1rem 0 0;
 }
 .card__bottom {

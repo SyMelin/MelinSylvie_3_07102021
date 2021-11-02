@@ -86,3 +86,9 @@ body{
         display: none;
     }
 }
+
+#resto2{
+    & img{
+        object-position: 50% 62%;
+    }
+}
