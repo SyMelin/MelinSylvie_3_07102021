@@ -19,12 +19,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 3.5rem;
     &__top{
         text-align: center;
         width: 100%;
-        padding-top: 0.875rem;
-        padding-bottom: 0.875rem;
+        padding: 0.875rem;
         background-color: clrBgDken(5%);
         & .place{
             position: relative;
@@ -39,28 +37,25 @@ body{
         }
     }
     &__bottom{
-        @include border;
+       /* @include border;*/
+        padding: 2.5rem 0;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        & h1{
-            @include border;
-            width: 70%;
+        & h1, p{
             text-align: center;
-            margin-top: 2rem;
-            margin-bottom: $size-d;
-        }
-         &> p {
-            @include border;
-            width: 90%; 
-            text-align: center;
-            
             margin-top: 0;
-            margin-bottom: 2rem;
+            margin-bottom: 0.875rem;
+        }
+        & h1{
+            width: 70%;
+        }
+        & p{
+            width: 85%; 
         }
         & .btn{
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
+            margin: 1rem auto;
         }
     }
 }
@@ -73,7 +68,7 @@ body{
         list-style-position: inside;
         @include flex-col-gap($size: 1.75rem);
         padding-left: 0.875rem;
-        @include tabletANDdesktop {
+        @include MediumAndLargeScreen{
             display: flex;
             flex-flow: nowrap row;
             justify-content: space-between;

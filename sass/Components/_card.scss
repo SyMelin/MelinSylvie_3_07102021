@@ -1,9 +1,9 @@
 .cardbox{
     position: relative;
-    @include tablet-only{
+    @include MediumScreen-only{
         min-width: 48%;
     }
-    @include desktop-only{
+    @include LargeScreen-only{
         min-width: 23%;
     }
 }

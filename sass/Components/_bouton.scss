@@ -9,6 +9,9 @@
     @include shadow($mapKey: mapGetShadow(bouton), $color: clrBgDken(25%));
     position: relative;
     z-index:1;
+    &--explore{
+        padding: 1rem 1.5rem;
+    }
     &--form{
         border: none;
     }

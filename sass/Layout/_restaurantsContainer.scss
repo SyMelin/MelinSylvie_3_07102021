@@ -1,6 +1,6 @@
 .restaurants__container{
     @include flex-col-gap;
-    @include tabletANDdesktop {
+    @include MediumAndLargeScreen{
         flex-flow: wrap row;
         justify-content: space-between;
         row-gap: 2rem;

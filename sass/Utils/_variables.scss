@@ -36,7 +36,7 @@ $shadow: (
     liFct: (0 0.25rem 0.875rem)
 );
 
-$fsTitles: (localisation: 1.5rem, mainh2: 1.4375rem, footer: $fs-d, name: 1.625rem, formBox: 1.275rem);
+$fsTitles: (localisation: 1.4375rem, mainh2: 1.4375rem, footer: $fs-d, name: 1.625rem, formBox: 1.275rem);
 $fsAnimCk: (title: 1.0625rem, details: 0.875rem, price: 0.875rem);
 $fsLiFct: (nbAfter: 0.8rem, img:1.25rem, imgAfter: 1.25rem, text: $fs-d);
 $fsCard: (title: 1.1rem, place: $fs-d);
@@ -46,7 +46,7 @@ $fs1: 0.8rem;
 $fs2: 0.875rem;
 $fs3: 0.925rem;
 $fs4: 1.0625rem;
-$fs5: 1.1rem;
+$fs5: 1.0625rem; /* p dans localisation__bottom  1.1rem*/
 $fs6: 1.25rem;
 $fs7: 1.4375rem;
 $fs8: 1.5rem;
@@ -72,5 +72,15 @@ padding: 0.5rem;
 padding: 0;
 padding: 1.5rem 1rem 0.5rem 1rem;
 */
-
+/*
 $breakpoints: (mobile: 768px, tablet: 1023px, desktop: 1024px);
+*/
+$breakpoints: (
+    smallMin: 0px,
+    smallMax: 767px,
+    mediumMin: 768px,
+    mediumMax: 991px,
+    largeMin: 992px,
+    largeMax: 1199px,
+    extraLargeMin: 1200px
+    );

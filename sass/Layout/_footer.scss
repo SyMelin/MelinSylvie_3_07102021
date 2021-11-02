@@ -10,23 +10,23 @@ footer{
         list-style-type: none;
         padding-left: 0;
         margin: 0;
-        @include tabletANDdesktop{
+        @include MediumAndLargeScreen{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
         }
-        @include tablet-only{
+        @include MediumScreen-only{
             flex-direction: column;
             height: 3rem;
         }
         li{
             font-size: 0.925rem;
             margin-bottom: 0.3rem;
-            @include tabletANDdesktop{
+            @include MediumAndLargeScreen{
                 width: 50%;
             }
-            @include desktop-only{
+            @include LargeScreen-only{
                 width: 25%;
             }
             a{

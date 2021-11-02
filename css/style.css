@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* p dans localisation__bottom  1.1rem*/
 /*
 padding: 0.5rem 0;
 padding: 0.825rem 0.5rem;
@@ -9,6 +10,9 @@ padding: 1.5rem;
 padding: 0.5rem;
 padding: 0;
 padding: 1.5rem 1rem 0.5rem 1rem;
+*/
+/*
+$breakpoints: (mobile: 768px, tablet: 1023px, desktop: 1024px);
 */
 /*@mixin rounded-corner($radius: $radius-d){
     border-radius: $radius;
@@ -75,7 +79,9 @@ form .form-box__title {
 
 /*-- typography Components _bouton --*/
 .btn {
-  font-weight: 500;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
 }
 
 /*-- typography Components _card --*/
@@ -116,21 +122,26 @@ form .form-box__title {
 }
 
 /*-- typography Pages _home --*/
-.localisation__name {
+.localisation__top .place {
   font-size: 0.925rem;
-  font-weight: 700;
 }
-.localisation__name .fas {
+.localisation__top .place .fas {
   font-size: 1rem;
 }
-.localisation h1 {
-  font-size: 1.5rem;
+.localisation__top .place__text {
+  font-weight: 700;
+}
+
+.localisation__bottom h1 {
+  font-size: 1.4375rem;
   font-weight: 900;
 }
-.localisation > p {
-  font-size: 1.1rem;
+.localisation__bottom > p {
+  font-size: 1.0625rem;
+  font-weight: 300;
+  letter-spacing: -0.01rem;
 }
-.localisation .btn {
+.localisation__bottom .btn {
   font-size: 0.875rem;
 }
 
@@ -179,7 +190,7 @@ footer ul {
   padding-left: 0;
   margin: 0;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   footer ul {
     display: flex;
     flex-wrap: wrap;
@@ -187,7 +198,7 @@ footer ul {
     align-items: center;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   footer ul {
     flex-direction: column;
     height: 3rem;
@@ -197,12 +208,12 @@ footer ul li {
   font-size: 0.925rem;
   margin-bottom: 0.3rem;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   footer ul li {
     width: 50%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   footer ul li {
     width: 25%;
   }
@@ -357,7 +368,7 @@ form .form-button {
   flex-direction: column;
   gap: 1rem;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .restaurants__container {
     flex-flow: wrap row;
     justify-content: space-between;
@@ -508,6 +519,9 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   position: relative;
   z-index: 1;
 }
+.btn--explore {
+  padding: 1rem 1.5rem;
+}
 .btn--form {
   border: none;
 }
@@ -534,12 +548,12 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
 .cardbox {
   position: relative;
 }
-@media screen and (min-width: 769px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .cardbox {
     min-width: 48%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .cardbox {
     min-width: 23%;
   }
