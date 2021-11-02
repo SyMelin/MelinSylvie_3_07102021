@@ -27,12 +27,6 @@ $breakpoints: (mobile: 768px, tablet: 1023px, desktop: 1024px);
     border-radius: 5rem;
 }
 */
-body {
-  margin: 0;
-  z-index: 1;
-  position: relative;
-}
-
 /*-- Header --*/
 .header__link--back {
   display: none;

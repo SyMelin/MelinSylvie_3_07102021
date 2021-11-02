@@ -167,6 +167,12 @@ form .form-box__title {
   font-weight: 400;
 }
 
+body {
+  margin: 0;
+  z-index: 1;
+  position: relative;
+}
+
 header {
   width: 100%;
   padding-top: 1.25rem;
@@ -245,7 +251,7 @@ form {
 form .form-box {
   margin: 0;
   padding: 0.5rem;
-  border: 1px solid red;
+  /* @include border;*/
 }
 form .form-box__title {
   display: block;
@@ -257,8 +263,29 @@ form .form-box__container {
   gap: 1rem;
 }
 form .form-button {
+  width: 100%;
   display: flex;
   justify-content: center;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  form {
+    margin: auto;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  form {
+    margin: auto;
+    width: 95%;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1.5rem;
+  }
+  form .form-box {
+    width: 29%;
+  }
 }
 
 .item {

@@ -18,14 +18,23 @@
         align-items: baseline;
         position: absolute;
         bottom: 0;
+        left: 0;
+        right: 0;
         width: 100%;
         padding: 1.5rem 1rem 0.5rem 1rem;
         background-color: $color-background;
         border-radius: $radiusXL $radiusXL 0 0;
-        /*border: 1px solid black;*/
         h1{
-            border: 1px solid black;
+           /* @include border; */
             margin-bottom: 0;
+        }
+        @include MediumScreen-only{
+            margin: auto;
+            width: 80%;
+        }
+        @include LargeScreen-only{
+            margin: auto;
+            width: 90%;
         }
     }
 }
