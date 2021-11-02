@@ -158,7 +158,7 @@ header {
 }
 header .header__link--back {
   position: absolute;
-  left: 10px;
+  left: 1rem;
   color: #000;
 }
 header .header__logo {

@@ -41,34 +41,45 @@ body {
   align-items: center;
   padding-bottom: 3.5rem;
 }
-.localisation__name {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.localisation__top {
   text-align: center;
+  width: 100%;
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
   background-color: #e9e9e9;
 }
-.localisation__name .fas {
-  margin-right: 1rem;
+.localisation__top .place {
+  position: relative;
 }
-.localisation__name span {
+.localisation__top .place .fas {
+  position: absolute;
+  top: 0;
+  left: -1.75rem;
+}
+.localisation__top .place__text {
   text-align: left;
 }
-.localisation h1 {
+.localisation__bottom {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.localisation__bottom h1 {
+  border: 1px solid red;
   width: 70%;
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
-.localisation > p {
+.localisation__bottom > p {
+  border: 1px solid red;
   width: 90%;
   text-align: center;
   margin-top: 0;
   margin-bottom: 2rem;
 }
-.localisation .btn {
+.localisation__bottom .btn {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
