@@ -703,6 +703,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   z-index: 2;
 }
 .heart--InCard .fa-heart--filled {
+  bottom: 0.05rem;
   right: 0.1rem;
 }
 .heart--InTitle {
@@ -714,12 +715,11 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
 }
 .heart--InTitle .fa-heart--filled {
   top: 0.1rem;
-  right: 0.4rem;
+  right: 0.35rem;
 }
 .heart .fa-heart {
   color: #9356DC;
   display: block;
-  bottom: 0;
 }
 .heart .fa-heart--edge {
   color: #000;

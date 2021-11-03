@@ -10,6 +10,7 @@
         z-index: 2;
         & .fa-heart{
             &--filled{
+                bottom: 0.05rem;
                 right: 0.1rem;  
             }
         }
@@ -21,14 +22,13 @@
             margin-right: 0.5rem;;
             &--filled{
                 top: 0.1rem;
-                right: 0.4rem;     
+                right: 0.35rem;     
             }
         }
     }
     & .fa-heart{
         color: $color-primary;
         display: block;
-        bottom: 0;
         &--edge{
             color: #000;
             opacity: $opaHeart;
