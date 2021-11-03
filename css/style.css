@@ -28,6 +28,18 @@ $breakpoints: (mobile: 768px, tablet: 1023px, desktop: 1024px);
     border-radius: 5rem;
 }
 */
+/*
+@mixin MediumAndLargeScreen{
+    @media screen and (min-width: map-get($map: $breakpoints, $key: mediumMin)) {
+        @content;
+    }
+}
+
+@mixin LargeScreen-only{
+    @media screen and (min-width: map-get($map: $breakpoints, $key: largeMin)) {
+        @content;
+    }
+}*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Shrikhand&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
@@ -216,7 +228,7 @@ footer ul {
     align-items: center;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   footer ul {
     flex-direction: column;
     height: 3.5rem;
@@ -225,12 +237,12 @@ footer ul {
 footer ul li {
   margin-bottom: 0.4rem;
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   footer ul li {
     width: 50%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   footer ul li {
     width: 25%;
   }
@@ -267,13 +279,13 @@ form .form-button {
   display: flex;
   justify-content: center;
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   form {
     margin: auto;
     width: 80%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   form {
     margin: auto;
     width: 95%;
@@ -586,12 +598,12 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
 .cardbox {
   position: relative;
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .cardbox {
     min-width: 48%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   .cardbox {
     min-width: 23%;
   }

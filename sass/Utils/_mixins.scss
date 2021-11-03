@@ -69,3 +69,18 @@
         @content;
     }
 }
+
+
+
+/*
+@mixin MediumAndLargeScreen{
+    @media screen and (min-width: map-get($map: $breakpoints, $key: mediumMin)) {
+        @content;
+    }
+}
+
+@mixin LargeScreen-only{
+    @media screen and (min-width: map-get($map: $breakpoints, $key: largeMin)) {
+        @content;
+    }
+}*/

@@ -79,8 +79,10 @@ $breakpoints: (
     smallMin: 0px,
     smallMax: 767px,
     mediumMin: 768px,
-    mediumMax: 991px,
-    largeMin: 992px,
-    largeMax: 1199px,
+    mediumMax: 1023px,
+  /*  mediumMax: 991px,*/
+  /*  largeMin: 992px,*/
+  /*  largeMax: 1199px,*/
+    largeMin: 1024px,
     extraLargeMin: 1200px
     );
