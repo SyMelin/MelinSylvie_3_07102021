@@ -11,9 +11,6 @@ padding: 0.5rem;
 padding: 0;
 padding: 1.5rem 1rem 0.5rem 1rem;
 */
-/*
-$breakpoints: (mobile: 768px, tablet: 1023px, desktop: 1024px);
-*/
 /*@mixin rounded-corner($radius: $radius-d){
     border-radius: $radius;
 }*/
@@ -233,7 +230,7 @@ footer ul {
     align-items: center;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
   footer ul {
     flex-direction: column;
     height: 3.5rem;
@@ -242,12 +239,12 @@ footer ul {
 footer ul li {
   margin-bottom: 0.4rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
   footer ul li {
     width: 50%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   footer ul li {
     width: 25%;
   }
@@ -284,13 +281,13 @@ form .form-button {
   display: flex;
   justify-content: center;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
   form {
     margin: auto;
     width: 80%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   form {
     margin: auto;
     width: 95%;
@@ -606,14 +603,14 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
 .cardbox {
   position: relative;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
   .cardbox {
     min-width: 48%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .cardbox {
-    min-width: 23%;
+    width: 23%;
   }
 }
 
@@ -637,7 +634,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.825rem 0.5rem;
+  padding: 0.825rem 0.75rem;
   color: #000;
 }
 .card__bottom .info h3, .card__bottom .info p {
@@ -701,7 +698,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
 .heart--InCard {
   position: absolute;
   bottom: 1.8125rem;
-  right: 1.5rem;
+  right: 1.25rem;
   padding: 0.05rem 0.1rem;
   z-index: 2;
 }
