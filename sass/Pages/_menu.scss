@@ -8,7 +8,7 @@
     position: relative;
     &__img{
         width: 100%;
-        height: 20rem;
+        height: 17.5em;
         object-fit: cover;
     }
     &__name{
@@ -21,9 +21,9 @@
         left: 0;
         right: 0;
         width: 100%;
-        padding: 1.5rem 1rem 0.5rem 1rem;
+        padding: 0.75rem 1.25rem 0 1.25rem;
         background-color: $color-background;
-        border-radius: $radiusXL $radiusXL 0 0;
+        border-radius: $radiusN $radiusN 0 0;
         h1{
            /* @include border; */
             margin-bottom: 0;
@@ -37,4 +37,8 @@
             width: 90%;
         }
     }
+}
+
+.form-button{
+    margin: 2.5rem auto 2.5rem auto;
 }

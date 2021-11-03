@@ -10,10 +10,11 @@
     position: relative;
     z-index:1;
     &--explore{
-        padding: 1rem 1.5rem;
+        padding: 0.9375rem 1.3125rem;
     }
     &--form{
         border: none;
+        padding: 1rem 3rem;
     }
     &:hover {
         &::after{

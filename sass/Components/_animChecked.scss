@@ -2,7 +2,7 @@
 
 .anim-ck{
     margin: 0;
-    margin-left: -0.5rem; /* pour se placer au-dessus de input masqué dessous */
+    margin-left: -0.55rem; /* pour se placer au-dessus de input masqué dessous */
     width: 100%;
     height: 4rem;
     display: flex;
@@ -27,6 +27,7 @@
             }
         }
         &__price{
+            padding-left: 0.5rem;
             width: 20%;
             max-width: 3rem;
             text-align: left;
@@ -103,7 +104,7 @@ input[type="checkbox"]{
         width: 100%;
     }
     to{
-        width: 85%;
+        width: 80%;
     }
 }
 
@@ -112,13 +113,13 @@ input[type="checkbox"]{
         width: 100%;
     }
     to{
-        width: 95%;
+        width: 90%;
     }
 }
 
 @keyframes growI{
     from{
-        width: 85%;
+        width: 80%;
     }
     to{
         width: 100%;
@@ -127,7 +128,7 @@ input[type="checkbox"]{
 
 @keyframes growID{
     from{
-        width: 95%;
+        width: 90%;
     }
     to{
         width: 100%;
@@ -139,13 +140,13 @@ input[type="checkbox"]{
     transform: translateX(0);
     }
     100%{
-    transform: translateX(-80%);
+    transform: translateX(-95%);
     }
 }
 
 @keyframes moveRightCk{
     0%{
-    transform: translateX(-80%);
+    transform: translateX(-95%);
     }
     100%{
     transform: translateX(0%);

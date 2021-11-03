@@ -27,13 +27,25 @@ $breakpoints: (mobile: 768px, tablet: 1023px, desktop: 1024px);
     border-radius: 5rem;
 }
 */
+/*
+@mixin MediumAndLargeScreen{
+    @media screen and (min-width: map-get($map: $breakpoints, $key: mediumMin)) {
+        @content;
+    }
+}
+
+@mixin LargeScreen-only{
+    @media screen and (min-width: map-get($map: $breakpoints, $key: largeMin)) {
+        @content;
+    }
+}*/
 /* Div "Restaurant" */
 .restaurant {
   position: relative;
 }
 .restaurant__img {
   width: 100%;
-  height: 20rem;
+  height: 17.5em;
   object-fit: cover;
 }
 .restaurant__name {
@@ -46,25 +58,29 @@ $breakpoints: (mobile: 768px, tablet: 1023px, desktop: 1024px);
   left: 0;
   right: 0;
   width: 100%;
-  padding: 1.5rem 1rem 0.5rem 1rem;
+  padding: 0.75rem 1.25rem 0 1.25rem;
   background-color: #f6f6f6;
-  border-radius: 1.5rem 1.5rem 0 0;
+  border-radius: 2.5rem 2.5rem 0 0;
 }
 .restaurant__name h1 {
   /* @include border; */
   margin-bottom: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .restaurant__name {
     margin: auto;
     width: 80%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   .restaurant__name {
     margin: auto;
     width: 90%;
   }
+}
+
+.form-button {
+  margin: 2.5rem auto 2.5rem auto;
 }
 
 /*# sourceMappingURL=menu.css.map */

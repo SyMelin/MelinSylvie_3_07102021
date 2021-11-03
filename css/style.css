@@ -81,18 +81,22 @@ footer li a .fa-hands-helping {
 
 /*-- typography Layout _form --*/
 form .form-box__title {
-  font-size: 1.275rem;
+  font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
 }
 
 /*-- typography Components _animChecked --*/
+.anim-ck .info__description {
+  letter-spacing: -0.01rem;
+}
 .anim-ck .info__description--title {
-  font-size: 1.0625rem;
+  font-size: 1.1rem;
   font-weight: 700;
 }
 .anim-ck .info__description--details {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
 }
 .anim-ck .info__price {
   font-size: 0.875rem;
@@ -101,9 +105,9 @@ form .form-box__title {
 
 /*-- typography Components _bouton --*/
 .btn {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 400;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.01rem;
 }
 
 /*-- typography Components _card --*/
@@ -164,7 +168,7 @@ form .form-box__title {
   letter-spacing: -0.01rem;
 }
 .localisation__bottom .btn {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
 }
 
 .main--index h2 {
@@ -174,7 +178,8 @@ form .form-box__title {
 
 /*-- typography Pages _menu --*/
 .restaurant__name h1 {
-  font-size: 1.625rem;
+  font-size: 1.6875rem;
+  font-weight: true;
   font-family: "Shrikhand", "cursive";
   font-weight: 400;
 }
@@ -262,12 +267,12 @@ form {
 }
 form .form-box {
   margin: 0;
-  padding: 0.5rem;
+  padding: 0 0.875rem;
   /* @include border;*/
 }
 form .form-box__title {
   display: block;
-  margin: 3rem 0.5rem;
+  margin: 2rem 0.35rem 2.75rem 0.4rem;
 }
 form .form-box__container {
   display: flex;
@@ -293,7 +298,7 @@ form .form-button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 1.5rem;
+    column-gap: 1.5%;
   }
   form .form-box {
     width: 29%;
@@ -302,9 +307,10 @@ form .form-button {
 
 .item {
   border-radius: 0.825rem;
-  box-shadow: 0 0.3rem 0.3rem #d0d0d0;
+  box-shadow: 0 0.3rem 0.3rem #e9e9e9;
   background-color: #fff;
   padding: 0;
+  padding-bottom: 0.25rem;
   overflow: hidden;
   width: 100%;
 }
@@ -429,7 +435,7 @@ form .form-button {
 /*-- .anim-ck = élement qui remplit un .item --*/
 .anim-ck {
   margin: 0;
-  margin-left: -0.5rem;
+  margin-left: -0.55rem;
   /* pour se placer au-dessus de input masqué dessous */
   width: 100%;
   height: 4rem;
@@ -459,6 +465,7 @@ form .form-button {
   text-overflow: ellipsis;
 }
 .anim-ck .info__price {
+  padding-left: 0.5rem;
   width: 20%;
   max-width: 3rem;
   text-align: left;
@@ -514,7 +521,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
     width: 100%;
   }
   to {
-    width: 85%;
+    width: 80%;
   }
 }
 @keyframes shrinkID {
@@ -522,12 +529,12 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
     width: 100%;
   }
   to {
-    width: 95%;
+    width: 90%;
   }
 }
 @keyframes growI {
   from {
-    width: 85%;
+    width: 80%;
   }
   to {
     width: 100%;
@@ -535,7 +542,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
 }
 @keyframes growID {
   from {
-    width: 95%;
+    width: 90%;
   }
   to {
     width: 100%;
@@ -546,12 +553,12 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-80%);
+    transform: translateX(-95%);
   }
 }
 @keyframes moveRightCk {
   0% {
-    transform: translateX(-80%);
+    transform: translateX(-95%);
   }
   100% {
     transform: translateX(0%);
@@ -570,10 +577,11 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   z-index: 1;
 }
 .btn--explore {
-  padding: 1rem 1.5rem;
+  padding: 0.9375rem 1.3125rem;
 }
 .btn--form {
   border: none;
+  padding: 1rem 3rem;
 }
 .btn:hover::after {
   opacity: 1;
@@ -650,6 +658,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
 }
 
 .ckbox {
+  margin-left: 0.5rem;
   width: 100%;
   height: 100%;
   /* min-width: 3rem;*/
@@ -659,8 +668,12 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
 }
 .ckbox .checkmark {
   position: absolute;
-  top: 1.5rem;
-  left: 1rem;
+  top: 1.75rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /*
+  left: 1rem;*/
   height: 1.25rem;
   width: 1.25rem;
   background-color: #fff;
@@ -700,11 +713,11 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   position: relative;
 }
 .heart--InTitle .fa-heart {
-  margin-right: 0.25rem;
+  margin-right: 0.5rem;
 }
 .heart--InTitle .fa-heart--filled {
-  top: 0.05rem;
-  right: 0.35rem;
+  top: 0.1rem;
+  right: 0.4rem;
 }
 .heart .fa-heart {
   color: #9356DC;

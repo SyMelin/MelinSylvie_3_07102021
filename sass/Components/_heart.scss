@@ -18,10 +18,10 @@
         background-color: $color-background;
         position: relative;
         & .fa-heart{
-            margin-right: 0.25rem;;
+            margin-right: 0.5rem;;
             &--filled{
-                top: 0.05rem;
-                right: 0.35rem;     
+                top: 0.1rem;
+                right: 0.4rem;     
             }
         }
     }

@@ -1,13 +1,14 @@
 /* Formulaire */
 form{
+   
     padding-bottom: 2rem;
     .form-box{
         margin: 0;
-        padding: 0.5rem;
+        padding: 0 0.875rem;
        /* @include border;*/
         &__title{
             display: block;
-            margin: 3rem 0.5rem;
+            margin: 2rem 0.35rem 2.75rem 0.4rem;
         }
         &__container{
             @include flex-col-gap($size: $gs-d);
@@ -29,7 +30,7 @@ form{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        column-gap: 1.5rem;
+        column-gap: 1.5%;
         .form-box{
             width: 29%;
         }
@@ -38,9 +39,10 @@ form{
 
 .item{
     border-radius: $radiusS;
-    @include shadow($mapKey: mapGetShadow(item), $color: clrBgDken(15%));
+    @include shadow($mapKey: mapGetShadow(item), $color: clrBgDken(5%));
     background-color: $color-white;
     padding: 0;
+    padding-bottom: 0.25rem;
     overflow: hidden;
     width: 100%;
     & .dish{
