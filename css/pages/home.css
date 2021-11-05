@@ -10,6 +10,8 @@ padding: 0.5rem;
 padding: 0;
 padding: 1.5rem 1rem 0.5rem 1rem;
 */
+/*fonction qui assombrit directement la couleur de background*/
+/*fonction qui cherche directement dans la map $shadow*/
 /*@mixin rounded-corner($radius: $radius-d){
     border-radius: $radius;
 }*/
@@ -65,7 +67,6 @@ padding: 1.5rem 1rem 0.5rem 1rem;
   text-align: left;
 }
 .localisation__bottom {
-  /* @include border;*/
   padding: 2.5rem 0;
   width: 100%;
   display: flex;
@@ -89,7 +90,6 @@ padding: 1.5rem 1rem 0.5rem 1rem;
 
 /* Section "Fonctionnement" et "Restaurant" */
 .fonctionnement, .restaurants {
-  /* @include border;*/
   margin-top: 0;
   padding: 1.75rem 5% 2.75rem 5%;
 }
@@ -116,6 +116,9 @@ padding: 1.5rem 1rem 0.5rem 1rem;
   .fonctionnement ol li {
     width: 30%;
     white-space: nowrap;
+  }
+  .fonctionnement ol li .li-text {
+    white-space: pre-wrap;
   }
 }
 
