@@ -1,7 +1,7 @@
 @function clrBgDken($amount){
     @return darken($color-background, $amount);
-}
+}/*fonction qui assombrit directement la couleur de background*/
 
 @function mapGetShadow($key){
-    @return map-get($shadow, $key)
-}
+    @return map-get($shadow, $key);
+}/*fonction qui cherche directement dans la map $shadow*/

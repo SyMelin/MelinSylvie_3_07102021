@@ -99,26 +99,41 @@ form{
 
 
 /*-- typography Components _liFct --*/
-.li__text{
-    font-size: map-get($map: $fsLiFct, $key: text);
-    font-weight: map-get($map: $fw, $key: bold);
-}
-
 .li--fct{
     & .fas{
         &--number{
             &::after{
                 font-family: $font-text;
                 font-size: map-get($map: $fsLiFct, $key: nbAfter);
+                font-weight: map-get($map: $fw, $key: regular);
             }
         }
         &--img{
-            font-size: map-get($map: $fsLiFct, $key: img);
-            &::after{
-                font-size: map-get($map: $fsLiFct, $key: imgAfter);
+            &--1 {
+                font-size: map-get($map: $fsLiFct, $key: img1);
+                transform: scaleX(1.05);
+                &::after{
+                    font-size: map-get($map: $fsLiFct, $key: img1);
+                }
             }
-
+            &--2 {
+                font-size: map-get($map: $fsLiFct, $key: img);
+                &::after{
+                    font-size: map-get($map: $fsLiFct, $key: img);
+               }
+            }
+            &--3 {
+                font-size: map-get($map: $fsLiFct, $key: img);
+                transform: scale(0.85, 1);
+                &::after{
+                    font-size: map-get($map: $fsLiFct, $key: img);
+                }
+            }
         }
+    }
+    .li-text{
+        font-size: map-get($map: $fsLiFct, $key: text);
+        font-weight: map-get($map: $fw, $key: bold);
     }
 }
 

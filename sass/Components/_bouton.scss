@@ -4,7 +4,7 @@
     color: $color-white;
     background-image: $gradient;
     text-decoration: none;
-    padding: $padBouton;
+    /*padding: $padBouton;*/
     border-radius: $radius2XL;
     @include shadow($mapKey: mapGetShadow(bouton), $color: clrBgDken(25%));
     position: relative;

@@ -11,6 +11,8 @@ padding: 0.5rem;
 padding: 0;
 padding: 1.5rem 1rem 0.5rem 1rem;
 */
+/*fonction qui assombrit directement la couleur de background*/
+/*fonction qui cherche directement dans la map $shadow*/
 /*@mixin rounded-corner($radius: $radius-d){
     border-radius: $radius;
 }*/
@@ -128,20 +130,34 @@ form .form-box__title {
 }
 
 /*-- typography Components _liFct --*/
-.li__text {
-  font-size: 1rem;
-  font-weight: 700;
-}
-
 .li--fct .fas--number::after {
   font-family: "Roboto";
   font-size: 0.8rem;
+  font-weight: 400;
 }
-.li--fct .fas--img {
-  font-size: 1.25rem;
+.li--fct .fas--img--1 {
+  font-size: 1.1875rem;
+  transform: scaleX(1.05);
 }
-.li--fct .fas--img::after {
-  font-size: 1.25rem;
+.li--fct .fas--img--1::after {
+  font-size: 1.1875rem;
+}
+.li--fct .fas--img--2 {
+  font-size: 1.0625rem;
+}
+.li--fct .fas--img--2::after {
+  font-size: 1.0625rem;
+}
+.li--fct .fas--img--3 {
+  font-size: 1.0625rem;
+  transform: scale(0.85, 1);
+}
+.li--fct .fas--img--3::after {
+  font-size: 1.0625rem;
+}
+.li--fct .li-text {
+  font-size: 0.9375rem;
+  font-weight: 700;
 }
 
 /*-- typography Pages _home --*/
@@ -567,7 +583,7 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
   color: #fff;
   background-image: linear-gradient(175deg, #FF79DA, #9356DC);
   text-decoration: none;
-  padding: 1rem 2rem 1rem 2rem;
+  /*padding: $padBouton;*/
   border-radius: 5rem;
   box-shadow: 0 0.3rem 0.75rem #b6b6b6;
   position: relative;
@@ -745,16 +761,15 @@ input[type=checkbox]:not(:checked) + .anim-ck .trslt {
 ol .li--fct {
   z-index: 1;
   display: inline-flex;
-  line-height: 4rem;
+  height: 4.25rem;
   width: 100%;
   opacity: 1;
-  padding-top: 0.25rem;
+  padding-top: 0.15rem;
   align-items: center;
   position: relative;
   background-color: #f6f6f6;
   border-radius: 1.25rem;
   box-shadow: 0 0.25rem 0.875rem #dddddd;
-  /*  @include shadow(0, 0.25rem, 0.875rem, clrBgDken(10%));*/
 }
 ol .li--fct::after {
   position: absolute;
@@ -781,18 +796,21 @@ ol .li--fct .fas::after {
   left: 0;
 }
 ol .li--fct .fas--number {
+  width: 1.5rem;
+  height: 1rem;
   margin-left: -0.75rem;
-  margin-right: 1rem;
+  margin-right: 1.25rem;
+  margin-bottom: 0.25rem;
 }
 ol .li--fct .fas--number::after {
   background-color: #9356DC;
   color: #f6f6f6;
   border-radius: 1rem;
-  width: 1.5rem;
-  padding-top: 0.45rem;
-  padding-bottom: 0.25rem;
+  width: 1.4rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.2rem;
   text-align: center;
-  margin-left: 0rem;
+  margin-left: 0.05rem;
 }
 ol .li--fct .fas--number--1::after {
   content: "1";
@@ -807,8 +825,19 @@ ol .li--fct .fas--number--3::after {
   opacity: 1;
 }
 ol .li--fct .fas--img {
+  width: 1.5rem;
+  height: 1.25rem;
+  margin-top: 0.25rem;
   margin-right: 1rem;
   color: #777777;
+}
+ol .li--fct .fas--img--1 {
+  margin-bottom: 0.15rem;
+}
+ol .li--fct .fas--img--2 {
+  width: 1rem;
+  overflow: hidden;
+  margin-right: 1.5rem;
 }
 ol .li--fct .fas--img::after {
   font-family: "Font Awesome 5 Free";
@@ -831,6 +860,10 @@ ol .li--fct:hover::after {
 }
 ol .li--fct:hover .fas--img::after {
   opacity: 1;
+}
+ol .li-text {
+  display: inline-block;
+  margin-bottom: -0.15rem;
 }
 
 /*2500ms*/

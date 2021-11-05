@@ -1,22 +1,18 @@
-$icoNum: o;
 $icoImg: \f3cd, \f0ca, \f54e;
-
-
 
 ol{
     .li--fct{
         z-index: 1;
         display: inline-flex;
-        line-height: 4rem;
+        height: 4.25rem;
         width: 100%;
         opacity: 1;
-        padding-top: 0.25rem;
+        padding-top: 0.15rem;
         align-items: center;
         position: relative;
         background-color: $color-background;
         border-radius: $radiusL;
         @include shadow($mapKey: mapGetShadow(liFct), $color: clrBgDken(10%));
-      /*  @include shadow(0, 0.25rem, 0.875rem, clrBgDken(10%));*/
         &::after{
             position: absolute;
             top: 0;
@@ -41,17 +37,21 @@ ol{
                 left: 0;
             }
             &--number{
+                width: 1.5rem;
+                height: 1rem;
                 margin-left: -0.75rem;
-                margin-right: 1rem;
+                margin-right: 1.25rem;
+                margin-bottom: 0.25rem;
                 &::after{
                     background-color: $color-primary;
                     color: $color-background;
                     border-radius: $radiusM;
-                    width: 1.5rem;
-                    padding-top: 0.45rem;
-                    padding-bottom: 0.25rem;
+                    width: 1.4rem;
+                    padding-top: 0.4rem;
+                    padding-bottom: 0.2rem;
                     text-align: center;
-                    margin-left: 0rem;
+                    margin-left: 0.05rem;
+                    
                 }
                 @for $i from 1 through 3 {
                     &--#{$i}{
@@ -63,9 +63,19 @@ ol{
                 }
             }
             &--img{
+                width: 1.5rem;
+                height: 1.25rem;
+                margin-top: 0.25rem;
                 margin-right: 1rem;
                 color: clrBgDken(50%);
-               
+                &--1{
+                    margin-bottom: 0.15rem;
+                }
+                &--2{
+                    width: 1rem; 
+                    overflow: hidden;
+                    margin-right: 1.5rem;
+                }
                 &::after{
                     font-family: "Font Awesome 5 Free";
                     color: $color-primary;
@@ -90,5 +100,9 @@ ol{
                 }
             }
         }
+    }
+    .li-text{
+        display: inline-block;
+        margin-bottom: -0.15rem;
     }
 }
