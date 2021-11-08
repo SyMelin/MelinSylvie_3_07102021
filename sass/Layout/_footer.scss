@@ -1,7 +1,10 @@
 footer{
     color: $color-white;
     background-color: $color-footer;
-    padding: 1.5rem 5%;
+    padding: $padFooter;
+    @include LargeScreen-only{
+        height: 5rem;
+    }
     & .footer__logo{
         filter: invert(1);
         height: 1rem;

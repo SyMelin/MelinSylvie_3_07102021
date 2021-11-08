@@ -21,9 +21,10 @@ padding: 1.5rem 1rem 0.5rem 1rem;
   align-items: center;
 }
 .localisation__top {
+  border-color: green;
   text-align: center;
   width: 100%;
-  padding: 0.875rem;
+  padding: 0.875rem 0;
   background-color: #e9e9e9;
 }
 .localisation__top .place {
