@@ -178,7 +178,6 @@ form{
 .restaurant__name{
     & h1{
         font-size: map-get($map: $fsTitles, $key: name);
-        font-weight: map-has-key($map: $fw, $key: bold);
         @include font-title;
     }
 }

@@ -1,15 +1,4 @@
 @charset "UTF-8";
-/*
-padding: 0.5rem 0;
-padding: 0.825rem 0.5rem;
-padding: 0.4rem 0.725rem 0.3rem 0.725rem;
-padding: 1rem 0;
-padding: 0.05rem 0.1rem;
-padding: 1.5rem;
-padding: 0.5rem;
-padding: 0;
-padding: 1.5rem 1rem 0.5rem 1rem;
-*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Shrikhand&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
@@ -153,7 +142,6 @@ form .form-box__title {
 
 .restaurant__name h1 {
   font-size: 1.6875rem;
-  font-weight: true;
   font-family: "Shrikhand", "cursive";
   font-weight: 400;
 }

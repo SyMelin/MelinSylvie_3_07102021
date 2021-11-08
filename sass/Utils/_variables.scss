@@ -7,7 +7,7 @@ $color-white: #fff;
 $color-black: #000;
 $color-footer:#535353;
 
-// Variables angles
+// Variables concernant les gradients de couleur
 $angle-d: 175deg;
 $angle-heart: $angle-d - 115deg;
 $gradient: linear-gradient($angle-d, $color-secondary, $color-primary);
@@ -25,9 +25,21 @@ $size-d: 1rem;
 $fs-d: $size-d;
 $gs-d: $size-d;
 
-// Variables pour l'opacité du composant Heart
-$opaHeart: 1;
-$opaHeart-inv: 1 - $opaHeart;
+// Maps et variables pour les font-size
+$fsTitles: (localisation: 1.4375rem, mainh2: 1.4375rem, name: 1.6875rem, formBox: 1rem);
+$fsAnimCk: (title: 1.1rem, details: 0.9375rem, price: 0.875rem);
+$fsLiFct: (nbAfter: 0.8rem, img1: 1.1875rem, img: 1.0625rem, text: 0.9375rem);
+$fsCard: (title: 1.1rem, place: $fs-d);
+$fs: (bouton: 0.9375rem, heart: 1.25rem, new: 0.8rem);
+$fsFooter: (li: 1rem, a: 0.875rem, fas: 0.75rem);
+$fsLocalisation: (place: 0.925rem, fas: 1rem, pBottom: 1.0625rem);
+$fsLoader: 2.825rem;
+
+// Variables de padding
+$padHeader: 1.25rem 0 0.75rem 0;
+$padFooter: 1.5rem 5%;
+$padHome: 1.75rem 5% 2.75rem 5%;
+$padBouton: 1rem 2rem 1rem 2rem;
 
 // Map pour les ombres de boîtes
 $shadow: (
@@ -40,17 +52,6 @@ $shadow: (
     liFct: (0 0.25rem 0.875rem)
 );
 
-// Maps et variables pour les font-size
-$fsTitles: (localisation: 1.4375rem, mainh2: 1.4375rem, name: 1.6875rem, formBox: 1rem);
-$fsAnimCk: (title: 1.1rem, details: 0.9375rem, price: 0.875rem);
-$fsLiFct: (nbAfter: 0.8rem, img1: 1.1875rem, img: 1.0625rem, text: 0.9375rem);
-$fsCard: (title: 1.1rem, place: $fs-d);
-$fs: (bouton: 0.9375rem, heart: 1.25rem, new: 0.8rem);
-$fsFooter: (li: 1rem, a: 0.875rem, fas: 0.75rem);
-$fsLocalisation: (place: 0.925rem, fas: 1rem, pBottom: 1.0625rem);
-$fsLoader: 2.825rem;
-
-
 // Variables pour les tailles d'arrondis des coins des boîtes
 $radiusXS: 0.1rem;
 $radiusS: 0.825rem;
@@ -61,24 +62,9 @@ $radiusN: 2.5rem;
 $radius2XL: 5rem;
 $radius3XL: 20rem;
 
-/*
-padding: 0.5rem 0;
-padding: 0.825rem 0.5rem;
-padding: 0.4rem 0.725rem 0.3rem 0.725rem;
-padding: 1rem 0;
-padding: 0.05rem 0.1rem;
-padding: 1.5rem;
-padding: 0.5rem;
-padding: 0;
-padding: 1.5rem 1rem 0.5rem 1rem;
-*/
-
-// Variables de padding
-$padHeader: 1.25rem 0 0.75rem 0;
-$padFooter: 1.5rem 5%;
-$padHome: 1.75rem 5% 2.75rem 5%;
-$padBouton: 1rem 2rem 1rem 2rem;
-
+// Variables pour l'opacité du composant Heart
+$opaHeart: 1;
+$opaHeart-inv: 1 - $opaHeart;
 
 // Map des breakpoints
 $breakpoints: (
