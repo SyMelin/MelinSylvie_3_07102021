@@ -9,7 +9,7 @@
     "sass-m": "sass --watch ./sass/Pages/_menu.scss:./css/pages/menu.css",
     "prefix-s": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/",
     "prefix-h": "postcss ./css/pages/home.css --use autoprefixer -d ./css/prefixed/pages/",
-    "prefix-mnpm": "postcss ./css/pages/menu.css --use autoprefixer -d ./css/prefixed/pages/"
+    "prefix-m": "postcss ./css/pages/menu.css --use autoprefixer -d ./css/prefixed/pages/"
   },
   "repository": {
     "type": "git",

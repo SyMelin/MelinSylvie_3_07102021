@@ -1,10 +1,21 @@
-/* Div "Restaurant" */
+/*
+padding: 0.5rem 0;
+padding: 0.825rem 0.5rem;
+padding: 0.4rem 0.725rem 0.3rem 0.725rem;
+padding: 1rem 0;
+padding: 0.05rem 0.1rem;
+padding: 1.5rem;
+padding: 0.5rem;
+padding: 0;
+padding: 1.5rem 1rem 0.5rem 1rem;
+*/
+/*-- div "Restaurant" --*/
 .restaurant {
   position: relative;
 }
 .restaurant__img {
   width: 100%;
-  height: 20rem;
+  height: 17.5em;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -17,20 +28,37 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  padding: 1.5rem 1rem 0.5rem 1rem;
+  padding: 0.75rem 1.25rem 0 1.25rem;
   background-color: #f6f6f6;
-  border-radius: 1.5rem 1.5rem 0 0;
-  /*border: 1px solid black;*/
+  border-radius: 2.5rem 2.5rem 0 0;
 }
 .restaurant__name h1 {
-  border: 1px solid black;
   margin-bottom: 0;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .restaurant__name {
+    margin: auto;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant__name {
+    margin: auto;
+    width: 90%;
+  }
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Nhc3MvUGFnZXMvX21lbnUuc2NzcyIsIi4uLy4uL3BhZ2VzL21lbnUuY3NzIiwiLi4vLi4vLi4vc2Fzcy9VdGlscy9fdmFyaWFibGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBS0EscUJBQUE7QUFDQTtFQUNJLGtCQUFBO0FDSko7QURLSTtFQUNJLFdBQUE7RUFDQSxhQUFBO0VBQ0Esb0JBQUE7S0FBQSxpQkFBQTtBQ0hSO0FES0k7RUFDSSw4QkFBQTtVQUFBLHNCQUFBO0VBQ0Esb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSx5QkFBQTtNQUFBLHNCQUFBO1VBQUEsOEJBQUE7RUFDQSx5QkFBQTtNQUFBLHNCQUFBO1VBQUEsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxXQUFBO0VBQ0EsZ0NBQUE7RUFDQSx5QkVuQlc7RUZvQlgsZ0NBQUE7RUFDQSwyQkFBQTtBQ0hSO0FESVE7RUFDSSx1QkFBQTtFQUNBLGdCQUFBO0FDRloiLCJmaWxlIjoibWVudS5jc3MifQ== */
+/*-- Formulaire --*/
+.form-button {
+  margin: 2.5rem auto 2.5rem auto;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Nhc3MvVXRpbHMvX3ZhcmlhYmxlcy5zY3NzIiwiLi4vLi4vLi4vc2Fzcy9QYWdlcy9fbWVudS5zY3NzIiwiLi4vLi4vcGFnZXMvbWVudS5jc3MiLCIuLi8uLi8uLi9zYXNzL1V0aWxzL19taXhpbnMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUErREE7Ozs7Ozs7Ozs7Q0FBQTtBQzFEQSx5QkFBQTtBQUNBO0VBQ0ksa0JBQUE7QUNPSjtBRE5JO0VBQ0ksV0FBQTtFQUNBLGNBQUE7RUFDQSxvQkFBQTtLQUFBLGlCQUFBO0FDUVI7QUROSTtFQUNJLDhCQUFBO1VBQUEsc0JBQUE7RUFDQSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFQUNBLHlCQUFBO01BQUEsc0JBQUE7VUFBQSw4QkFBQTtFQUNBLDJCQUFBO01BQUEsd0JBQUE7VUFBQSxxQkFBQTtFQUNBLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsV0FBQTtFQUNBLGtDQUFBO0VBQ0EseUJEcEJXO0VDcUJYLGdDQUFBO0FDUVI7QURQUTtFQUNJLGdCQUFBO0FDU1o7QUNXSTtFRmxDQTtJQWlCUSxZQUFBO0lBQ0EsVUFBQTtFQ1VWO0FBQ0Y7QUNtQkk7RUZoREE7SUFxQlEsWUFBQTtJQUNBLFVBQUE7RUNZVjtBQUNGOztBRFJBLG1CQUFBO0FBQ0E7RUFDSSwrQkFBQTtBQ1dKIiwiZmlsZSI6Im1lbnUuY3NzIn0= */
