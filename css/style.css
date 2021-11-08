@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* p dans localisation__bottom  1.1rem*/
 /*
 padding: 0.5rem 0;
 padding: 0.825rem 0.5rem;
@@ -64,15 +63,18 @@ body {
 /*-- typography Layout _footer --*/
 footer li {
   font-size: 1rem;
+  /*1rem:;*/
   font-weight: 400;
   transform: scaleY(1.05);
   letter-spacing: 0.02rem;
 }
 footer li a {
   font-size: 0.875rem;
+  /*0.875rem;*/
 }
 footer li a .fas {
   font-size: 0.75rem;
+  /*0.75rem;*/
 }
 footer li a .fa-hands-helping {
   transform: scaleX(0.75);
@@ -163,9 +165,11 @@ form .form-box__title {
 /*-- typography Pages _home --*/
 .localisation__top .place {
   font-size: 0.925rem;
+  /*$fs3;*/
 }
 .localisation__top .place .fas {
   font-size: 1rem;
+  /*$fs-d;*/
 }
 .localisation__top .place__text {
   font-weight: 700;
@@ -177,6 +181,7 @@ form .form-box__title {
 }
 .localisation__bottom > p {
   font-size: 1.0625rem;
+  /*$fs5;*/
   font-weight: 300;
   letter-spacing: -0.01rem;
 }

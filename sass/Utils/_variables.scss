@@ -38,16 +38,8 @@ $fsAnimCk: (title: 1.1rem, details: 0.9375rem, price: 0.875rem);
 $fsLiFct: (nbAfter: 0.8rem, img1: 1.1875rem, img: 1.0625rem, text: 0.9375rem);
 $fsCard: (title: 1.1rem, place: $fs-d);
 $fs: (bouton: 0.9375rem, heart: 1.25rem, new: 0.8rem);
-
-$fs1: 0.8rem;
-$fs2: 0.875rem;
-$fs3: 0.925rem;
-$fs4: 1.0625rem;
-$fs5: 1.0625rem; /* p dans localisation__bottom  1.1rem*/
-$fs6: 1.25rem;
-$fs7: 1.4375rem;
-$fs8: 1.5rem;
-$fs9: 1.825rem;
+$fsFooter: (li: 1rem, a: 0.875rem, fas: 0.75rem);
+$fsLocalisation: (place: 0.925rem, fas: 1rem, pBottom: 1.0625rem);
 $fsLoader: 2.825rem;
 
 $radiusXS: 0.1rem;
