@@ -1,4 +1,4 @@
-/* Formulaire */
+// Formulaire
 form{
    
     padding-bottom: 2rem;
@@ -14,10 +14,11 @@ form{
         }
     }
     .form-button{
+        /* Bouton Commander */
         width: 100%;
         display: flex;
         justify-content: center;
-    }/* Bouton Commander */
+    }
     @include MediumScreen-only{
         margin: auto;
         width: 80%;
@@ -57,10 +58,10 @@ form{
 }
 
 
-/*-- Animation: apparition progressive des différents plats --*/
+// Animation: apparition progressive des différents plats
 
 $anim-delay: 350ms;
-$anim-dur: 1220ms; /* durée totale de l'animation sur un .item */
+$anim-dur: 1220ms; // durée totale de l'animation sur un .item
 
 .form-box{
     animation: hidding 20ms 0ms ease-in-out both, fadeInB 1000ms 220ms forwards;

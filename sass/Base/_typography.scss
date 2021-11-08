@@ -1,10 +1,10 @@
-/*-- typography valable partout --*/
+// typography valable partout
 body{
     font-size: $fs-d;
     font-weight: map-get($map: $fw, $key: regular);
 }
 
-/*-- typography Layout _footer --*/
+// typography Layout _footer
 footer{
     & li{
         font-size: map-get($map: $fsFooter, $key: li);
@@ -23,7 +23,7 @@ footer{
     }
 }
 
-/*-- typography Layout _form --*/
+//typography Layout _form
 form{
     & .form-box{
         &__title{
@@ -36,7 +36,7 @@ form{
 
 
 
-/*-- typography Components _animChecked --*/
+//typography Components _animChecked
 .anim-ck{
     .info{
         &__description{
@@ -58,7 +58,7 @@ form{
 }
 
 
-/*-- typography Components _bouton --*/
+// typography Components _bouton
 .btn{
     font-size: map-get($map: $fs, $key: bouton);
     font-weight: map-get($map: $fw, $key: regular);
@@ -66,7 +66,7 @@ form{
 }
 
 
-/*-- typography Components _card --*/
+// typography Components _card
 .card{
     &__bottom{
         .info{
@@ -89,7 +89,7 @@ form{
 }
 
 
-/*-- typography Components _heart --*/
+// typography Components _heart
 .heart{
     & .fa-heart{
         font-size: map-get($map: $fs, $key: heart);
@@ -98,7 +98,7 @@ form{
 }
 
 
-/*-- typography Components _liFct --*/
+// typography Components _liFct
 .li--fct{
     & .fas{
         &--number{
@@ -138,7 +138,7 @@ form{
 }
 
 
-/*-- typography Pages _home --*/
+// typography Pages _home
 .localisation__top{
     & .place{
         font-size: map-get($map: $fsLocalisation, $key: place);
@@ -174,7 +174,7 @@ form{
 }
 
 
-/*-- typography Pages _menu --*/
+// typography Pages _menu
 .restaurant__name{
     & h1{
         font-size: map-get($map: $fsTitles, $key: name);

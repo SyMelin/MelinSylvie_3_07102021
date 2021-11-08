@@ -1,6 +1,5 @@
 $animLoad-dur: 1500ms; /*2500ms*/
 $widthSpinAft: 3rem;
-/*$leftSpinAft: 100% / 2 - $widthSpinAft;*/
 
 .body--home{
     &::before{
@@ -44,6 +43,7 @@ $widthSpinAft: 3rem;
     }
 }
 
+// animation de rotation
 @keyframes spin{
     0% {
       transform: rotate(0deg);
@@ -54,14 +54,14 @@ $widthSpinAft: 3rem;
   }
 
 
-/* animation "masquer" */
+// animation "masquer"
 @keyframes hidding{
     0%, 100% {
         opacity: 0;
     }
 }
  
-/* animation "loading spinner"*/
+// animation "montrer le loading spinner"
 @keyframes showing{
     0%, 100%{
         opacity: 1;

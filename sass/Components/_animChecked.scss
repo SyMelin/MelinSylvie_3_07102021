@@ -1,8 +1,8 @@
-/*-- .anim-ck = élement qui remplit un .item --*/
 
 .anim-ck{
+    /* .anim-ck est l'élement qui remplit un .item de formulaire */
     margin: 0;
-    margin-left: -0.55rem; /* pour se placer au-dessus de input qui est masqué en-dessous */
+    margin-left: -0.55rem;/* margin-left pour se placer au-dessus de input qui est masqué en-dessous */
     width: 100%;
     height: 4rem;
     display: flex;
@@ -32,7 +32,6 @@
             max-width: 3rem;
             text-align: left;
             margin-bottom: 0.5rem;
-            /*background-color: pink;*/
         }
     }
     & .trslt{
@@ -46,7 +45,7 @@
 }
 
 
-/* Animation quand la checkbox est cochée + Animation quand la checkbox est décochée */
+// Animation quand la checkbox est cochée et Animation quand la checkbox est décochée
 
 $animCk-dur: 350ms;
 $animNotCk_dur: 300ms;
@@ -63,7 +62,6 @@ input[type="checkbox"]{
                 }
             }
             .trslt{ 
-            /* &__ckbox{ */
                 animation: moveLeftCk $animCk-dur ease-in-out forwards;
                 transform-origin: right;
                 .checkmark::after{

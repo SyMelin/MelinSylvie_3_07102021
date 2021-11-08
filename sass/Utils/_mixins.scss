@@ -1,13 +1,9 @@
-/*@mixin rounded-corner($radius: $radius-d){
-    border-radius: $radius;
-}*/
-
-/* mixin pour l'ombre des boîtes*/
+// mixin pour l'ombre des boîtes
 @mixin shadow($mapKey: mapGetShadow(card), $color: none){
     box-shadow: ($mapKey $color);
 }
 
-/* mixin pour créer l'icône coeur remplie du gradient de couleur*/
+// mixin pour créer l'icône coeur remplie du gradient de couleur
 @mixin heartFilled{
     background: -webkit-#{$gradient-heart};
     background-clip: text;
@@ -15,53 +11,53 @@
     -webkit-text-fill-color: transparent;
 }
 
-/* mixin pour recréer le style du logo de l'entrerise */
+// mixin pour recréer le style du logo de l'entreprise
 @mixin font-title{
     font-family: $font-logo, 'cursive';
     font-weight: map-get($map: $fw, $key: regular);
 }
 
-/* mixin pour mettre les éléments en dispaly flex, direction colonne et choisir une taille d'espacement */
+// mixin pour mettre les éléments en dispaly flex, direction colonne et choisir une taille d'espacement
 @mixin flex-col-gap($size: $gs-d){
         display: flex;
         flex-direction: column;
         gap: $size;
 }
 
-/* mixin pour créer des bordures rouges - utilisée lors de la création du site */
+// mixin pour créer des bordures rouges - utilisée lors de la création du site
 @mixin border{
     border: 1px solid red;
 }
 
-/* mixin qui reprend les media queries pour les écrans de petite taille */
+// mixin qui reprend les media queries pour les écrans de petite taille
 @mixin SmallScreen-only{
     @media screen and (max-width: map-get($map: $breakpoints, $key: smallMax)) {
         @content;
     }
 }
 
-/* mixin qui reprend les media queries pour les écrans de petite et moyenne tailles */
+// mixin qui reprend les media queries pour les écrans de petite et moyenne tailles
 @mixin SmallAndMediumScreen{
     @media screen and (max-width: map-get($map: $breakpoints, $key: mediumMax)) {
         @content;
     }
 }
 
-/* mixin qui reprend les media queries pour les écrans de taille moyenne */
+// mixin qui reprend les media queries pour les écrans de taille moyenne
 @mixin MediumScreen-only{
     @media screen and (min-width: map-get($map: $breakpoints, $key: mediumMin )) and (max-width: map-get($map: $breakpoints, $key: mediumMax)) {
         @content;
     }
 }
 
-/* mixin qui reprend les media queries pour les écrans de tailles moyenne et large */
+// mixin qui reprend les media queries pour les écrans de tailles moyenne et large
 @mixin MediumAndLargeScreen{
     @media screen and (min-width: map-get($map: $breakpoints, $key: mediumMin)) {
         @content;
     }
 }
 
-/* mixin qui reprend le media queries pour les écrans de grande taille */
+// mixin qui reprend le media queries pour les écrans de grande taille
 @mixin LargeScreen-only{
     @media screen and (min-width: map-get($map: $breakpoints, $key: largeMin)) {
         @content;
@@ -69,15 +65,14 @@
 }
 
 
-/*
-@mixin MediumAndLargeScreen{
-    @media screen and (min-width: map-get($map: $breakpoints, $key: mediumMin)) {
-        @content;
-    }
-}
-
-@mixin LargeScreen-only{
-    @media screen and (min-width: map-get($map: $breakpoints, $key: largeMin)) {
-        @content;
-    }
-}*/
+// mixins non utilisées :
+//@mixin MediumAndLargeScreen{
+//    @media screen and (min-width: map-get($map: $breakpoints, $key: mediumMin)) {
+//        @content;
+//    }
+//}
+//@mixin LargeScreen-only{
+//    @media screen and (min-width: map-get($map: $breakpoints, $key: largeMin)) {
+//        @content;
+//    }
+//}

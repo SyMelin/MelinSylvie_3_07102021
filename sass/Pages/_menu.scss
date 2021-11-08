@@ -3,7 +3,7 @@
 @import "../Utils/mixins";
 
 
-/* Div "Restaurant" */
+/*-- div "Restaurant" --*/
 .restaurant{
     position: relative;
     &__img{
@@ -38,6 +38,7 @@
     }
 }
 
+/*-- Formulaire --*/
 .form-button{
     margin: 2.5rem auto 2.5rem auto;
 }
