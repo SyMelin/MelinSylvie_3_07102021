@@ -407,7 +407,6 @@ form .form-button {
   }
 }
 
-/*2500ms*/
 .body--home::before {
   content: "ohmyfood";
   color: #fff;

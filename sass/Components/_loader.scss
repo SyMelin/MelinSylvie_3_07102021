@@ -1,5 +1,4 @@
-$animLoad-dur: 1500ms; /*2500ms*/
-$widthSpinAft: 3rem;
+$animLoad-dur: 1500ms;
 
 .body--home{
     &::before{
@@ -18,7 +17,7 @@ $widthSpinAft: 3rem;
         bottom: 0;
         left: 0;
         opacity: 0;
-        animation: showing $animLoad-dur; /* de 1 à 3s */
+        animation: showing $animLoad-dur;/* de 1 à 3s */
     }
     &::after{
         content:"";
@@ -39,7 +38,7 @@ $widthSpinAft: 3rem;
     }
     & header, main, footer{
         opacity: 1;
-        animation: hidding $animLoad-dur; /* de 1 à 3s */
+        animation: hidding $animLoad-dur;/* de 1 à 3s */
     }
 }
 

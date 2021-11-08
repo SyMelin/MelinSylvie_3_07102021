@@ -61,7 +61,7 @@ form{
 // Animation: apparition progressive des différents plats
 
 $anim-delay: 350ms;
-$anim-dur: 1220ms; // durée totale de l'animation sur un .item
+// NB: durée totale de l'animation d'apparition sur un .item = 1220ms
 
 .form-box{
     animation: hidding 20ms 0ms ease-in-out both, fadeInB 1000ms 220ms forwards;
