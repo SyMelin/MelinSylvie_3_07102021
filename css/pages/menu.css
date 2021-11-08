@@ -1,4 +1,4 @@
-/* p dans localisation__bottom  1.1rem*/
+@charset "UTF-8";
 /*
 padding: 0.5rem 0;
 padding: 0.825rem 0.5rem;
@@ -10,23 +10,21 @@ padding: 0.5rem;
 padding: 0;
 padding: 1.5rem 1rem 0.5rem 1rem;
 */
-/*
-$breakpoints: (mobile: 768px, tablet: 1023px, desktop: 1024px);
-*/
+/*fonction qui assombrit directement la couleur de background*/
+/*fonction qui cherche directement dans la map $shadow*/
 /*@mixin rounded-corner($radius: $radius-d){
     border-radius: $radius;
 }*/
-/*
-@mixin bouton{
-    display: block;
-    text-align: center;
-    color: $color-white;
-    background-image: $gradient;
-    text-decoration: none;
-    padding: $padBouton;
-    border-radius: 5rem;
-}
-*/
+/* mixin pour l'ombre des boîtes*/
+/* mixin pour créer l'icône coeur remplie du gradient de couleur*/
+/* mixin pour recréer le style du logo de l'entrerise */
+/* mixin pour mettre les éléments en dispaly flex, direction colonne et choisir une taille d'espacement */
+/* mixin pour créer des bordures rouges - utilisée lors de la création du site */
+/* mixin qui reprend les media queries pour les écrans de petite taille */
+/* mixin qui reprend les media queries pour les écrans de petite et moyenne tailles */
+/* mixin qui reprend les media queries pour les écrans de taille moyenne */
+/* mixin qui reprend les media queries pour les écrans de tailles moyenne et large */
+/* mixin qui reprend le media queries pour les écrans de grande taille */
 /*
 @mixin MediumAndLargeScreen{
     @media screen and (min-width: map-get($map: $breakpoints, $key: mediumMin)) {
@@ -63,16 +61,15 @@ $breakpoints: (mobile: 768px, tablet: 1023px, desktop: 1024px);
   border-radius: 2.5rem 2.5rem 0 0;
 }
 .restaurant__name h1 {
-  /* @include border; */
   margin-bottom: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
   .restaurant__name {
     margin: auto;
     width: 80%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .restaurant__name {
     margin: auto;
     width: 90%;

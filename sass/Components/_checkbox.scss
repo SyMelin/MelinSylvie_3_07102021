@@ -2,7 +2,6 @@
     margin-left: 0.5rem;
     width: 100%;
     height: 100%;
-   /* min-width: 3rem;*/
     padding: 1rem 0;
     background-color: $color-tertiary;
     position: relative;
@@ -12,8 +11,6 @@
         left: 0;
         right: 0;
         margin: auto;
-        /*
-        left: 1rem;*/
         height: 1.25rem;
         width: 1.25rem;
         background-color: $color-white;
@@ -21,7 +18,6 @@
         &::after{
             content:"";
             position: absolute;
-           /* display: none;*/
             display: block;
             top: 0.2rem;
             left: 0.4rem;

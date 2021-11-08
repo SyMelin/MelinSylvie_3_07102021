@@ -7,14 +7,14 @@ body{
 /*-- typography Layout _footer --*/
 footer{
     & li{
-        font-size: map-get($map: $fsFooter, $key: li); /*1rem:;*/
+        font-size: map-get($map: $fsFooter, $key: li);
         font-weight: map-get($map: $fw, $key: regular);
         transform: scaleY(1.05);
         letter-spacing: 0.02rem;
         & a{
-            font-size:  map-get($map: $fsFooter, $key: a); /*0.875rem;*/
+            font-size:  map-get($map: $fsFooter, $key: a);
             & .fas{
-                font-size:  map-get($map: $fsFooter, $key: fas); /*0.75rem;*/
+                font-size:  map-get($map: $fsFooter, $key: fas);
             }
             & .fa-hands-helping{
                 transform: scaleX(0.75);
@@ -141,10 +141,10 @@ form{
 /*-- typography Pages _home --*/
 .localisation__top{
     & .place{
-        font-size: map-get($map: $fsLocalisation, $key: place); /*$fs3;*/
+        font-size: map-get($map: $fsLocalisation, $key: place);
         
         & .fas{
-            font-size: map-get($map: $fsLocalisation, $key: fas); /*$fs-d;*/ 
+            font-size: map-get($map: $fsLocalisation, $key: fas);
         }
         &__text{
             font-weight: map-get($map: $fw, $key: bold);
@@ -157,7 +157,7 @@ form{
         font-weight: map-get($map: $fw, $key: black);
     }
     & > p{
-        font-size:  map-get($map: $fsLocalisation, $key: pBottom); /*$fs5;*/
+        font-size:  map-get($map: $fsLocalisation, $key: pBottom);
         font-weight: map-get($map: $fw, $key: light);
         letter-spacing: -0.01rem;
     }

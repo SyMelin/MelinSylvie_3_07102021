@@ -2,7 +2,7 @@
 
 .anim-ck{
     margin: 0;
-    margin-left: -0.55rem; /* pour se placer au-dessus de input masqué dessous */
+    margin-left: -0.55rem; /* pour se placer au-dessus de input qui est masqué en-dessous */
     width: 100%;
     height: 4rem;
     display: flex;
@@ -46,7 +46,7 @@
 }
 
 
-/* Animation quand la checkbox est cochée */ /*Animation quand la checkbox est décochée */
+/* Animation quand la checkbox est cochée + Animation quand la checkbox est décochée */
 
 $animCk-dur: 350ms;
 $animNotCk_dur: 300ms;
@@ -152,5 +152,3 @@ input[type="checkbox"]{
     transform: translateX(0%);
     }
 }
-
-

@@ -25,7 +25,6 @@
         background-color: $color-background;
         border-radius: $radiusN $radiusN 0 0;
         h1{
-           /* @include border; */
             margin-bottom: 0;
         }
         @include MediumScreen-only{
